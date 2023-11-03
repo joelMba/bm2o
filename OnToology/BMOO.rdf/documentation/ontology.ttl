@@ -1,0 +1,378 @@
+@prefix : <http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#> .
+
+<http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O> rdf:type owl:Ontology ;
+                                                                      owl:imports <http://www.semanticweb.org/maintenance-activity> ,
+                                                                                  <https://brickschema.org/schema/1.3/Brick> ,
+                                                                                  <https://w3id.org/rec/addressing/3.3/> ,
+                                                                                  <https://w3id.org/rec/agents/3.3/> ,
+                                                                                  <https://w3id.org/rec/core/3.3/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceActivity
+:hasMaintenanceActivity rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :isMaintenanceActivityOf ;
+                        rdfs:domain :Operation ;
+                        rdfs:range <http://www.semanticweb.org/maintenance-activity#MaintenanceActivity> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceContract
+:hasMaintenanceContract rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :isMaintenanceContractOf ;
+                        rdfs:domain :MaintenanceService ,
+                                    :Operation ;
+                        rdfs:range :MaintenanceContract .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasSLA
+:hasSLA rdf:type owl:ObjectProperty ;
+        owl:inverseOf :isSLAOf ;
+        rdfs:domain :MaintenanceService ;
+        rdfs:range :SLA .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceActivityOf
+:isMaintenanceActivityOf rdf:type owl:ObjectProperty ;
+                         rdfs:domain <http://www.semanticweb.org/maintenance-activity#MaintenanceActivity> ;
+                         rdfs:range :Operation .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceContractOf
+:isMaintenanceContractOf rdf:type owl:ObjectProperty ;
+                         rdfs:domain :MaintenanceContract ;
+                         rdfs:range :MaintenanceService ,
+                                    :Operation .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isPersonContactOf
+:isPersonContactOf rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :personContact ;
+                   rdfs:domain <https://w3id.org/rec/agents/Person> ;
+                   rdfs:range :Customer .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedAddressOf
+:isRelatedAddressOf rdf:type owl:ObjectProperty ;
+                    owl:inverseOf <https://w3id.org/rec/addressing/address> ;
+                    rdfs:domain <https://w3id.org/rec/addressing/Address> ;
+                    rdfs:range :Operation .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf
+:isRelatedCompanyOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isRelatedOrganizationOf ;
+                    owl:inverseOf :relatedCompany ;
+                    rdfs:domain <https://w3id.org/rec/agents/Company> ;
+                    rdfs:range :MaintenanceContract .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCustomerOf
+:isRelatedCustomerOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :isRelatedCompanyOf ;
+                     owl:inverseOf :relatedCustomer ;
+                     rdfs:domain :Customer ;
+                     rdfs:range :MaintenanceContract .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedDepartmentOf
+:isRelatedDepartmentOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isRelatedOrganizationOf ;
+                       owl:inverseOf :relatedDepartment ;
+                       rdfs:domain <https://w3id.org/rec/agents/Department> ;
+                       rdfs:range :MaintenanceContract .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedEquipmentOf
+:isRelatedEquipmentOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :relatedEquipment ;
+                      rdfs:domain <https://brickschema.org/schema/Brick#Equipment> ;
+                      rdfs:range :Operation .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf
+:isRelatedOrganizationOf rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :relatedOrganization ;
+                         rdfs:domain <https://w3id.org/rec/agents/Organization> ;
+                         rdfs:range :MaintenanceContract .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedServiceProviderOf
+:isRelatedServiceProviderOf rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :isRelatedCompanyOf ;
+                            owl:inverseOf :relatedServiceProvider ;
+                            rdfs:domain :ServiceProvider ;
+                            rdfs:range :MaintenanceContract .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedSpaceOf
+:isRelatedSpaceOf rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :relatedSpace ;
+                  rdfs:domain <https://w3id.org/rec/core/Space> ;
+                  rdfs:range :Operation .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isSLAOf
+:isSLAOf rdf:type owl:ObjectProperty ;
+         rdfs:domain :SLA ;
+         rdfs:range :MaintenanceService .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#personContact
+:personContact rdf:type owl:ObjectProperty ;
+               rdfs:domain :Customer ;
+               rdfs:range <https://w3id.org/rec/agents/Person> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany
+:relatedCompany rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedOrganization ;
+                rdfs:domain :MaintenanceContract ;
+                rdfs:range <https://w3id.org/rec/agents/Company> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCustomer
+:relatedCustomer rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :relatedCompany ;
+                 rdfs:domain :MaintenanceContract ;
+                 rdfs:range :Customer .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedDepartment
+:relatedDepartment rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :relatedOrganization ;
+                   rdfs:domain :MaintenanceContract ;
+                   rdfs:range <https://w3id.org/rec/agents/Department> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedEquipment
+:relatedEquipment rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Operation ;
+                  rdfs:range <https://brickschema.org/schema/Brick#Equipment> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization
+:relatedOrganization rdf:type owl:ObjectProperty ;
+                     rdfs:domain :MaintenanceContract ;
+                     rdfs:range <https://w3id.org/rec/agents/Organization> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedServiceProvider
+:relatedServiceProvider rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedCompany ;
+                        rdfs:domain :MaintenanceContract ;
+                        rdfs:range :ServiceProvider .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedSpace
+:relatedSpace rdf:type owl:ObjectProperty ;
+              rdfs:domain :Operation ;
+              rdfs:range <https://w3id.org/rec/core/Space> .
+
+
+###  https://w3id.org/rec/addressing/address
+<https://w3id.org/rec/addressing/address> rdfs:domain :Operation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://data.ashrae.org/bacnet/2020#description
+<http://data.ashrae.org/bacnet/2020#description> rdfs:domain :Customer ,
+                                                             :MaintenanceContract ,
+                                                             :MaintenanceService ,
+                                                             :Operation ,
+                                                             :ServiceProvider ;
+                                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#criticalLevel
+:criticalLevel rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MaintenanceService ,
+                           :Operation ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "The critical level of and intervention/operation is an integer between -1 and 5"@en .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#customerCode
+:customerCode rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MaintenanceService ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://w3id.org/rec/agents/Person> ;
+       rdfs:range xsd:string ;
+       rdfs:comment "email address of the customer person contact"@en .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#equipmentWorkingOrder
+:equipmentWorkingOrder rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Operation ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDuration
+:estimatedInterventionDuration rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :SLA ;
+                               rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDurationUnit
+:estimatedInterventionDurationUnit rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :SLA ;
+                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Customer ,
+                   :ServiceProvider ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Label or name of a service provider or property management company"@en .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToIntervention
+:maxTimeToIntervention rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :SLA ;
+                       rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToInterventionUnit
+:maxTimeToInterventionUnit rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :SLA ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecovery
+:maxTimeToRecovery rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :SLA ;
+                   rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecoveryUnit
+:maxTimeToRecoveryUnit rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :SLA ;
+                       rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#phoneNumber
+:phoneNumber rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://w3id.org/rec/agents/Person> ;
+             rdfs:range xsd:string ;
+             rdfs:comment "phone number of the customer person contact"@en .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#serviceProviderCode
+:serviceProviderCode rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :MaintenanceService ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#technicalReason
+:technicalReason rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Operation ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#topic
+:topic rdf:type owl:DatatypeProperty ;
+       rdfs:comment "For example \"multiservice\", \"elevator\" topics, ...etc."@en .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#workType
+:workType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :MaintenanceService ,
+                      :Operation ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Specified if there is and preventive, curative or reglementary operation"@en .
+
+
+###  https://w3id.org/rec/core/hasCreatedTime
+<https://w3id.org/rec/core/hasCreatedTime> rdfs:domain :Operation .
+
+
+###  https://w3id.org/rec/core/hasDuration
+<https://w3id.org/rec/core/hasDuration> rdfs:domain :Operation .
+
+
+###  https://w3id.org/rec/core/hasProcessedTime
+<https://w3id.org/rec/core/hasProcessedTime> rdfs:domain :Operation .
+
+
+###  https://w3id.org/rec/core/hasStartTime
+<https://w3id.org/rec/core/hasStartTime> rdfs:domain :MaintenanceContract ,
+                                                     :Operation .
+
+
+###  https://w3id.org/rec/core/hasStopTime
+<https://w3id.org/rec/core/hasStopTime> rdfs:domain :MaintenanceContract ,
+                                                    :Operation .
+
+
+###  https://w3id.org/rec/core/hasUpdatedTime
+<https://w3id.org/rec/core/hasUpdatedTime> rdfs:domain :Operation .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Collectivity
+:Collectivity rdf:type owl:Class ;
+              rdfs:subClassOf :Customer .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer
+:Customer rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/agents/Company> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract
+:MaintenanceContract rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/rec/core/Document> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService
+:MaintenanceService rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation
+:Operation rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/Event> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#PropertyManager
+:PropertyManager rdf:type owl:Class ;
+                 rdfs:subClassOf :Customer .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA
+:SLA rdf:type owl:Class ;
+     rdfs:comment "SLA = Service Level Agreement (define by customer)"@en .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider
+:ServiceProvider rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/rec/agents/Company> .
+
+
+###  http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Tertiary
+:Tertiary rdf:type owl:Class ;
+          rdfs:subClassOf :Customer .
+
+
+###  http://www.semanticweb.org/maintenance-activity#MaintenanceActivity
+<http://www.semanticweb.org/maintenance-activity#MaintenanceActivity> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
