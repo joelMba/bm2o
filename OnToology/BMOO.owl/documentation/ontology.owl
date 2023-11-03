@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#"
+     xml:base="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://www.linkedmodel.org/owl/schema/core#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:shacl="http://www.w3.org/ns/shacl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:bacnet="http://data.ashrae.org/bacnet/2020#"
+     xmlns:schema="http://schema.org/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O">
+        <owl:imports rdf:resource="http://www.semanticweb.org/maintenance-activity"/>
+        <owl:imports rdf:resource="https://brickschema.org/schema/1.3/Brick"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/addressing/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.3/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceActivity -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceActivity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceActivityOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maintenance-activity#MaintenanceActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceContract -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceContract">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceContractOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasSLA -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasSLA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isSLAOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceActivityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceActivityOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maintenance-activity#MaintenanceActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceContractOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceContractOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isPersonContactOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isPersonContactOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#personContact"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedAddressOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedAddressOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/addressing/address"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/addressing/Address"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCustomerOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCustomerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCustomer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedDepartmentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedDepartmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedDepartment"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Department"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedEquipmentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedEquipmentOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedEquipment"/>
+        <rdfs:domain rdf:resource="https://brickschema.org/schema/Brick#Equipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedServiceProviderOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedServiceProviderOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedServiceProvider"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedSpaceOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedSpaceOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedSpace"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isSLAOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isSLAOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#personContact -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#personContact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/agents/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/agents/Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCustomer -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCustomer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedDepartment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedDepartment">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/agents/Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedEquipment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedEquipment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="https://brickschema.org/schema/Brick#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/agents/Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedServiceProvider -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedServiceProvider">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedSpace -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedSpace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/addressing/address -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/addressing/address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ashrae.org/bacnet/2020#description -->
+
+
+    <rdf:Description rdf:about="http://data.ashrae.org/bacnet/2020#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#criticalLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#criticalLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The critical level of and intervention/operation is an integer between -1 and 5</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#customerCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#customerCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#email -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#email">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">email address of the customer person contact</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#equipmentWorkingOrder -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#equipmentWorkingOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDurationUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDurationUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#label -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#label">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Label or name of a service provider or property management company</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToIntervention -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToIntervention">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToInterventionUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToInterventionUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecovery -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecovery">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecoveryUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecoveryUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#phoneNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#phoneNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">phone number of the customer person contact</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#serviceProviderCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#serviceProviderCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#technicalReason -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#technicalReason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#topic -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#topic">
+        <rdfs:comment xml:lang="en">For example &quot;multiservice&quot;, &quot;elevator&quot; topics, ...etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#workType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#workType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Specified if there is and preventive, curative or reglementary operation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasCreatedTime -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/hasCreatedTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasDuration -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/hasDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasProcessedTime -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/hasProcessedTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasStartTime -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/hasStartTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasStopTime -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/hasStopTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasUpdatedTime -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/hasUpdatedTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Collectivity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Collectivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/agents/Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#PropertyManager -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#PropertyManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA">
+        <rdfs:comment xml:lang="en">SLA = Service Level Agreement (define by customer)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/agents/Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Tertiary -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Tertiary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maintenance-activity#MaintenanceActivity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maintenance-activity#MaintenanceActivity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
