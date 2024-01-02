@@ -1,0 +1,1397 @@
+@prefix : <https://w3id.org/rec/building/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/building/> .
+
+<https://w3id.org/rec/building/> rdf:type owl:Ontology ;
+                                  owl:versionIRI <https://w3id.org/rec/building/3.3/> ;
+                                  owl:imports <https://w3id.org/rec/core/3.3/> ;
+                                  <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> ;
+                                  <http://purl.org/dc/elements/1.1/contributor> "Karl Hammar" ;
+                                  <http://purl.org/dc/elements/1.1/creator> "Erik Wallin" ;
+                                  <http://purl.org/dc/elements/1.1/description> "This REC module covers different types of building components and rooms."@en ;
+                                  <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                                  <http://purl.org/dc/elements/1.1/title> "RealEstateCore Building Module" ;
+                                  <http://purl.org/dc/terms/modified> "2020-06-23" ;
+                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "building" ;
+                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/building/3.3/" ;
+                                  <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "Are there any labs in Building 7?"@en ,
+                                                                                                                            "How many entrances are there to Building 7?"@en ,
+                                                                                                                            "How many of each type of room does Building 7 contain?"@en ,
+                                                                                                                            "What equipment is mounted in server rooms in Building 7?"@en ,
+                                                                                                                            "Which facade- or roof-mounted sensors are installed in Building 7?"@en ;
+                                  rdfs:seeAlso <https://w3id.org/rec/> ;
+                                  owl:versionInfo "3.3" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/rec/building/roomType
+:roomType rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <https://w3id.org/rec/core/hasType> ;
+          rdfs:domain <https://w3id.org/rec/core/Room> ;
+          rdfs:range :RoomType ;
+          rdfs:label "room type"@en ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/rec/building/AdmittingRoom
+:AdmittingRoom rdf:type owl:Class ;
+               rdfs:subClassOf :HealthcareRoom ;
+               rdfs:label "Admitting room"@en .
+
+
+###  https://w3id.org/rec/building/Atrium
+:Atrium rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Auditorium
+:Auditorium rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/BackOffice
+:BackOffice rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Balcony
+:Balcony rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+         rdfs:label "Balcony"@en .
+
+
+###  https://w3id.org/rec/building/BarRoom
+:BarRoom rdf:type owl:Class ;
+         rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/BasementLevel
+:BasementLevel rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/rec/core/Level> ;
+               rdfs:label "Basement level"@en .
+
+
+###  https://w3id.org/rec/building/Bathroom
+:Bathroom rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Bedroom
+:Bedroom rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/BicycleGarage
+:BicycleGarage rdf:type owl:Class ;
+               rdfs:subClassOf :Garage .
+
+
+###  https://w3id.org/rec/building/Cabinet
+:Cabinet rdf:type owl:Class ;
+         rdfs:subClassOf :UtilitiesRoom .
+
+
+###  https://w3id.org/rec/building/CableRoom
+:CableRoom rdf:type owl:Class ;
+           rdfs:subClassOf :UtilitiesRoom .
+
+
+###  https://w3id.org/rec/building/CafeteriaRoom
+:CafeteriaRoom rdf:type owl:Class ;
+               rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/Cinema
+:Cinema rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Classroom
+:Classroom rdf:type owl:Class ;
+           rdfs:subClassOf :EducationalRoom .
+
+
+###  https://w3id.org/rec/building/CleaningRoom
+:CleaningRoom rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ClimateControlRoom
+:ClimateControlRoom rdf:type owl:Class ;
+                    rdfs:subClassOf :UtilitiesRoom .
+
+
+###  https://w3id.org/rec/building/CloakRoom
+:CloakRoom rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/CoffeeRoom
+:CoffeeRoom rdf:type owl:Class ;
+            rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/ConferenceRoom
+:ConferenceRoom rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ConversationRoom
+:ConversationRoom rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/CookingRoom
+:CookingRoom rdf:type owl:Class ;
+             rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/CopyingRoom
+:CopyingRoom rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/DataServerRoom
+:DataServerRoom rdf:type owl:Class ;
+                rdfs:subClassOf :UtilitiesRoom .
+
+
+###  https://w3id.org/rec/building/DiningRoom
+:DiningRoom rdf:type owl:Class ;
+            rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/DisabledToilet
+:DisabledToilet rdf:type owl:Class ;
+                rdfs:subClassOf :PersonalHygiene .
+
+
+###  https://w3id.org/rec/building/DishingRoom
+:DishingRoom rdf:type owl:Class ;
+             rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/DressingRoom
+:DressingRoom rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/EducationalRoom
+:EducationalRoom rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ElectricityRoom
+:ElectricityRoom rdf:type owl:Class ;
+                 rdfs:subClassOf :UtilitiesRoom .
+
+
+###  https://w3id.org/rec/building/ElevatorRoom
+:ElevatorRoom rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ElevatorShaft
+:ElevatorShaft rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Entrance
+:Entrance rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ExerciseRoom
+:ExerciseRoom rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ExhibitionRoom
+:ExhibitionRoom rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Facade
+:Facade rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+        rdfs:label "Facade"@en .
+
+
+###  https://w3id.org/rec/building/FittingRoom
+:FittingRoom rdf:type owl:Class ;
+             rdfs:subClassOf :RetailRoom .
+
+
+###  https://w3id.org/rec/building/Floor
+:Floor rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+       rdfs:label "Floor"@en .
+
+
+###  https://w3id.org/rec/building/FoodHandlingRoom
+:FoodHandlingRoom rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Garage
+:Garage rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/GroupRoom
+:GroupRoom rdf:type owl:Class ;
+           rdfs:subClassOf :EducationalRoom .
+
+
+###  https://w3id.org/rec/building/Hallway
+:Hallway rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/HealthcareRoom
+:HealthcareRoom rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                rdfs:label "Healthcare room"@en .
+
+
+###  https://w3id.org/rec/building/Hospital
+:Hospital rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/core/Building> ;
+          rdfs:label "Hospital"@en .
+
+
+###  https://w3id.org/rec/building/Kitchenette
+:Kitchenette rdf:type owl:Class ;
+             rdfs:subClassOf :FoodHandlingRoom ;
+             rdfs:label "Kitechenette"@en .
+
+
+###  https://w3id.org/rec/building/Laboratory
+:Laboratory rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/LaboratoryDry
+:LaboratoryDry rdf:type owl:Class ;
+               rdfs:subClassOf :Laboratory .
+
+
+###  https://w3id.org/rec/building/LaboratoryWet
+:LaboratoryWet rdf:type owl:Class ;
+               rdfs:subClassOf :Laboratory .
+
+
+###  https://w3id.org/rec/building/LaundryRoom
+:LaundryRoom rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/LivingRoom
+:LivingRoom rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/LoadingReceivingRoom
+:LoadingReceivingRoom rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/LockerRoom
+:LockerRoom rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+            rdfs:label "Locker room"@en .
+
+
+###  https://w3id.org/rec/building/MailRoom
+:MailRoom rdf:type owl:Class ;
+          rdfs:subClassOf :BackOffice .
+
+
+###  https://w3id.org/rec/building/MainEntrance
+:MainEntrance rdf:type owl:Class ;
+              rdfs:subClassOf :Entrance .
+
+
+###  https://w3id.org/rec/building/MeditationRoom
+:MeditationRoom rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/MezzanineLevel
+:MezzanineLevel rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/rec/core/Level> ;
+                rdfs:label "Mezzanine level"@en .
+
+
+###  https://w3id.org/rec/building/Morgue
+:Morgue rdf:type owl:Class ;
+        rdfs:subClassOf :HealthcareRoom ;
+        rdfs:label "Morgue"@en .
+
+
+###  https://w3id.org/rec/building/MothersRoom
+:MothersRoom rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/MultiPurposeRoom
+:MultiPurposeRoom rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/NeonatalNursingRoom
+:NeonatalNursingRoom rdf:type owl:Class ;
+                     rdfs:subClassOf :HealthcareRoom ;
+                     rdfs:label "Neonatal nursing room"@en .
+
+
+###  https://w3id.org/rec/building/Office
+:Office rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/OfficeLandscape
+:OfficeLandscape rdf:type owl:Class ;
+                 rdfs:subClassOf :Office .
+
+
+###  https://w3id.org/rec/building/OfficeRoom
+:OfficeRoom rdf:type owl:Class ;
+            rdfs:subClassOf :Office .
+
+
+###  https://w3id.org/rec/building/OperatingRoom
+:OperatingRoom rdf:type owl:Class ;
+               rdfs:subClassOf :HealthcareRoom ;
+               rdfs:label "Operating room"@en .
+
+
+###  https://w3id.org/rec/building/OutpatientServicesRoom
+:OutpatientServicesRoom rdf:type owl:Class ;
+                        rdfs:subClassOf :HealthcareRoom ;
+                        rdfs:label "Outpatient services room"@en .
+
+
+###  https://w3id.org/rec/building/Pantry
+:Pantry rdf:type owl:Class ;
+        rdfs:subClassOf :FoodHandlingRoom ;
+        rdfs:label "Pantry"@en .
+
+
+###  https://w3id.org/rec/building/ParkingSlotCold
+:ParkingSlotCold rdf:type owl:Class ;
+                 rdfs:subClassOf :Garage .
+
+
+###  https://w3id.org/rec/building/ParkingSlotWarm
+:ParkingSlotWarm rdf:type owl:Class ;
+                 rdfs:subClassOf :Garage .
+
+
+###  https://w3id.org/rec/building/Pentry
+:Pentry rdf:type owl:Class ;
+        rdfs:subClassOf :FoodHandlingRoom .
+
+
+###  https://w3id.org/rec/building/PersonalHygiene
+:PersonalHygiene rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/PharmacyRoom
+:PharmacyRoom rdf:type owl:Class ;
+              rdfs:subClassOf :HealthcareRoom ;
+              rdfs:label "Pharmacy room"@en .
+
+
+###  https://w3id.org/rec/building/PhoneBooth
+:PhoneBooth rdf:type owl:Class ;
+            rdfs:subClassOf :Office .
+
+
+###  https://w3id.org/rec/building/RadiologyRoom
+:RadiologyRoom rdf:type owl:Class ;
+               rdfs:subClassOf :HealthcareRoom ;
+               rdfs:label "Radiology room"@en .
+
+
+###  https://w3id.org/rec/building/Reception
+:Reception rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/RecordingRoom
+:RecordingRoom rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/RecreationalRoom
+:RecreationalRoom rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/RestingRoom
+:RestingRoom rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/RetailRoom
+:RetailRoom rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/RoofInner
+:RoofInner rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+           rdfs:label "Roof, inner"@en .
+
+
+###  https://w3id.org/rec/building/RoofLevel
+:RoofLevel rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/Level> ;
+           rdfs:label "Roof level"@en .
+
+
+###  https://w3id.org/rec/building/RoofOuter
+:RoofOuter rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+           rdfs:label "Roof, outer"@en .
+
+
+###  https://w3id.org/rec/building/RoomType
+:RoomType rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/core/Type> ;
+          rdfs:comment "Deprecated in favour of traditional rdf:type-based typing, using core:Room subclasses."@en ;
+          rdfs:label "Room type"@en ;
+          owl:deprecated "true"^^xsd:boolean ;
+          <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "roomtype" ;
+          <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/building/Sauna
+:Sauna rdf:type owl:Class ;
+       rdfs:subClassOf :PersonalHygiene .
+
+
+###  https://w3id.org/rec/building/School
+:School rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Building> ;
+        rdfs:label "School"@en .
+
+
+###  https://w3id.org/rec/building/SecurityRoom
+:SecurityRoom rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ServiceEntrance
+:ServiceEntrance rdf:type owl:Class ;
+                 rdfs:subClassOf :Entrance .
+
+
+###  https://w3id.org/rec/building/ServiceShaft
+:ServiceShaft rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Shelter
+:Shelter rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/ShelterGasLock
+:ShelterGasLock rdf:type owl:Class ;
+                rdfs:subClassOf :Shelter .
+
+
+###  https://w3id.org/rec/building/ShelterRoom
+:ShelterRoom rdf:type owl:Class ;
+             rdfs:subClassOf :Shelter .
+
+
+###  https://w3id.org/rec/building/ShoppingMall
+:ShoppingMall rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Building> ;
+              rdfs:label "Shopping mall"@en .
+
+
+###  https://w3id.org/rec/building/ShowerRoom
+:ShowerRoom rdf:type owl:Class ;
+            rdfs:subClassOf :PersonalHygiene .
+
+
+###  https://w3id.org/rec/building/Slab
+:Slab rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+      rdfs:label "Slab"@en .
+
+
+###  https://w3id.org/rec/building/SmallStudyRoom
+:SmallStudyRoom rdf:type owl:Class ;
+                rdfs:subClassOf :EducationalRoom .
+
+
+###  https://w3id.org/rec/building/SprinklerRoom
+:SprinklerRoom rdf:type owl:Class ;
+               rdfs:subClassOf :UtilitiesRoom .
+
+
+###  https://w3id.org/rec/building/Stadium
+:Stadium rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Building> ;
+         rdfs:label "Stadium"@en .
+
+
+###  https://w3id.org/rec/building/StaffRoom
+:StaffRoom rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Stairwell
+:Stairwell rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Storey
+:Storey rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+        rdfs:comment """The level of storey, a.k.a. floorplan.
+
+Deprecated in favour of core:Level"""@en ;
+        rdfs:label "Storey"@en ;
+        owl:deprecated "true"^^xsd:boolean ;
+        <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "storey" ;
+        <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/building/StoreyLevel
+:StoreyLevel rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+             rdfs:comment "The level of storey, a.k.a. floorplan"@en ;
+             rdfs:label "Storey level"@en ;
+             owl:deprecated "true"^^xsd:boolean ;
+             owl:versionInfo "Deprecated in favour of :Storey"@en .
+
+
+###  https://w3id.org/rec/building/TelecommunicationRoom
+:TelecommunicationRoom rdf:type owl:Class ;
+                       rdfs:subClassOf :CableRoom .
+
+
+###  https://w3id.org/rec/building/Terrace
+:Terrace rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+         rdfs:label "Terrace"@en .
+
+
+###  https://w3id.org/rec/building/Theater
+:Theater rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/TherapyRoom
+:TherapyRoom rdf:type owl:Class ;
+             rdfs:subClassOf :HealthcareRoom ;
+             rdfs:label "Therapy room"@en .
+
+
+###  https://w3id.org/rec/building/Toilet
+:Toilet rdf:type owl:Class ;
+        rdfs:subClassOf :PersonalHygiene .
+
+
+###  https://w3id.org/rec/building/TreatmentRoom
+:TreatmentRoom rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/TreatmentWaitingRoom
+:TreatmentWaitingRoom rdf:type owl:Class ;
+                      rdfs:subClassOf :TreatmentRoom .
+
+
+###  https://w3id.org/rec/building/UtilitiesRoom
+:UtilitiesRoom rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/VirtualBuilding
+:VirtualBuilding rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/rec/core/Building> ;
+                 rdfs:comment "A non-physical Building. Belongs to a RealEstate."@en ;
+                 rdfs:label "Virtual building"@en .
+
+
+###  https://w3id.org/rec/building/VirtualBuildingComponent
+:VirtualBuildingComponent rdf:type owl:Class ;
+                          rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                          rdfs:comment "A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building."@en ;
+                          rdfs:label "Virtual building component"@en .
+
+
+###  https://w3id.org/rec/building/Wall
+:Wall rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+      rdfs:label "Wall"@en .
+
+
+###  https://w3id.org/rec/building/WallInner
+:WallInner rdf:type owl:Class ;
+           rdfs:subClassOf :Wall ;
+           rdfs:label "Inner wall"@en .
+
+
+###  https://w3id.org/rec/building/WasteManagementRoom
+:WasteManagementRoom rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/building/Workshop
+:Workshop rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/core/Room
+<https://w3id.org/rec/core/Room> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/rec/building/Atrium
+:Atrium rdf:type owl:NamedIndividual ,
+                 :RoomType .
+
+
+###  https://w3id.org/rec/building/Auditorium
+:Auditorium rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/BackOffice
+:BackOffice rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/BankVault
+:BankVault rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/BarRoom
+:BarRoom rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/Bathroom
+:Bathroom rdf:type owl:NamedIndividual ,
+                   :RoomType .
+
+
+###  https://w3id.org/rec/building/Bedroom
+:Bedroom rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/BicycleGarage
+:BicycleGarage rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/Cabinet
+:Cabinet rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/CableRoom
+:CableRoom rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/CafeteriaRoom
+:CafeteriaRoom rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/Cinema
+:Cinema rdf:type owl:NamedIndividual ,
+                 :RoomType .
+
+
+###  https://w3id.org/rec/building/Classroom
+:Classroom rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/CleaningRoom
+:CleaningRoom rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/ClimateControlRoom
+:ClimateControlRoom rdf:type owl:NamedIndividual ,
+                             :RoomType .
+
+
+###  https://w3id.org/rec/building/CloakRoom
+:CloakRoom rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/CoffeeRoom
+:CoffeeRoom rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/ConferenceRoom
+:ConferenceRoom rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/ConversationRoom
+:ConversationRoom rdf:type owl:NamedIndividual ,
+                           :RoomType .
+
+
+###  https://w3id.org/rec/building/CookingRoom
+:CookingRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/CopyingRoom
+:CopyingRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/DataServerRoom
+:DataServerRoom rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/DeliRoom
+:DeliRoom rdf:type owl:NamedIndividual ,
+                   :RoomType .
+
+
+###  https://w3id.org/rec/building/DiningRoom
+:DiningRoom rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/DisabledToilet
+:DisabledToilet rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/DishingRoom
+:DishingRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/DressingRoom
+:DressingRoom rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/EducationalRoom
+:EducationalRoom rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/ElectricityRoom
+:ElectricityRoom rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/ElevatorRoom
+:ElevatorRoom rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/ElevatorShaft
+:ElevatorShaft rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/Entrance
+:Entrance rdf:type owl:NamedIndividual ,
+                   :RoomType .
+
+
+###  https://w3id.org/rec/building/ExerciseRoom
+:ExerciseRoom rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/ExhibitionRoom
+:ExhibitionRoom rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/FittingRoom
+:FittingRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/FoodHandlingRoom
+:FoodHandlingRoom rdf:type owl:NamedIndividual ,
+                           :RoomType .
+
+
+###  https://w3id.org/rec/building/FoodStorageFreezerRoom
+:FoodStorageFreezerRoom rdf:type owl:NamedIndividual ,
+                                 :RoomType .
+
+
+###  https://w3id.org/rec/building/FoodStorageRefrigeratorRoom
+:FoodStorageRefrigeratorRoom rdf:type owl:NamedIndividual ,
+                                      :RoomType .
+
+
+###  https://w3id.org/rec/building/FoodStorageRoom
+:FoodStorageRoom rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/Garage
+:Garage rdf:type owl:NamedIndividual ,
+                 :RoomType .
+
+
+###  https://w3id.org/rec/building/GroupRoom
+:GroupRoom rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/Hallway
+:Hallway rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/Laboratory
+:Laboratory rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/LaboratoryDry
+:LaboratoryDry rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/LaboratoryWet
+:LaboratoryWet rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/LaundryRoom
+:LaundryRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/Library
+:Library rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/LivingRoom
+:LivingRoom rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/LoadingReceivingRoom
+:LoadingReceivingRoom rdf:type owl:NamedIndividual ,
+                               :RoomType .
+
+
+###  https://w3id.org/rec/building/MailRoom
+:MailRoom rdf:type owl:NamedIndividual ,
+                   :RoomType .
+
+
+###  https://w3id.org/rec/building/MainEntrance
+:MainEntrance rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/MeditationRoom
+:MeditationRoom rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/MothersRoom
+:MothersRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/MultiPurposeRoom
+:MultiPurposeRoom rdf:type owl:NamedIndividual ,
+                           :RoomType .
+
+
+###  https://w3id.org/rec/building/Office
+:Office rdf:type owl:NamedIndividual ,
+                 :RoomType .
+
+
+###  https://w3id.org/rec/building/OfficeLandscape
+:OfficeLandscape rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/OfficeRoom
+:OfficeRoom rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/ParkingSlotCold
+:ParkingSlotCold rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/ParkingSlotWarm
+:ParkingSlotWarm rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/Pentry
+:Pentry rdf:type owl:NamedIndividual ,
+                 :RoomType .
+
+
+###  https://w3id.org/rec/building/PersonalHygiene
+:PersonalHygiene rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/PhoneBooth
+:PhoneBooth rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/Reception
+:Reception rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/RecordingRoom
+:RecordingRoom rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/RecreationalRoom
+:RecreationalRoom rdf:type owl:NamedIndividual ,
+                           :RoomType .
+
+
+###  https://w3id.org/rec/building/RestingRoom
+:RestingRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/RetailRoom
+:RetailRoom rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/Sauna
+:Sauna rdf:type owl:NamedIndividual ,
+                :RoomType .
+
+
+###  https://w3id.org/rec/building/SecurityRoom
+:SecurityRoom rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/ServiceEntrance
+:ServiceEntrance rdf:type owl:NamedIndividual ,
+                          :RoomType .
+
+
+###  https://w3id.org/rec/building/ServiceShaft
+:ServiceShaft rdf:type owl:NamedIndividual ,
+                       :RoomType .
+
+
+###  https://w3id.org/rec/building/Shelter
+:Shelter rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/ShelterGasLock
+:ShelterGasLock rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/ShelterRoom
+:ShelterRoom rdf:type owl:NamedIndividual ,
+                      :RoomType .
+
+
+###  https://w3id.org/rec/building/ShowerRoom
+:ShowerRoom rdf:type owl:NamedIndividual ,
+                     :RoomType .
+
+
+###  https://w3id.org/rec/building/SmallStudyRoom
+:SmallStudyRoom rdf:type owl:NamedIndividual ,
+                         :RoomType .
+
+
+###  https://w3id.org/rec/building/SprinklerRoom
+:SprinklerRoom rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/StaffRoom
+:StaffRoom rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/Stairwell
+:Stairwell rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/Storage
+:Storage rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/StudyRoom
+:StudyRoom rdf:type owl:NamedIndividual ,
+                    :RoomType .
+
+
+###  https://w3id.org/rec/building/TelecommunicationRoom
+:TelecommunicationRoom rdf:type owl:NamedIndividual ,
+                                :RoomType .
+
+
+###  https://w3id.org/rec/building/Theater
+:Theater rdf:type owl:NamedIndividual ,
+                  :RoomType .
+
+
+###  https://w3id.org/rec/building/Toilet
+:Toilet rdf:type owl:NamedIndividual ,
+                 :RoomType .
+
+
+###  https://w3id.org/rec/building/TreatmentRoom
+:TreatmentRoom rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/TreatmentWaitingRoom
+:TreatmentWaitingRoom rdf:type owl:NamedIndividual ,
+                               :RoomType .
+
+
+###  https://w3id.org/rec/building/UtilitiesRoom
+:UtilitiesRoom rdf:type owl:NamedIndividual ,
+                        :RoomType .
+
+
+###  https://w3id.org/rec/building/Vault
+:Vault rdf:type owl:NamedIndividual ,
+                :RoomType .
+
+
+###  https://w3id.org/rec/building/WasteManagementRoom
+:WasteManagementRoom rdf:type owl:NamedIndividual ,
+                              :RoomType .
+
+
+###  https://w3id.org/rec/building/Workshop
+:Workshop rdf:type owl:NamedIndividual ,
+                   :RoomType .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Atrium rdfs:label "Atrium"@en .
+
+
+:Auditorium rdfs:label "Auditorium"@en .
+
+
+:BackOffice rdfs:label "BackOffice"@en .
+
+
+:BarRoom rdfs:label "BarRoom"@en .
+
+
+:Bathroom rdfs:label "Bathroom"@en .
+
+
+:Bedroom rdfs:label "Bedroom"@en .
+
+
+:BicycleGarage rdfs:label "BicycleGarage"@en .
+
+
+:Cabinet rdfs:label "Cabinet"@en .
+
+
+:CableRoom rdfs:label "Cable room"@en .
+
+
+:CafeteriaRoom rdfs:label "CafeteriaRoom"@en .
+
+
+:Cinema rdfs:label "Cinema"@en .
+
+
+:Classroom rdfs:label "Classroom"@en .
+
+
+:CleaningRoom rdfs:label "CleaningRoom"@en .
+
+
+:ClimateControlRoom rdfs:label "ClimateControlRoom"@en .
+
+
+:CloakRoom rdfs:label "CloakRoom"@en .
+
+
+:CoffeeRoom rdfs:comment "Deprecated in favour of building:CafeteriaRoom"@en ;
+            rdfs:label "CoffeeRoom"@en ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+:ConferenceRoom rdfs:label "ConferenceRoom"@en .
+
+
+:ConversationRoom rdfs:label "ConversationRoom"@en .
+
+
+:CookingRoom rdfs:label "CookingRoom"@en .
+
+
+:CopyingRoom rdfs:label "CopyingRoom"@en .
+
+
+:DataServerRoom rdfs:label "DataServerRoom"@en .
+
+
+:DiningRoom rdfs:label "DiningRoom"@en .
+
+
+:DisabledToilet rdfs:label "DisabledToilet"@en ;
+                rdfs:seeAlso "HWC"@en ,
+                             "RWC"@en .
+
+
+:DishingRoom rdfs:label "DishingRoom"@en .
+
+
+:DressingRoom rdfs:label "DressingRoom"@en .
+
+
+:EducationalRoom rdfs:label "EducationalRoom"@en .
+
+
+:ElectricityRoom rdfs:label "ElectricityRoom"@en .
+
+
+:ElevatorRoom rdfs:label "ElevatorRoom"@en .
+
+
+:ElevatorShaft rdfs:label "ElevatorShaft"@en .
+
+
+:Entrance rdfs:label "Entrance"@en .
+
+
+:ExerciseRoom rdfs:label "ExerciseRoom"@en .
+
+
+:ExhibitionRoom rdfs:label "ExhibitionRoom"@en .
+
+
+:FittingRoom rdfs:label "FittingRoom"@en .
+
+
+:FoodHandlingRoom rdfs:label "FoodHandlingRoom"@en .
+
+
+:Garage rdfs:label "Garage"@en .
+
+
+:GroupRoom rdfs:label "GroupRoom"@en .
+
+
+:Hallway rdfs:label "Hallway"@en .
+
+
+:Laboratory rdfs:label "Laboratory"@en .
+
+
+:LaboratoryDry rdfs:comment "A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm."@en ;
+               rdfs:label "LaboratoryDry"@en .
+
+
+:LaboratoryWet rdfs:comment "A LaboratoryWet is a type of laboratory where it is necessary to handle various types of chemicals and potential \"wet\" hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination."@en ;
+               rdfs:label "LaboratoryWet"@en .
+
+
+:LaundryRoom rdfs:label "LaundryRoom"@en .
+
+
+:Library rdfs:label "Library"@en .
+
+
+:LivingRoom rdfs:label "LivingRoom"@en .
+
+
+:LoadingReceivingRoom rdfs:label "Loading/receiving room"@en .
+
+
+:MailRoom rdfs:label "Mail room"@en .
+
+
+:MainEntrance rdfs:label "MainEntrance"@en .
+
+
+:MeditationRoom rdfs:label "Meditation room"@en .
+
+
+:MothersRoom rdfs:label "Mothers' room"@en .
+
+
+:MultiPurposeRoom rdfs:label "Multi-purpose room"@en .
+
+
+:Office rdfs:label "Office"@en .
+
+
+:OfficeLandscape rdfs:label "OfficeLandscape"@en .
+
+
+:OfficeRoom rdfs:label "OfficeRoom"@en .
+
+
+:ParkingSlotCold rdfs:label "ParkingSlotCold"@en .
+
+
+:ParkingSlotWarm rdfs:label "ParkingSlotWarm"@en .
+
+
+:Pentry rdfs:comment "Deprecated in favour of building:Pantry"@en ;
+        rdfs:label "Pentry"@en ;
+        owl:deprecated "true"^^xsd:boolean .
+
+
+:PersonalHygiene rdfs:label "PersonalHygiene"@en .
+
+
+:PhoneBooth rdfs:label "PhoneBooth"@en .
+
+
+:Reception rdfs:label "Reception"@en .
+
+
+:RecordingRoom rdfs:comment "Room for making audio and/or video recordings. A.ka. studio."@en ;
+               rdfs:label "RecordingRoom"@en .
+
+
+:RecreationalRoom rdfs:label "RecreationalRoom"@en .
+
+
+:RestingRoom rdfs:label "RestingRoom"@en .
+
+
+:RetailRoom rdfs:label "RetailRoom"@en .
+
+
+:Sauna rdfs:label "Sauna"@en .
+
+
+:SecurityRoom rdfs:label "Security room"@en .
+
+
+:ServiceEntrance rdfs:label "ServiceEntrance"@en .
+
+
+:ServiceShaft rdfs:label "ServiceShaft"@en .
+
+
+:Shelter rdfs:label "Shelter"@en .
+
+
+:ShelterGasLock rdfs:label "ShelterGasLock"@en .
+
+
+:ShelterRoom rdfs:label "ShelterRoom"@en .
+
+
+:ShowerRoom rdfs:label "ShowerRoom"@en .
+
+
+:SmallStudyRoom rdfs:label "SmallStudyRoom"@en .
+
+
+:SprinklerRoom rdfs:label "Sprinkler room"@en .
+
+
+:StaffRoom rdfs:comment "Room for staff to take breaks."@en ;
+           rdfs:label "StaffRoom"@en .
+
+
+:Stairwell rdfs:label "Stairwell"@en .
+
+
+:Storage rdfs:label "Storage"@en .
+
+
+:TelecommunicationRoom rdfs:label "TelecommunicationRoom"@en .
+
+
+:Theater rdfs:label "Theater"@en .
+
+
+:Toilet rdfs:label "Toilet"@en .
+
+
+:TreatmentRoom rdfs:comment "For e.g. medical or other treatment or consultation."@en ;
+               rdfs:label "TreatmentRoom"@en .
+
+
+:TreatmentWaitingRoom rdfs:label "TreatmentWaitingRoom"@en .
+
+
+:UtilitiesRoom rdfs:label "UtilitiesRoom"@en .
+
+
+:WasteManagementRoom rdfs:label "WasteManagementRoom"@en ;
+                     rdfs:seeAlso "Recycling room"@en .
+
+
+:Workshop rdfs:label "Workshop"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
