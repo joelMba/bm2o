@@ -1,0 +1,105 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "Organization" : {
+      "@id" : "https://w3id.org/rec/agents/Organization"
+    },
+    "Department" : {
+      "@id" : "https://w3id.org/rec/agents/Department"
+    },
+    "image" : {
+      "@id" : "https://w3id.org/rec/agents/image",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isPartOf" : {
+      "@id" : "https://w3id.org/rec/core/isPartOf",
+      "@type" : "@id"
+    },
+    "hasPart" : {
+      "@id" : "https://w3id.org/rec/core/hasPart",
+      "@type" : "@id"
+    },
+    "familyName" : {
+      "@id" : "https://w3id.org/rec/agents/familyName"
+    },
+    "lastName" : {
+      "@id" : "https://w3id.org/rec/agents/lastName"
+    },
+    "gender" : {
+      "@id" : "https://w3id.org/rec/agents/gender"
+    },
+    "isMemberOf" : {
+      "@id" : "https://w3id.org/rec/agents/isMemberOf",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "https://w3id.org/rec/agents/Person"
+    },
+    "Agent" : {
+      "@id" : "https://w3id.org/rec/core/Agent"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "givenName" : {
+      "@id" : "https://w3id.org/rec/agents/givenName"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/rec/agents/name"
+    },
+    "hasMember" : {
+      "@id" : "https://w3id.org/rec/agents/hasMember",
+      "@type" : "@id"
+    },
+    "firstName" : {
+      "@id" : "https://w3id.org/rec/agents/firstName"
+    },
+    "Company" : {
+      "@id" : "https://w3id.org/rec/agents/Company"
+    },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "coversRequirements" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"
+    },
+    "logo" : {
+      "@id" : "https://w3id.org/rec/agents/logo"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Group" : {
+      "@id" : "https://w3id.org/rec/agents/Group"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}
