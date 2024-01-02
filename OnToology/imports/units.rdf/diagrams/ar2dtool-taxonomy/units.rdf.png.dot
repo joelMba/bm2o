@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "qudt:Unit" "qudt:LogarithmicUnit" "qudt:DimensionlessUnit" "qudt:DerivedUnit" ; /*classes style*/
+	"qudt:DimensionlessUnit" -> "qudt:Unit" [ label = "rdfs:subClassOf" ];
+	"qudt:DerivedUnit" -> "qudt:Unit" [ label = "rdfs:subClassOf" ];
+	"qudt:LogarithmicUnit" -> "qudt:DimensionlessUnit" [ label = "rdfs:subClassOf" ];
+
+}
