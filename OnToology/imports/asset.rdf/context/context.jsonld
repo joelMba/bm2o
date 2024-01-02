@@ -1,0 +1,1588 @@
+{
+  "@context" : {
+    "RequestToExitDevice" : {
+      "@id" : "https://w3id.org/rec/asset/RequestToExitDevice"
+    },
+    "mounting" : {
+      "@id" : "https://w3id.org/rec/asset/mounting",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sizeKVA" : {
+      "@id" : "https://w3id.org/rec/asset/sizeKVA",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "technology" : {
+      "@id" : "https://w3id.org/rec/asset/technology",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "servicedBy" : {
+      "@id" : "https://w3id.org/rec/asset/servicedBy",
+      "@type" : "@id"
+    },
+    "OccupancySensorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/OccupancySensorEquipment"
+    },
+    "bladeDiameter" : {
+      "@id" : "https://w3id.org/rec/asset/bladeDiameter",
+      "@type" : "http://qudt.org/vocab/unit/CentiM"
+    },
+    "PlumbingStorageTank" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingStorageTank"
+    },
+    "fan" : {
+      "@id" : "https://w3id.org/rec/asset/fan",
+      "@type" : "@id"
+    },
+    "MakeupAirUnit" : {
+      "@id" : "https://w3id.org/rec/asset/MakeupAirUnit"
+    },
+    "DomesticHotWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DomesticHotWaterSystem"
+    },
+    "HVACConditionedAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACConditionedAirSystem"
+    },
+    "ElectricalEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalEquipment"
+    },
+    "HVACGreaseExhaustAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACGreaseExhaustAirSystem"
+    },
+    "driveType" : {
+      "@id" : "https://w3id.org/rec/asset/driveType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "refrigerantType" : {
+      "@id" : "https://w3id.org/rec/asset/refrigerantType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "primePowerKVA" : {
+      "@id" : "https://w3id.org/rec/asset/primePowerKVA",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "economizer" : {
+      "@id" : "https://w3id.org/rec/asset/economizer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "HVACPressureReducingStation" : {
+      "@id" : "https://w3id.org/rec/asset/HVACPressureReducingStation"
+    },
+    "minMassFlowRating" : {
+      "@id" : "https://w3id.org/rec/asset/minMassFlowRating",
+      "@type" : "http://qudt.org/vocab/unit/KiloGM-PER-HR"
+    },
+    "DomesticWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DomesticWaterSystem"
+    },
+    "HVACCoolingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/HVACCoolingMethod"
+    },
+    "Meter" : {
+      "@id" : "https://w3id.org/rec/asset/Meter"
+    },
+    "PlumbingFixture" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingFixture"
+    },
+    "Space" : {
+      "@id" : "https://w3id.org/rec/core/Space"
+    },
+    "PlumbingGlobeValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingGlobeValve"
+    },
+    "Furniture" : {
+      "@id" : "https://w3id.org/rec/asset/Furniture"
+    },
+    "HVACShutOffValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACShutOffValve"
+    },
+    "SmokeDamper" : {
+      "@id" : "https://w3id.org/rec/asset/SmokeDamper"
+    },
+    "stepWidth" : {
+      "@id" : "https://w3id.org/rec/asset/stepWidth",
+      "@type" : "http://qudt.org/vocab/unit/MilliM"
+    },
+    "ElectricalEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalEquipmentGroup"
+    },
+    "minTemperatureRating" : {
+      "@id" : "https://w3id.org/rec/asset/minTemperatureRating",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "nominalCoolingCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/nominalCoolingCapacity"
+    },
+    "FireDamper" : {
+      "@id" : "https://w3id.org/rec/asset/FireDamper"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "ICTHardware" : {
+      "@id" : "https://w3id.org/rec/asset/ICTHardware"
+    },
+    "EthernetSwitchPort" : {
+      "@id" : "https://w3id.org/rec/asset/EthernetSwitchPort"
+    },
+    "ITSystem" : {
+      "@id" : "https://w3id.org/rec/asset/ITSystem"
+    },
+    "PlumbingBalancingValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingBalancingValve"
+    },
+    "poles" : {
+      "@id" : "https://w3id.org/rec/asset/poles",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HVACWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACWaterSystem"
+    },
+    "includes" : {
+      "@id" : "https://w3id.org/rec/core/includes",
+      "@type" : "@id"
+    },
+    "nominalAirflow" : {
+      "@id" : "https://w3id.org/rec/asset/nominalAirflow",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "StairPressurizationFan" : {
+      "@id" : "https://w3id.org/rec/asset/StairPressurizationFan"
+    },
+    "width" : {
+      "@id" : "https://w3id.org/rec/asset/width",
+      "@type" : "http://qudt.org/vocab/unit/CentiM"
+    },
+    "maxLandings" : {
+      "@id" : "https://w3id.org/rec/asset/maxLandings",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "SprinklerHeatTracing" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerHeatTracing"
+    },
+    "HVACCheckValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACCheckValve"
+    },
+    "FanPoweredBox" : {
+      "@id" : "https://w3id.org/rec/asset/FanPoweredBox"
+    },
+    "EquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/EquipmentGroup"
+    },
+    "primaryFlowCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/primaryFlowCapacity",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "ITEthernetNetworkSystem" : {
+      "@id" : "https://w3id.org/rec/asset/ITEthernetNetworkSystem"
+    },
+    "RooftopUnit" : {
+      "@id" : "https://w3id.org/rec/asset/RooftopUnit"
+    },
+    "commissionedBy" : {
+      "@id" : "https://w3id.org/rec/asset/commissionedBy",
+      "@type" : "@id"
+    },
+    "fireRating" : {
+      "@id" : "https://w3id.org/rec/asset/fireRating",
+      "@type" : "http://qudt.org/vocab/unit/HR"
+    },
+    "ElectricalGenerationStorageEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalGenerationStorageEquipment"
+    },
+    "GasTankWaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/GasTankWaterHeater"
+    },
+    "TankWaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/TankWaterHeater"
+    },
+    "SumpPump" : {
+      "@id" : "https://w3id.org/rec/asset/SumpPump"
+    },
+    "Asset" : {
+      "@id" : "https://w3id.org/rec/core/Asset"
+    },
+    "filtrationRating" : {
+      "@id" : "https://w3id.org/rec/asset/filtrationRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ElectricalCircuit2Pole" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalCircuit2Pole"
+    },
+    "zoneDelivery" : {
+      "@id" : "https://w3id.org/rec/asset/zoneDelivery"
+    },
+    "transitionType" : {
+      "@id" : "https://w3id.org/rec/asset/transitionType"
+    },
+    "fanMotorPower" : {
+      "@id" : "https://w3id.org/rec/asset/fanMotorPower",
+      "@type" : "http://qudt.org/vocab/unit/HP"
+    },
+    "UrinalWaterless" : {
+      "@id" : "https://w3id.org/rec/asset/UrinalWaterless"
+    },
+    "maxPressureRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxPressureRating",
+      "@type" : "http://qudt.org/vocab/unit/KiloPA"
+    },
+    "kFactorImperial" : {
+      "@id" : "https://w3id.org/rec/asset/kFactorImperial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "GasTanklessWaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/GasTanklessWaterHeater"
+    },
+    "DataNetworkEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/DataNetworkEquipment"
+    },
+    "Urinal" : {
+      "@id" : "https://w3id.org/rec/asset/Urinal"
+    },
+    "wireType" : {
+      "@id" : "https://w3id.org/rec/asset/wireType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "UnitHeater" : {
+      "@id" : "https://w3id.org/rec/asset/UnitHeater"
+    },
+    "installationDate" : {
+      "@id" : "https://w3id.org/rec/asset/installationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "HVACPressureReducingValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACPressureReducingValve"
+    },
+    "SprinklerPumpGroup" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerPumpGroup"
+    },
+    "HVACFan" : {
+      "@id" : "https://w3id.org/rec/asset/HVACFan"
+    },
+    "CleanAgentCabinet" : {
+      "@id" : "https://w3id.org/rec/asset/CleanAgentCabinet"
+    },
+    "Equipment" : {
+      "@id" : "https://w3id.org/rec/asset/Equipment"
+    },
+    "standbyPower" : {
+      "@id" : "https://w3id.org/rec/asset/standbyPower",
+      "@type" : "http://qudt.org/vocab/unit/KiloW"
+    },
+    "freeAirDelivery" : {
+      "@id" : "https://w3id.org/rec/asset/freeAirDelivery",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "HVACValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACValve"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "ElectricalCircuit1Pole" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalCircuit1Pole"
+    },
+    "HVACChilledWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACChilledWaterSystem"
+    },
+    "VAVBoxReheat" : {
+      "@id" : "https://w3id.org/rec/asset/VAVBoxReheat"
+    },
+    "SecurityEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/SecurityEquipmentGroup"
+    },
+    "mainsRating" : {
+      "@id" : "https://w3id.org/rec/asset/mainsRating",
+      "@type" : "http://qudt.org/vocab/unit/A"
+    },
+    "SteamUnitHeater" : {
+      "@id" : "https://w3id.org/rec/asset/SteamUnitHeater"
+    },
+    "personCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/personCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "dtdlType" : {
+      "@id" : "https://w3id.org/rec/metadata/dtdlType"
+    },
+    "ControlsSystem" : {
+      "@id" : "https://w3id.org/rec/asset/ControlsSystem"
+    },
+    "SmokeDetector" : {
+      "@id" : "https://w3id.org/rec/asset/SmokeDetector"
+    },
+    "GasMeter" : {
+      "@id" : "https://w3id.org/rec/asset/GasMeter"
+    },
+    "waterPerFlush" : {
+      "@id" : "https://w3id.org/rec/asset/waterPerFlush",
+      "@type" : "http://qudt.org/vocab/unit/L"
+    },
+    "PlumbingSolenoidValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingSolenoidValve"
+    },
+    "IAQSensorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/IAQSensorEquipment"
+    },
+    "height" : {
+      "@id" : "https://w3id.org/rec/asset/height",
+      "@type" : "http://qudt.org/vocab/unit/CentiM"
+    },
+    "EthernetRouter" : {
+      "@id" : "https://w3id.org/rec/asset/EthernetRouter"
+    },
+    "SprinklerSystem" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerSystem"
+    },
+    "Cogenerator" : {
+      "@id" : "https://w3id.org/rec/asset/Cogenerator"
+    },
+    "SprinklerSolenoidValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerSolenoidValve"
+    },
+    "maxAirflowRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxAirflowRating",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "LightingController" : {
+      "@id" : "https://w3id.org/rec/asset/LightingController"
+    },
+    "PlumbingPump" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingPump"
+    },
+    "shape" : {
+      "@id" : "https://w3id.org/rec/asset/shape"
+    },
+    "PlumbingCheckValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingCheckValve"
+    },
+    "SteamSystem" : {
+      "@id" : "https://w3id.org/rec/asset/SteamSystem"
+    },
+    "BACnetController" : {
+      "@id" : "https://w3id.org/rec/asset/BACnetController"
+    },
+    "mixingBox" : {
+      "@id" : "https://w3id.org/rec/asset/mixingBox",
+      "@type" : "@id"
+    },
+    "ductInlet" : {
+      "@id" : "https://w3id.org/rec/asset/ductInlet",
+      "@type" : "@id"
+    },
+    "FirePump" : {
+      "@id" : "https://w3id.org/rec/asset/FirePump"
+    },
+    "subMeterOf" : {
+      "@id" : "https://w3id.org/rec/asset/subMeterOf",
+      "@type" : "@id"
+    },
+    "HVACHeatingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/HVACHeatingMethod"
+    },
+    "SprinklerEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerEquipment"
+    },
+    "PlumbingValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingValve"
+    },
+    "FireProtectionEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/FireProtectionEquipmentGroup"
+    },
+    "Switchboard" : {
+      "@id" : "https://w3id.org/rec/asset/Switchboard"
+    },
+    "secondaryMaxPressure" : {
+      "@id" : "https://w3id.org/rec/asset/secondaryMaxPressure",
+      "@type" : "http://qudt.org/vocab/unit/KiloPA"
+    },
+    "Generator" : {
+      "@id" : "https://w3id.org/rec/asset/Generator"
+    },
+    "primePower" : {
+      "@id" : "https://w3id.org/rec/asset/primePower",
+      "@type" : "http://qudt.org/vocab/unit/KiloW"
+    },
+    "AccessPanel" : {
+      "@id" : "https://w3id.org/rec/asset/AccessPanel"
+    },
+    "SprinklerCheckValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerCheckValve"
+    },
+    "UrinalFlushometer" : {
+      "@id" : "https://w3id.org/rec/asset/UrinalFlushometer"
+    },
+    "WaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/WaterHeater"
+    },
+    "filterType" : {
+      "@id" : "https://w3id.org/rec/asset/filterType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HVACHotWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACHotWaterSystem"
+    },
+    "AutomaticTransferSwitch" : {
+      "@id" : "https://w3id.org/rec/asset/AutomaticTransferSwitch"
+    },
+    "manufacturedBy" : {
+      "@id" : "https://w3id.org/rec/asset/manufacturedBy",
+      "@type" : "@id"
+    },
+    "SprinklerTank" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerTank"
+    },
+    "HVACWaterTreatment" : {
+      "@id" : "https://w3id.org/rec/asset/HVACWaterTreatment"
+    },
+    "HeatExchanger" : {
+      "@id" : "https://w3id.org/rec/asset/HeatExchanger"
+    },
+    "commissionDate" : {
+      "@id" : "https://w3id.org/rec/asset/commissionDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "powerDensity" : {
+      "@id" : "https://w3id.org/rec/asset/powerDensity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "FanPoweredBoxReheat" : {
+      "@id" : "https://w3id.org/rec/asset/FanPoweredBoxReheat"
+    },
+    "ConveyanceEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/ConveyanceEquipment"
+    },
+    "ElectricityMeter" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricityMeter"
+    },
+    "runtime" : {
+      "@id" : "https://w3id.org/rec/asset/runtime",
+      "@type" : "http://qudt.org/vocab/unit/MIN"
+    },
+    "Faucet" : {
+      "@id" : "https://w3id.org/rec/asset/Faucet"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "currentRating" : {
+      "@id" : "https://w3id.org/rec/asset/currentRating",
+      "@type" : "http://qudt.org/vocab/unit/A"
+    },
+    "Busway" : {
+      "@id" : "https://w3id.org/rec/asset/Busway"
+    },
+    "maxTravelDistance" : {
+      "@id" : "https://w3id.org/rec/asset/maxTravelDistance",
+      "@type" : "http://qudt.org/vocab/unit/M"
+    },
+    "outputPhases" : {
+      "@id" : "https://w3id.org/rec/asset/outputPhases"
+    },
+    "isPartOf" : {
+      "@id" : "https://w3id.org/rec/core/isPartOf",
+      "@type" : "@id"
+    },
+    "recovery100FRise" : {
+      "@id" : "https://w3id.org/rec/asset/recovery100FRise",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "MCBRating" : {
+      "@id" : "https://w3id.org/rec/asset/MCBRating",
+      "@type" : "http://qudt.org/vocab/unit/A"
+    },
+    "insideDiameter" : {
+      "@id" : "https://w3id.org/rec/asset/insideDiameter",
+      "@type" : "http://qudt.org/vocab/unit/MilliM"
+    },
+    "Damper" : {
+      "@id" : "https://w3id.org/rec/asset/Damper"
+    },
+    "Tank" : {
+      "@id" : "https://w3id.org/rec/asset/Tank"
+    },
+    "WirelessAccessPoint" : {
+      "@id" : "https://w3id.org/rec/asset/WirelessAccessPoint"
+    },
+    "FireSmokeDamper" : {
+      "@id" : "https://w3id.org/rec/asset/FireSmokeDamper"
+    },
+    "rackBottomPosition" : {
+      "@id" : "https://w3id.org/rec/asset/rackBottomPosition"
+    },
+    "FanCoilUnit" : {
+      "@id" : "https://w3id.org/rec/asset/FanCoilUnit"
+    },
+    "VariableFrequencyDrive" : {
+      "@id" : "https://w3id.org/rec/asset/VariableFrequencyDrive"
+    },
+    "HeatDetector" : {
+      "@id" : "https://w3id.org/rec/asset/HeatDetector"
+    },
+    "maxVerticalRise" : {
+      "@id" : "https://w3id.org/rec/asset/maxVerticalRise",
+      "@type" : "http://qudt.org/vocab/unit/M"
+    },
+    "Boiler" : {
+      "@id" : "https://w3id.org/rec/asset/Boiler"
+    },
+    "fuelType" : {
+      "@id" : "https://w3id.org/rec/asset/fuelType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Escalator" : {
+      "@id" : "https://w3id.org/rec/asset/Escalator"
+    },
+    "WaterMeter" : {
+      "@id" : "https://w3id.org/rec/asset/WaterMeter"
+    },
+    "returnTemp" : {
+      "@id" : "https://w3id.org/rec/asset/returnTemp",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "mountedInRack" : {
+      "@id" : "https://w3id.org/rec/asset/mountedInRack",
+      "@type" : "@id"
+    },
+    "ModbusController" : {
+      "@id" : "https://w3id.org/rec/asset/ModbusController"
+    },
+    "PlumbingPumpGroup" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingPumpGroup"
+    },
+    "primaryMaxPressure" : {
+      "@id" : "https://w3id.org/rec/asset/primaryMaxPressure",
+      "@type" : "http://qudt.org/vocab/unit/KiloPA"
+    },
+    "HVACCondenserWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACCondenserWaterSystem"
+    },
+    "configuration" : {
+      "@id" : "https://w3id.org/rec/asset/configuration"
+    },
+    "FireExtinguisher" : {
+      "@id" : "https://w3id.org/rec/asset/FireExtinguisher"
+    },
+    "IntercomEntry" : {
+      "@id" : "https://w3id.org/rec/asset/IntercomEntry"
+    },
+    "HVACExhaustAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACExhaustAirSystem"
+    },
+    "FlushometerValve" : {
+      "@id" : "https://w3id.org/rec/asset/FlushometerValve"
+    },
+    "netSensibleHeatingCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/netSensibleHeatingCapacity"
+    },
+    "volumeTotal" : {
+      "@id" : "https://w3id.org/rec/asset/volumeTotal",
+      "@type" : "http://qudt.org/vocab/unit/L"
+    },
+    "PlumbingWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingWaterSystem"
+    },
+    "ModbusNetworkSystem" : {
+      "@id" : "https://w3id.org/rec/asset/ModbusNetworkSystem"
+    },
+    "PlumbingEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingEquipment"
+    },
+    "ventilationStrategy" : {
+      "@id" : "https://w3id.org/rec/asset/ventilationStrategy"
+    },
+    "AssetCollection" : {
+      "@id" : "https://w3id.org/rec/core/AssetCollection"
+    },
+    "motorPower" : {
+      "@id" : "https://w3id.org/rec/asset/motorPower",
+      "@type" : "http://qudt.org/vocab/unit/HP"
+    },
+    "PlumbingBackflowPreventer" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingBackflowPreventer"
+    },
+    "ToiletTank" : {
+      "@id" : "https://w3id.org/rec/asset/ToiletTank"
+    },
+    "medium" : {
+      "@id" : "https://w3id.org/rec/asset/medium",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "arrangement" : {
+      "@id" : "https://w3id.org/rec/asset/arrangement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HotWaterUnitHeater" : {
+      "@id" : "https://w3id.org/rec/asset/HotWaterUnitHeater"
+    },
+    "exhaustFan" : {
+      "@id" : "https://w3id.org/rec/asset/exhaustFan",
+      "@type" : "@id"
+    },
+    "NetworkSecurityEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/NetworkSecurityEquipment"
+    },
+    "inclination" : {
+      "@id" : "https://w3id.org/rec/asset/inclination",
+      "@type" : "http://qudt.org/vocab/unit/DEG"
+    },
+    "FanCoilUnitReheat" : {
+      "@id" : "https://w3id.org/rec/asset/FanCoilUnitReheat"
+    },
+    "SensorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/SensorEquipment"
+    },
+    "TransferFan" : {
+      "@id" : "https://w3id.org/rec/asset/TransferFan"
+    },
+    "powerOutput" : {
+      "@id" : "https://w3id.org/rec/asset/powerOutput"
+    },
+    "OPCDANetworkSystem" : {
+      "@id" : "https://w3id.org/rec/asset/OPCDANetworkSystem"
+    },
+    "PlumbingEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingEquipmentGroup"
+    },
+    "HVACPumpGroup" : {
+      "@id" : "https://w3id.org/rec/asset/HVACPumpGroup"
+    },
+    "dayTankCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/dayTankCapacity",
+      "@type" : "http://qudt.org/vocab/unit/L"
+    },
+    "toSpace" : {
+      "@id" : "https://w3id.org/rec/asset/toSpace",
+      "@type" : "@id"
+    },
+    "FireDetectionEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/FireDetectionEquipment"
+    },
+    "Switchgear" : {
+      "@id" : "https://w3id.org/rec/asset/Switchgear"
+    },
+    "partitionMaterial" : {
+      "@id" : "https://w3id.org/rec/asset/partitionMaterial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FireSuppressionSystem" : {
+      "@id" : "https://w3id.org/rec/asset/FireSuppressionSystem"
+    },
+    "FuelOilSystem" : {
+      "@id" : "https://w3id.org/rec/asset/FuelOilSystem"
+    },
+    "shortCircuitRating" : {
+      "@id" : "https://w3id.org/rec/asset/shortCircuitRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "deltaTemp" : {
+      "@id" : "https://w3id.org/rec/asset/deltaTemp",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "ElectricalCircuit" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalCircuit"
+    },
+    "inputPhases" : {
+      "@id" : "https://w3id.org/rec/asset/inputPhases"
+    },
+    "SprinklerBackflowPreventer" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerBackflowPreventer"
+    },
+    "Agent" : {
+      "@id" : "https://w3id.org/rec/core/Agent"
+    },
+    "maxLength" : {
+      "@id" : "https://w3id.org/rec/asset/maxLength",
+      "@type" : "http://qudt.org/vocab/unit/M"
+    },
+    "CeilingFan" : {
+      "@id" : "https://w3id.org/rec/asset/CeilingFan"
+    },
+    "PropaneSystem" : {
+      "@id" : "https://w3id.org/rec/asset/PropaneSystem"
+    },
+    "numberOfHandles" : {
+      "@id" : "https://w3id.org/rec/asset/numberOfHandles",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "tankCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/tankCapacity",
+      "@type" : "http://qudt.org/vocab/unit/L"
+    },
+    "DomesticColdWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DomesticColdWaterSystem"
+    },
+    "DomesticHotWaterRecircSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DomesticHotWaterRecircSystem"
+    },
+    "FireAlarmSystem" : {
+      "@id" : "https://w3id.org/rec/asset/FireAlarmSystem"
+    },
+    "HeatTracing" : {
+      "@id" : "https://w3id.org/rec/asset/HeatTracing"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "maxCurrentRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxCurrentRating",
+      "@type" : "http://qudt.org/vocab/unit/A"
+    },
+    "PipeConnection" : {
+      "@id" : "https://w3id.org/rec/asset/PipeConnection"
+    },
+    "IrrigationSystem" : {
+      "@id" : "https://w3id.org/rec/asset/IrrigationSystem"
+    },
+    "WasteVentDrainageSystem" : {
+      "@id" : "https://w3id.org/rec/asset/WasteVentDrainageSystem"
+    },
+    "ElectricTankWaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricTankWaterHeater"
+    },
+    "SecurityEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/SecurityEquipment"
+    },
+    "Transformer" : {
+      "@id" : "https://w3id.org/rec/asset/Transformer"
+    },
+    "windowMaterial" : {
+      "@id" : "https://w3id.org/rec/asset/windowMaterial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "returnFan" : {
+      "@id" : "https://w3id.org/rec/asset/returnFan",
+      "@type" : "@id"
+    },
+    "EmergencyLight" : {
+      "@id" : "https://w3id.org/rec/asset/EmergencyLight"
+    },
+    "UPS" : {
+      "@id" : "https://w3id.org/rec/asset/UPS"
+    },
+    "AccessControlEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/AccessControlEquipment"
+    },
+    "isFedBy" : {
+      "@id" : "https://w3id.org/rec/asset/isFedBy",
+      "@type" : "@id"
+    },
+    "FurnitureCollection" : {
+      "@id" : "https://w3id.org/rec/asset/FurnitureCollection"
+    },
+    "supplyTemp" : {
+      "@id" : "https://w3id.org/rec/asset/supplyTemp",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "SprinklerPressureReducingValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerPressureReducingValve"
+    },
+    "voltage" : {
+      "@id" : "https://w3id.org/rec/asset/voltage",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "PlumbingExpansionTank" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingExpansionTank"
+    },
+    "Door" : {
+      "@id" : "https://w3id.org/rec/asset/Door"
+    },
+    "rackTopPosition" : {
+      "@id" : "https://w3id.org/rec/asset/rackTopPosition"
+    },
+    "HVACHeatTracing" : {
+      "@id" : "https://w3id.org/rec/asset/HVACHeatTracing"
+    },
+    "minVolumeFlowRating" : {
+      "@id" : "https://w3id.org/rec/asset/minVolumeFlowRating",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "FireSprinklerHead" : {
+      "@id" : "https://w3id.org/rec/asset/FireSprinklerHead"
+    },
+    "ThermalMeter" : {
+      "@id" : "https://w3id.org/rec/asset/ThermalMeter"
+    },
+    "volumeFlow" : {
+      "@id" : "https://w3id.org/rec/asset/volumeFlow",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "headCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/headCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "SmokeCarbonMonoxideDetector" : {
+      "@id" : "https://w3id.org/rec/asset/SmokeCarbonMonoxideDetector"
+    },
+    "IrrigationPump" : {
+      "@id" : "https://w3id.org/rec/asset/IrrigationPump"
+    },
+    "mainBus" : {
+      "@id" : "https://w3id.org/rec/asset/mainBus",
+      "@type" : "@id"
+    },
+    "RoofDrain" : {
+      "@id" : "https://w3id.org/rec/asset/RoofDrain"
+    },
+    "ArchitecturalAssetCollection" : {
+      "@id" : "https://w3id.org/rec/asset/ArchitecturalAssetCollection"
+    },
+    "installationType" : {
+      "@id" : "https://w3id.org/rec/asset/installationType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "condensate" : {
+      "@id" : "https://w3id.org/rec/asset/condensate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "supplyFanNominalAirflow" : {
+      "@id" : "https://w3id.org/rec/asset/supplyFanNominalAirflow",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "DomesticWaterPump" : {
+      "@id" : "https://w3id.org/rec/asset/DomesticWaterPump"
+    },
+    "heightRUs" : {
+      "@id" : "https://w3id.org/rec/asset/heightRUs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "nominalDiameter" : {
+      "@id" : "https://w3id.org/rec/asset/nominalDiameter",
+      "@type" : "http://qudt.org/vocab/unit/MilliM"
+    },
+    "VAVBox" : {
+      "@id" : "https://w3id.org/rec/asset/VAVBox"
+    },
+    "ToiletFlushometer" : {
+      "@id" : "https://w3id.org/rec/asset/ToiletFlushometer"
+    },
+    "flushingType" : {
+      "@id" : "https://w3id.org/rec/asset/flushingType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "EquipmentCollection" : {
+      "@id" : "https://w3id.org/rec/asset/EquipmentCollection"
+    },
+    "minAirflowRating" : {
+      "@id" : "https://w3id.org/rec/asset/minAirflowRating",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "minVoltageRating" : {
+      "@id" : "https://w3id.org/rec/asset/minVoltageRating",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "poeType" : {
+      "@id" : "https://w3id.org/rec/asset/poeType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "PlumbingTank" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingTank"
+    },
+    "maxNumberOfPoles" : {
+      "@id" : "https://w3id.org/rec/asset/maxNumberOfPoles",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "expectedReplacementCost" : {
+      "@id" : "https://w3id.org/rec/asset/expectedReplacementCost",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dehumidificationMethod" : {
+      "@id" : "https://w3id.org/rec/asset/dehumidificationMethod"
+    },
+    "ConveyanceEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/ConveyanceEquipmentGroup"
+    },
+    "airflowModulation" : {
+      "@id" : "https://w3id.org/rec/asset/airflowModulation"
+    },
+    "LightingEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/LightingEquipmentGroup"
+    },
+    "maxTravelSpeed" : {
+      "@id" : "https://w3id.org/rec/asset/maxTravelSpeed",
+      "@type" : "http://qudt.org/vocab/unit/M-PER-SEC"
+    },
+    "DrainageSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DrainageSystem"
+    },
+    "DomesticNonPotableWaterSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DomesticNonPotableWaterSystem"
+    },
+    "ChilledWaterPlant" : {
+      "@id" : "https://w3id.org/rec/asset/ChilledWaterPlant"
+    },
+    "PlumbingShutOffValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingShutOffValve"
+    },
+    "ArchitecturalAsset" : {
+      "@id" : "https://w3id.org/rec/asset/ArchitecturalAsset"
+    },
+    "Toilet" : {
+      "@id" : "https://w3id.org/rec/asset/Toilet"
+    },
+    "primaryMaxTemperature" : {
+      "@id" : "https://w3id.org/rec/asset/primaryMaxTemperature",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "outsideDiameter" : {
+      "@id" : "https://w3id.org/rec/asset/outsideDiameter",
+      "@type" : "http://qudt.org/vocab/unit/MilliM"
+    },
+    "heatingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/heatingMethod",
+      "@type" : "@id"
+    },
+    "minCurrentRating" : {
+      "@id" : "https://w3id.org/rec/asset/minCurrentRating",
+      "@type" : "http://qudt.org/vocab/unit/A"
+    },
+    "outputVoltage" : {
+      "@id" : "https://w3id.org/rec/asset/outputVoltage",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "ElectricalPanelboard" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalPanelboard"
+    },
+    "returnFanMotorSize" : {
+      "@id" : "https://w3id.org/rec/asset/returnFanMotorSize",
+      "@type" : "http://qudt.org/vocab/unit/HP"
+    },
+    "Fan" : {
+      "@id" : "https://w3id.org/rec/asset/Fan"
+    },
+    "maxVolumeFlowRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxVolumeFlowRating",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "netSensibleCoolingCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/netSensibleCoolingCapacity"
+    },
+    "Drain" : {
+      "@id" : "https://w3id.org/rec/asset/Drain"
+    },
+    "preHeatingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/preHeatingMethod",
+      "@type" : "@id"
+    },
+    "SprinklerValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerValve"
+    },
+    "HVACEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/HVACEquipmentGroup"
+    },
+    "substance" : {
+      "@id" : "https://w3id.org/rec/asset/substance"
+    },
+    "CarbonMonoxideDetector" : {
+      "@id" : "https://w3id.org/rec/asset/CarbonMonoxideDetector"
+    },
+    "HVACHumidificationSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACHumidificationSystem"
+    },
+    "LeakDetectorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/LeakDetectorEquipment"
+    },
+    "SurveillanceNVR" : {
+      "@id" : "https://w3id.org/rec/asset/SurveillanceNVR"
+    },
+    "voltagePrimary" : {
+      "@id" : "https://w3id.org/rec/asset/voltagePrimary",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "ICTEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/ICTEquipment"
+    },
+    "Window" : {
+      "@id" : "https://w3id.org/rec/asset/Window"
+    },
+    "voltageSecondary" : {
+      "@id" : "https://w3id.org/rec/asset/voltageSecondary",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "PlumbingSystem" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingSystem"
+    },
+    "ThermostatEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/ThermostatEquipment"
+    },
+    "ElectricTanklessWaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricTanklessWaterHeater"
+    },
+    "pipeOutlet" : {
+      "@id" : "https://w3id.org/rec/asset/pipeOutlet",
+      "@type" : "@id"
+    },
+    "CoolingTower" : {
+      "@id" : "https://w3id.org/rec/asset/CoolingTower"
+    },
+    "maxVoltageRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxVoltageRating",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "HVACSupplyAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACSupplyAirSystem"
+    },
+    "frameMaterial" : {
+      "@id" : "https://w3id.org/rec/asset/frameMaterial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eer" : {
+      "@id" : "https://w3id.org/rec/asset/eer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "AirCompressor" : {
+      "@id" : "https://w3id.org/rec/asset/AirCompressor"
+    },
+    "maintenanceInterval" : {
+      "@id" : "https://w3id.org/rec/asset/maintenanceInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "flowCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/flowCapacity",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "HVACReturnAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACReturnAirSystem"
+    },
+    "Elevator" : {
+      "@id" : "https://w3id.org/rec/asset/Elevator"
+    },
+    "Bed" : {
+      "@id" : "https://w3id.org/rec/asset/Bed"
+    },
+    "FireAlarmEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/FireAlarmEquipment"
+    },
+    "workingPressure" : {
+      "@id" : "https://w3id.org/rec/asset/workingPressure",
+      "@type" : "http://qudt.org/vocab/unit/PSI"
+    },
+    "EthernetSwitch" : {
+      "@id" : "https://w3id.org/rec/asset/EthernetSwitch"
+    },
+    "pumpingMedia" : {
+      "@id" : "https://w3id.org/rec/asset/pumpingMedia",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MeterEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/MeterEquipmentGroup"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Partition" : {
+      "@id" : "https://w3id.org/rec/asset/Partition"
+    },
+    "CleanAgentTank" : {
+      "@id" : "https://w3id.org/rec/asset/CleanAgentTank"
+    },
+    "AudioVisualEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/AudioVisualEquipment"
+    },
+    "ElectricUnitHeater" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricUnitHeater"
+    },
+    "FloorDrain" : {
+      "@id" : "https://w3id.org/rec/asset/FloorDrain"
+    },
+    "Server" : {
+      "@id" : "https://w3id.org/rec/asset/Server"
+    },
+    "DedicatedOutdoorAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DedicatedOutdoorAirSystem"
+    },
+    "LightingEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/LightingEquipment"
+    },
+    "CleanAgentEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/CleanAgentEquipment"
+    },
+    "type" : {
+      "@id" : "https://w3id.org/rec/asset/type"
+    },
+    "MovingWalkway" : {
+      "@id" : "https://w3id.org/rec/asset/MovingWalkway"
+    },
+    "SurveillanceCamera" : {
+      "@id" : "https://w3id.org/rec/asset/SurveillanceCamera"
+    },
+    "pressureCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/pressureCapacity",
+      "@type" : "http://qudt.org/vocab/unit/PSI"
+    },
+    "DuctConnection" : {
+      "@id" : "https://w3id.org/rec/asset/DuctConnection"
+    },
+    "Luminaire" : {
+      "@id" : "https://w3id.org/rec/asset/Luminaire"
+    },
+    "WaterFilter" : {
+      "@id" : "https://w3id.org/rec/asset/WaterFilter"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "HVACBackflowPreventer" : {
+      "@id" : "https://w3id.org/rec/asset/HVACBackflowPreventer"
+    },
+    "AirFilter" : {
+      "@id" : "https://w3id.org/rec/asset/AirFilter"
+    },
+    "ElectricalCircuit3Pole" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalCircuit3Pole"
+    },
+    "Chair" : {
+      "@id" : "https://w3id.org/rec/asset/Chair"
+    },
+    "ElectricalPanelboardMCB" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalPanelboardMCB"
+    },
+    "IntrusionDetectionEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/IntrusionDetectionEquipment"
+    },
+    "PlumbingHeatTracing" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingHeatTracing"
+    },
+    "energyRate" : {
+      "@id" : "https://w3id.org/rec/asset/energyRate",
+      "@type" : "http://qudt.org/vocab/unit/KiloW"
+    },
+    "inputVoltage" : {
+      "@id" : "https://w3id.org/rec/asset/inputVoltage",
+      "@type" : "http://qudt.org/vocab/unit/V"
+    },
+    "powerOutputKVA" : {
+      "@id" : "https://w3id.org/rec/asset/powerOutputKVA",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "PlumbingPressureReducingValve" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingPressureReducingValve"
+    },
+    "ICTEquipmentGroup" : {
+      "@id" : "https://w3id.org/rec/asset/ICTEquipmentGroup"
+    },
+    "ExitSign" : {
+      "@id" : "https://w3id.org/rec/asset/ExitSign"
+    },
+    "energyTotal" : {
+      "@id" : "https://w3id.org/rec/asset/energyTotal",
+      "@type" : "http://qudt.org/vocab/unit/KiloW-HR"
+    },
+    "HVACGlobeValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACGlobeValve"
+    },
+    "BACnetNetworkSystem" : {
+      "@id" : "https://w3id.org/rec/asset/BACnetNetworkSystem"
+    },
+    "HVACBalancingValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACBalancingValve"
+    },
+    "WaterFeatureSystem" : {
+      "@id" : "https://w3id.org/rec/asset/WaterFeatureSystem"
+    },
+    "volume" : {
+      "@id" : "https://w3id.org/rec/asset/volume",
+      "@type" : "http://qudt.org/vocab/unit/L"
+    },
+    "maxMassFlowRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxMassFlowRating",
+      "@type" : "http://qudt.org/vocab/unit/KiloGM-PER-HR"
+    },
+    "GasSystem" : {
+      "@id" : "https://w3id.org/rec/asset/GasSystem"
+    },
+    "ElevatorMachine" : {
+      "@id" : "https://w3id.org/rec/asset/ElevatorMachine"
+    },
+    "PreActionEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/PreActionEquipment"
+    },
+    "secondaryMaxTemperature" : {
+      "@id" : "https://w3id.org/rec/asset/secondaryMaxTemperature",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "FireProtectionSystem" : {
+      "@id" : "https://w3id.org/rec/asset/FireProtectionSystem"
+    },
+    "wifiSignalStrength" : {
+      "@id" : "https://w3id.org/rec/asset/wifiSignalStrength",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "maxRotationSpeed" : {
+      "@id" : "https://w3id.org/rec/asset/maxRotationSpeed",
+      "@type" : "http://qudt.org/vocab/unit/REV-PER-MIN"
+    },
+    "batteryPercentage" : {
+      "@id" : "https://w3id.org/rec/asset/batteryPercentage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "ElectricalDistributionEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalDistributionEquipment"
+    },
+    "Gateway" : {
+      "@id" : "https://w3id.org/rec/asset/Gateway"
+    },
+    "Pump" : {
+      "@id" : "https://w3id.org/rec/asset/Pump"
+    },
+    "Component" : {
+      "@id" : "https://w3id.org/rec/asset/Component"
+    },
+    "HVACMixingBox" : {
+      "@id" : "https://w3id.org/rec/asset/HVACMixingBox"
+    },
+    "SprinklerGlobeValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerGlobeValve"
+    },
+    "modeOfOperation" : {
+      "@id" : "https://w3id.org/rec/asset/modeOfOperation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SupplyFan" : {
+      "@id" : "https://w3id.org/rec/asset/SupplyFan"
+    },
+    "TanklessWaterHeater" : {
+      "@id" : "https://w3id.org/rec/asset/TanklessWaterHeater"
+    },
+    "secondaryFlowCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/secondaryFlowCapacity",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "switchingMechanism" : {
+      "@id" : "https://w3id.org/rec/asset/switchingMechanism"
+    },
+    "FireSuppressionEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/FireSuppressionEquipment"
+    },
+    "compressorType" : {
+      "@id" : "https://w3id.org/rec/asset/compressorType"
+    },
+    "kFactorMetric" : {
+      "@id" : "https://w3id.org/rec/asset/kFactorMetric",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "HVACSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACSystem"
+    },
+    "VideoSurveillanceEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/VideoSurveillanceEquipment"
+    },
+    "NaturalGasSystem" : {
+      "@id" : "https://w3id.org/rec/asset/NaturalGasSystem"
+    },
+    "ElectricalSystem" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalSystem"
+    },
+    "HVACTank" : {
+      "@id" : "https://w3id.org/rec/asset/HVACTank"
+    },
+    "SafetyLighting" : {
+      "@id" : "https://w3id.org/rec/asset/SafetyLighting"
+    },
+    "expectedLife" : {
+      "@id" : "https://w3id.org/rec/asset/expectedLife",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "phase2" : {
+      "@id" : "https://w3id.org/rec/asset/phase2"
+    },
+    "FireProtectionEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/FireProtectionEquipment"
+    },
+    "weightCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/weightCapacity",
+      "@type" : "http://qudt.org/vocab/unit/KiloGM"
+    },
+    "turnoverDate" : {
+      "@id" : "https://w3id.org/rec/asset/turnoverDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "bulkStorageCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/bulkStorageCapacity",
+      "@type" : "http://qudt.org/vocab/unit/L"
+    },
+    "AccessReader" : {
+      "@id" : "https://w3id.org/rec/asset/AccessReader"
+    },
+    "size" : {
+      "@id" : "https://w3id.org/rec/asset/size",
+      "@type" : "http://qudt.org/vocab/unit/MilliM"
+    },
+    "VibrationSensorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/VibrationSensorEquipment"
+    },
+    "service" : {
+      "@id" : "https://w3id.org/rec/asset/service"
+    },
+    "PreActionTank" : {
+      "@id" : "https://w3id.org/rec/asset/PreActionTank"
+    },
+    "maxFlowRate" : {
+      "@id" : "https://w3id.org/rec/asset/maxFlowRate",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "Controller" : {
+      "@id" : "https://w3id.org/rec/asset/Controller"
+    },
+    "expectedEndOfLife" : {
+      "@id" : "https://w3id.org/rec/asset/expectedEndOfLife",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "feeds" : {
+      "@id" : "https://w3id.org/rec/asset/feeds",
+      "@type" : "@id"
+    },
+    "installedBy" : {
+      "@id" : "https://w3id.org/rec/asset/installedBy",
+      "@type" : "@id"
+    },
+    "SprinklerShutOffValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerShutOffValve"
+    },
+    "ElectricalPanelboardMLO" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalPanelboardMLO"
+    },
+    "comment" : {
+      "@id" : "https://w3id.org/rec/core/comment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "OPCUANetworkSystem" : {
+      "@id" : "https://w3id.org/rec/asset/OPCUANetworkSystem"
+    },
+    "primaryCoolingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/primaryCoolingMethod",
+      "@type" : "@id"
+    },
+    "ElectricalBus" : {
+      "@id" : "https://w3id.org/rec/asset/ElectricalBus"
+    },
+    "LightingSystem" : {
+      "@id" : "https://w3id.org/rec/asset/LightingSystem"
+    },
+    "supplyFanMotorSize" : {
+      "@id" : "https://w3id.org/rec/asset/supplyFanMotorSize",
+      "@type" : "http://qudt.org/vocab/unit/HP"
+    },
+    "phase1" : {
+      "@id" : "https://w3id.org/rec/asset/phase1"
+    },
+    "JockeyPump" : {
+      "@id" : "https://w3id.org/rec/asset/JockeyPump"
+    },
+    "Chiller" : {
+      "@id" : "https://w3id.org/rec/asset/Chiller"
+    },
+    "CAVBox" : {
+      "@id" : "https://w3id.org/rec/asset/CAVBox"
+    },
+    "ACElectricalSystem" : {
+      "@id" : "https://w3id.org/rec/asset/ACElectricalSystem"
+    },
+    "AccessControlPanel" : {
+      "@id" : "https://w3id.org/rec/asset/AccessControlPanel"
+    },
+    "HVACEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/HVACEquipment"
+    },
+    "SprinklerBalancingValve" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerBalancingValve"
+    },
+    "StormDrainageSystem" : {
+      "@id" : "https://w3id.org/rec/asset/StormDrainageSystem"
+    },
+    "System" : {
+      "@id" : "https://w3id.org/rec/asset/System"
+    },
+    "Sink" : {
+      "@id" : "https://w3id.org/rec/asset/Sink"
+    },
+    "maxTemperatureRating" : {
+      "@id" : "https://w3id.org/rec/asset/maxTemperatureRating",
+      "@type" : "http://qudt.org/vocab/unit/DEG_C"
+    },
+    "thickness" : {
+      "@id" : "https://w3id.org/rec/asset/thickness",
+      "@type" : "http://qudt.org/vocab/unit/CentiM"
+    },
+    "TerminalUnit" : {
+      "@id" : "https://w3id.org/rec/asset/TerminalUnit"
+    },
+    "ITRack" : {
+      "@id" : "https://w3id.org/rec/asset/ITRack"
+    },
+    "reHeatingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/reHeatingMethod",
+      "@type" : "@id"
+    },
+    "AirHandlingUnit" : {
+      "@id" : "https://w3id.org/rec/asset/AirHandlingUnit"
+    },
+    "returnFanNominalAirflow" : {
+      "@id" : "https://w3id.org/rec/asset/returnFanNominalAirflow",
+      "@type" : "http://qudt.org/vocab/unit/L-PER-SEC"
+    },
+    "PlumbingWaterTreatment" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingWaterTreatment"
+    },
+    "Valve" : {
+      "@id" : "https://w3id.org/rec/asset/Valve"
+    },
+    "TransferSwitch" : {
+      "@id" : "https://w3id.org/rec/asset/TransferSwitch"
+    },
+    "pipeInlet" : {
+      "@id" : "https://w3id.org/rec/asset/pipeInlet",
+      "@type" : "@id"
+    },
+    "BackdraftDamper" : {
+      "@id" : "https://w3id.org/rec/asset/BackdraftDamper"
+    },
+    "BarrierAsset" : {
+      "@id" : "https://w3id.org/rec/asset/BarrierAsset"
+    },
+    "secondaryCoolingMethod" : {
+      "@id" : "https://w3id.org/rec/asset/secondaryCoolingMethod",
+      "@type" : "@id"
+    },
+    "DCElectricalSystem" : {
+      "@id" : "https://w3id.org/rec/asset/DCElectricalSystem"
+    },
+    "numberOfPorts" : {
+      "@id" : "https://w3id.org/rec/asset/numberOfPorts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "HVACOutsideAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACOutsideAirSystem"
+    },
+    "PeopleCountSensorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/PeopleCountSensorEquipment"
+    },
+    "standbyPowerKVA" : {
+      "@id" : "https://w3id.org/rec/asset/standbyPowerKVA",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "measures" : {
+      "@id" : "https://w3id.org/rec/asset/measures",
+      "@type" : "@id"
+    },
+    "EjectorPump" : {
+      "@id" : "https://w3id.org/rec/asset/EjectorPump"
+    },
+    "initialCost" : {
+      "@id" : "https://w3id.org/rec/asset/initialCost",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PreActionCabinet" : {
+      "@id" : "https://w3id.org/rec/asset/PreActionCabinet"
+    },
+    "wireSize" : {
+      "@id" : "https://w3id.org/rec/asset/wireSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HVACRefrigerantSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACRefrigerantSystem"
+    },
+    "CondensingUnit" : {
+      "@id" : "https://w3id.org/rec/asset/CondensingUnit"
+    },
+    "DaylightSensorEquipment" : {
+      "@id" : "https://w3id.org/rec/asset/DaylightSensorEquipment"
+    },
+    "weight" : {
+      "@id" : "https://w3id.org/rec/asset/weight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "supplyFan" : {
+      "@id" : "https://w3id.org/rec/asset/supplyFan",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "systemPressure" : {
+      "@id" : "https://w3id.org/rec/asset/systemPressure",
+      "@type" : "http://qudt.org/vocab/unit/PSI"
+    },
+    "nominalExternalStaticPressure" : {
+      "@id" : "https://w3id.org/rec/asset/nominalExternalStaticPressure",
+      "@type" : "http://qudt.org/vocab/unit/KiloPA"
+    },
+    "humidificationMethod" : {
+      "@id" : "https://w3id.org/rec/asset/humidificationMethod"
+    },
+    "leakageClass" : {
+      "@id" : "https://w3id.org/rec/asset/leakageClass"
+    },
+    "portSpeed" : {
+      "@id" : "https://w3id.org/rec/asset/portSpeed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ExhaustFan" : {
+      "@id" : "https://w3id.org/rec/asset/ExhaustFan"
+    },
+    "HVACTransferAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACTransferAirSystem"
+    },
+    "HVACPump" : {
+      "@id" : "https://w3id.org/rec/asset/HVACPump"
+    },
+    "fromSpace" : {
+      "@id" : "https://w3id.org/rec/asset/fromSpace",
+      "@type" : "@id"
+    },
+    "powerInput" : {
+      "@id" : "https://w3id.org/rec/asset/powerInput"
+    },
+    "CBRating" : {
+      "@id" : "https://w3id.org/rec/asset/CBRating",
+      "@type" : "http://qudt.org/vocab/unit/A"
+    },
+    "PlumbingPressureReducingStation" : {
+      "@id" : "https://w3id.org/rec/asset/PlumbingPressureReducingStation"
+    },
+    "phase3" : {
+      "@id" : "https://w3id.org/rec/asset/phase3"
+    },
+    "dischargeDuctworkConfiguration" : {
+      "@id" : "https://w3id.org/rec/asset/dischargeDuctworkConfiguration"
+    },
+    "HVACSolenoidValve" : {
+      "@id" : "https://w3id.org/rec/asset/HVACSolenoidValve"
+    },
+    "ventilationConfiguration" : {
+      "@id" : "https://w3id.org/rec/asset/ventilationConfiguration"
+    },
+    "bladeType" : {
+      "@id" : "https://w3id.org/rec/asset/bladeType"
+    },
+    "nominalHeatingCapacity" : {
+      "@id" : "https://w3id.org/rec/asset/nominalHeatingCapacity"
+    },
+    "mountedOn" : {
+      "@id" : "https://w3id.org/rec/asset/mountedOn",
+      "@type" : "@id"
+    },
+    "HVACAirSystem" : {
+      "@id" : "https://w3id.org/rec/asset/HVACAirSystem"
+    },
+    "SprinklerPressureReducingStation" : {
+      "@id" : "https://w3id.org/rec/asset/SprinklerPressureReducingStation"
+    },
+    "phases" : {
+      "@id" : "https://w3id.org/rec/asset/phases"
+    },
+    "material" : {
+      "@id" : "https://w3id.org/rec/asset/material",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "frequency" : {
+      "@id" : "https://w3id.org/rec/asset/frequency",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    }
+  }
+}

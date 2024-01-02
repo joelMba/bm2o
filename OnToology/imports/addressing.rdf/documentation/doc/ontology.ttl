@@ -1,0 +1,118 @@
+@prefix : <https://w3id.org/rec/addressing/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/addressing/> .
+
+<https://w3id.org/rec/addressing/> rdf:type owl:Ontology ;
+                                    owl:versionIRI <https://w3id.org/rec/addressing/3.3/> ;
+                                    owl:imports <https://w3id.org/rec/business/3.3/> ,
+                                                <https://w3id.org/rec/core/3.3/> ;
+                                    <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> ;
+                                    <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" ;
+                                    <http://purl.org/dc/elements/1.1/description> "This pluggable REC module covers the addressing domain."@en ;
+                                    <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                                    <http://purl.org/dc/elements/1.1/title> "RealEstateCore Addressing Module" ;
+                                    <http://purl.org/dc/terms/modified> "2021-09-14" ;
+                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "addressing" ;
+                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/addressing/3.3/" ;
+                                    owl:versionInfo "3.3"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/rec/addressing/address
+:address rdf:type owl:ObjectProperty ;
+         rdfs:range :Address ;
+         rdfs:label "address"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/rec/addressing/addressLine1
+:addressLine1 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Address ;
+              rdfs:range xsd:string ;
+              rdfs:label "address line 1"@en .
+
+
+###  https://w3id.org/rec/addressing/addressLine2
+:addressLine2 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Address ;
+              rdfs:range xsd:string ;
+              rdfs:label "address line 2"@en .
+
+
+###  https://w3id.org/rec/addressing/city
+:city rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Address ;
+      rdfs:range xsd:string ;
+      rdfs:label "city"@en .
+
+
+###  https://w3id.org/rec/addressing/country
+:country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Address ;
+         rdfs:range xsd:string ;
+         rdfs:label "country"@en .
+
+
+###  https://w3id.org/rec/addressing/postalCode
+:postalCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Address ;
+            rdfs:range xsd:string ;
+            rdfs:label "postal code"@en .
+
+
+###  https://w3id.org/rec/addressing/region
+:region rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Address ;
+        rdfs:range xsd:string ;
+        rdfs:label "region (state/province)"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/rec/addressing/Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/rec/core/Information> ;
+         rdfs:label "Address"@en ;
+         <https://w3id.org/rec/metadata/dtdlType> "component" .
+
+
+###  https://w3id.org/rec/business/TenantUnit
+<https://w3id.org/rec/business/TenantUnit> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :address ;
+                                                             owl:allValuesFrom :Address
+                                                           ] .
+
+
+###  https://w3id.org/rec/core/Building
+<https://w3id.org/rec/core/Building> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :address ;
+                                                       owl:allValuesFrom :Address
+                                                     ] .
+
+
+###  https://w3id.org/rec/core/Land
+<https://w3id.org/rec/core/Land> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :address ;
+                                                   owl:allValuesFrom :Address
+                                                 ] .
+
+
+###  https://w3id.org/rec/core/SubBuilding
+<https://w3id.org/rec/core/SubBuilding> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :address ;
+                                                          owl:allValuesFrom :Address
+                                                        ] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
