@@ -1,0 +1,189 @@
+{
+  "@context" : {
+    "Unit" : {
+      "@id" : "http://qudt.org/schema/qudt/Unit"
+    },
+    "applicableSIUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/applicableSIUnit",
+      "@type" : "@id"
+    },
+    "url" : {
+      "@id" : "http://qudt.org/schema/qudt/url"
+    },
+    "baseSIUnitDimensions" : {
+      "@id" : "http://qudt.org/schema/qudt/baseSIUnitDimensions"
+    },
+    "applicableImperialUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/applicableImperialUnit",
+      "@type" : "@id"
+    },
+    "isScalingOf" : {
+      "@id" : "http://qudt.org/schema/qudt/isScalingOf",
+      "@type" : "@id"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "id" : {
+      "@id" : "http://qudt.org/schema/qudt/id"
+    },
+    "baseUnitDimensions" : {
+      "@id" : "http://qudt.org/schema/qudt/baseUnitDimensions"
+    },
+    "isDerivedUnitOfSystem" : {
+      "@id" : "http://qudt.org/schema/qudt/isDerivedUnitOfSystem"
+    },
+    "exactMatch" : {
+      "@id" : "http://qudt.org/schema/qudt/exactMatch",
+      "@type" : "@id"
+    },
+    "expression" : {
+      "@id" : "http://qudt.org/schema/qudt/expression"
+    },
+    "closeMatch" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "@type" : "@id"
+    },
+    "baseUSCustomaryUnitDimensions" : {
+      "@id" : "http://qudt.org/schema/qudt/baseUSCustomaryUnitDimensions"
+    },
+    "uneceCommonCode" : {
+      "@id" : "http://qudt.org/schema/qudt/uneceCommonCode"
+    },
+    "normativeReference" : {
+      "@id" : "http://qudt.org/schema/qudt/normativeReference"
+    },
+    "applicableUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/applicableUnit",
+      "@type" : "@id"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
+    "symbolToken" : {
+      "@id" : "http://qudt.org/schema/qudt/symbolToken"
+    },
+    "isDerivedCoherentUnitOfSystem" : {
+      "@id" : "http://qudt.org/schema/qudt/isDerivedCoherentUnitOfSystem"
+    },
+    "guidance" : {
+      "@id" : "http://qudt.org/schema/qudt/guidance"
+    },
+    "QuantityKind" : {
+      "@id" : "http://qudt.org/schema/qudt/QuantityKind"
+    },
+    "DimensionlessUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/DimensionlessUnit"
+    },
+    "symbol" : {
+      "@id" : "http://qudt.org/schema/qudt/symbol"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "baseCGSUnitDimensions" : {
+      "@id" : "http://qudt.org/schema/qudt/baseCGSUnitDimensions"
+    },
+    "quantityKind" : {
+      "@id" : "http://qudt.org/schema/qudt/quantityKind"
+    },
+    "latexSymbol" : {
+      "@id" : "http://qudt.org/schema/qudt/latexSymbol"
+    },
+    "outOfScope" : {
+      "@id" : "http://qudt.org/schema/qudt/outOfScope"
+    },
+    "hasGovernance" : {
+      "@id" : "http://www.linkedmodel.org/owl/schema/core#hasGovernance"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "conversionOffset" : {
+      "@id" : "http://qudt.org/schema/qudt/conversionOffset"
+    },
+    "conversionMultiplier" : {
+      "@id" : "http://qudt.org/schema/qudt/conversionMultiplier"
+    },
+    "baseISOUnitDimensions" : {
+      "@id" : "http://qudt.org/schema/qudt/baseISOUnitDimensions"
+    },
+    "dbpediaMatch" : {
+      "@id" : "http://qudt.org/schema/qudt/dbpediaMatch"
+    },
+    "conversionCoefficient" : {
+      "@id" : "http://qudt.org/schema/qudt/conversionCoefficient"
+    },
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "iec61360Code" : {
+      "@id" : "http://qudt.org/schema/qudt/iec61360Code"
+    },
+    "todo" : {
+      "@id" : "http://www.linkedmodel.org/schema/vaem#todo"
+    },
+    "informativeReference" : {
+      "@id" : "http://qudt.org/schema/qudt/informativeReference"
+    },
+    "endpoint" : {
+      "@id" : "https://karlhammar.com/owl2oas/o2o.owl#endpoint"
+    },
+    "ucumCode" : {
+      "@id" : "http://qudt.org/schema/qudt/ucumCode"
+    },
+    "broader" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+      "@type" : "@id"
+    },
+    "DerivedUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/DerivedUnit"
+    },
+    "siUnitsExpression" : {
+      "@id" : "http://qudt.org/schema/qudt/siUnitsExpression"
+    },
+    "abbreviation" : {
+      "@id" : "http://qudt.org/schema/qudt/abbreviation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "baseImperialUnitDimensions" : {
+      "@id" : "http://qudt.org/schema/qudt/baseImperialUnitDimensions"
+    },
+    "comment" : {
+      "@id" : "http://www.linkedmodel.org/schema/vaem#comment"
+    },
+    "isoNormativeReference" : {
+      "@id" : "http://qudt.org/schema/qudt/isoNormativeReference"
+    },
+    "LogarithmicUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/LogarithmicUnit"
+    },
+    "included" : {
+      "@id" : "https://karlhammar.com/owl2oas/o2o.owl#included"
+    },
+    "latexDefinition" : {
+      "@id" : "http://qudt.org/schema/qudt/latexDefinition"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "plainTextDescription" : {
+      "@id" : "http://qudt.org/schema/qudt/plainTextDescription"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "hasQuantityKind" : {
+      "@id" : "http://qudt.org/schema/qudt/hasQuantityKind",
+      "@type" : "@id"
+    }
+  }
+}
