@@ -1,0 +1,159 @@
+<https://w3id.org/rec/agents/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/agents/3.3/> .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rec/core/3.3/> .
+<https://w3id.org/rec/agents/> <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/description> "This REC model covers basic types of agents (people, organizations, groups), structurally mostly aligned with FOAF -- divergences are noted in the respective propertys' documentation."@en .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/title> "RealEstateCore Agents Module" .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/terms/modified> "2020-06-23" .
+<https://w3id.org/rec/agents/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "agents" .
+<https://w3id.org/rec/agents/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/agents/3.3/" .
+<https://w3id.org/rec/agents/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What is Karl Hammar's GitHub account ID?"@en .
+<https://w3id.org/rec/agents/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What is the RealEstateCore organizational GitHub account ID?"@en .
+<https://w3id.org/rec/agents/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "Who are the members of the RealEstateCore release engineering team?"@en .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2000/01/rdf-schema#comment> "The Agents module is work-in-progress; requirements are rather unclear as of yet."@en .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/rec/> .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2002/07/owl#versionInfo> "3.3" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/agents/hasMember
+<https://w3id.org/rec/agents/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/agents/hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Organization> .
+<https://w3id.org/rec/agents/hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the individual Persons that are members of an Organization. For member Organizations, use hasPart."@en .
+<https://w3id.org/rec/agents/hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has member"@en .
+# 
+# https://w3id.org/rec/agents/isMemberOf
+<https://w3id.org/rec/agents/isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/agents/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/agents/Organization> .
+<https://w3id.org/rec/agents/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Organization(s) that this Person is a member of."@en .
+<https://w3id.org/rec/agents/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/agents/familyName
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#comment> "A person's family name."@en .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#label> "family name"@en .
+# 
+# https://w3id.org/rec/agents/firstName
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#comment> "A person's first name (if they have one; this varies across cultural contexts)."@en .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#label> "first name"@en .
+# 
+# https://w3id.org/rec/agents/gender
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/2000/01/rdf-schema#comment> "A gender designation for a Person."@en .
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/2000/01/rdf-schema#label> "gender"@en .
+# 
+# https://w3id.org/rec/agents/givenName
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#comment> "A person's personal, individual name."@en .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#label> "given name"@en .
+# 
+# https://w3id.org/rec/agents/image
+<https://w3id.org/rec/agents/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/image> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/image> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/agents/image> <http://www.w3.org/2000/01/rdf-schema#comment> "URL link to an image that represents the person."@en .
+<https://w3id.org/rec/agents/image> <http://www.w3.org/2000/01/rdf-schema#label> "image"@en .
+# 
+# https://w3id.org/rec/agents/lastName
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#comment> "A person's last name (if they have one; this varies across cultural contexts)."@en .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#label> "last name"@en .
+# 
+# https://w3id.org/rec/agents/logo
+<https://w3id.org/rec/agents/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/logo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Organization> .
+<https://w3id.org/rec/agents/logo> <http://www.w3.org/2000/01/rdf-schema#comment> "URL link to an image/logo that represents the organization."@en .
+<https://w3id.org/rec/agents/logo> <http://www.w3.org/2000/01/rdf-schema#label> "logo"@en .
+# 
+# https://w3id.org/rec/agents/name
+<https://w3id.org/rec/agents/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/core/Agent> .
+<https://w3id.org/rec/agents/name> <http://www.w3.org/2000/01/rdf-schema#comment> "A name for some Agent."@en .
+<https://w3id.org/rec/agents/name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/agents/Company
+<https://w3id.org/rec/agents/Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Company> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/agents/Organization> .
+<https://w3id.org/rec/agents/Company> <http://www.w3.org/2000/01/rdf-schema#label> "Company"@en .
+# 
+# https://w3id.org/rec/agents/Department
+<https://w3id.org/rec/agents/Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/agents/Organization> .
+<https://w3id.org/rec/agents/Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
+# 
+# https://w3id.org/rec/agents/Group
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Agent> .
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of individual Agents (included in the Group via the object property hasMember). These agents can be organizations or persons."@en .
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group"@en .
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/Group> .
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/rec/agents/Organization
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Agent> .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/agents/Person> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/agents/hasMember> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/agents/Organization> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/core/hasPart> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/agents/Organization> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/core/isPartOf> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"@en .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://w3id.org/rec/agents/Person
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Agent> .
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/agents/Organization> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/agents/isMemberOf> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A natural person (i.e., an individual human being)."@en .
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
