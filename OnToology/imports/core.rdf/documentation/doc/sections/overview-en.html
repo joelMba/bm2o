@@ -1,0 +1,839 @@
+<h2 id="overv" class="list">RealEstateCore Core Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/rec/core/Actuator" title="https://w3id.org/rec/core/Actuator">Actuator</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Agent" title="https://w3id.org/rec/core/Agent">Agent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Apartment" title="https://w3id.org/rec/core/Apartment">Apartment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Asset" title="https://w3id.org/rec/core/Asset">Asset</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/AssetCollection" title="https://w3id.org/rec/core/AssetCollection">Asset collection</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Building" title="https://w3id.org/rec/core/Building">Building</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/BuildingComponent" title="https://w3id.org/rec/core/BuildingComponent">Building component</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Campus" title="https://w3id.org/rec/core/Campus">Campus</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Capability" title="https://w3id.org/rec/core/Capability">Capability</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Collection" title="https://w3id.org/rec/core/Collection">Collection</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/DataSchema" title="https://w3id.org/rec/core/DataSchema">Data schema</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Document" title="https://w3id.org/rec/core/Document">Document</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Event" title="https://w3id.org/rec/core/Event">Event</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/GeoReferenceOrigo" title="https://w3id.org/rec/core/GeoReferenceOrigo">Geo-reference origo</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/HVACZone" title="https://w3id.org/rec/core/HVACZone">HVAC zone</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Information" title="https://w3id.org/rec/core/Information">Information</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Land" title="https://w3id.org/rec/core/Land">Land</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Level" title="https://w3id.org/rec/core/Level">Level</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LogicalController" title="https://w3id.org/rec/core/LogicalController">Logical controller</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LogicalDevice" title="https://w3id.org/rec/core/LogicalDevice">Logical device</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LogicalGateway" title="https://w3id.org/rec/core/LogicalGateway">Logical gateway</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LogicalServer" title="https://w3id.org/rec/core/LogicalServer">Logical server</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/MeasurementUnit" title="https://w3id.org/rec/core/MeasurementUnit">Measurement unit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Observation" title="https://w3id.org/rec/core/Observation">Observation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/OccupancyZone" title="https://w3id.org/rec/core/OccupancyZone">Occupancy zone</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Parameter" title="https://w3id.org/rec/core/Parameter">Parameter</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Portfolio" title="https://w3id.org/rec/core/Portfolio">Portfolio</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Premises" title="https://w3id.org/rec/core/Premises">Premises</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PremisesType" title="https://w3id.org/rec/core/PremisesType">Premises type</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PropertySet" title="https://w3id.org/rec/core/PropertySet">Property set</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/QuantityKind" title="https://w3id.org/rec/core/QuantityKind">Quantity kind</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RealEstate" title="https://w3id.org/rec/core/RealEstate">Real estate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RealEstateComponent" title="https://w3id.org/rec/core/RealEstateComponent">Real estate component</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Region" title="https://w3id.org/rec/core/Region">Region</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Room" title="https://w3id.org/rec/core/Room">Room</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/SensorInterface" title="https://w3id.org/rec/core/SensorInterface">
+         <span>sensor interface</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Service" title="https://w3id.org/rec/core/Service">Service</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Setpoint" title="https://w3id.org/rec/core/Setpoint">Setpoint</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Software" title="https://w3id.org/rec/core/Software">Software</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Space" title="https://w3id.org/rec/core/Space">Space</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/SpaceCollection" title="https://w3id.org/rec/core/SpaceCollection">Space collection</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/State" title="https://w3id.org/rec/core/State">State</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/SubBuilding" title="https://w3id.org/rec/core/SubBuilding">Sub-building</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Type" title="https://w3id.org/rec/core/Type">Type</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Workspace" title="https://w3id.org/rec/core/Workspace">Workspace</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Zone" title="https://w3id.org/rec/core/Zone">Zone</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/rec/core/architectedBy" title="https://w3id.org/rec/core/architectedBy">architected by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/producedEvent" title="https://w3id.org/rec/core/producedEvent">associated with event</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/categorizationProperties"
+         title="https://w3id.org/rec/core/categorizationProperties">categorization properties</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/componentOf" title="https://w3id.org/rec/core/componentOf">component of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/componentOfBuilding" title="https://w3id.org/rec/core/componentOfBuilding">component of building</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/constructedBy" title="https://w3id.org/rec/core/constructedBy">constructed by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/containsMountedDevice" title="https://w3id.org/rec/core/containsMountedDevice">contains mounted device</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/controlledBy" title="https://w3id.org/rec/core/controlledBy">controlled by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/dataSchema" title="https://w3id.org/rec/core/dataSchema">data schema</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#defaultGeometry"
+         title="http://www.opengis.net/ont/geosparql#defaultGeometry">default geometry</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/deviceMeasurementUnit" title="https://w3id.org/rec/core/deviceMeasurementUnit">device measurement unit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/deviceQuantityKind" title="https://w3id.org/rec/core/deviceQuantityKind">device quantity kind</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/documentTopic" title="https://w3id.org/rec/core/documentTopic">document topic</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/eventMeasurementUnit" title="https://w3id.org/rec/core/eventMeasurementUnit">event measurement unit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/eventQuantityKind" title="https://w3id.org/rec/core/eventQuantityKind">event quantity kind</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/generatedObservation" title="https://w3id.org/rec/core/generatedObservation">generated observation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasBuildingComponent" title="https://w3id.org/rec/core/hasBuildingComponent">has building component</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasCapability" title="https://w3id.org/rec/core/hasCapability">has capability</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasDocument" title="https://w3id.org/rec/core/hasDocument">has document</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasGeoReferenceOrigo" title="https://w3id.org/rec/core/hasGeoReferenceOrigo">has geo-reference origo</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasMeasurementUnit" title="https://w3id.org/rec/core/hasMeasurementUnit">has measurement unit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasMember" title="https://w3id.org/rec/core/hasMember">
+         <span>has member</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasPart" title="https://w3id.org/rec/core/hasPart">has part</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasRealEstateComponent" title="https://w3id.org/rec/core/hasRealEstateComponent">has real estate component</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasSubBuildingComponent"
+         title="https://w3id.org/rec/core/hasSubBuildingComponent">has sub-BuildingComponent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasSubDevice" title="https://w3id.org/rec/core/hasSubDevice">has sub-device</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasSuperBuildingComponent"
+         title="https://w3id.org/rec/core/hasSuperBuildingComponent">has super-BuildingComponent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasSuperDevice" title="https://w3id.org/rec/core/hasSuperDevice">has super-Device</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasType" title="https://w3id.org/rec/core/hasType">has type</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hostedBy" title="https://w3id.org/rec/core/hostedBy">hosted by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hosts" title="https://w3id.org/rec/core/hosts">hosts</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/includedIn" title="https://w3id.org/rec/core/includedIn">included in</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/includes" title="https://w3id.org/rec/core/includes">includes</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isCapabilityOf" title="https://w3id.org/rec/core/isCapabilityOf">is capabilty of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isLocationOf" title="https://w3id.org/rec/core/isLocationOf">is location of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isMemberOf" title="https://w3id.org/rec/core/isMemberOf">is member of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isMountedIn" title="https://w3id.org/rec/core/isMountedIn">is mounted in</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isMountedInBuildingComponent"
+         title="https://w3id.org/rec/core/isMountedInBuildingComponent">is mounted in Building Component</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isPartOf" title="https://w3id.org/rec/core/isPartOf">is part of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isPartOfBuilding" title="https://w3id.org/rec/core/isPartOfBuilding">is part of building</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isPartOfRealEstate" title="https://w3id.org/rec/core/isPartOfRealEstate">
+         <span>is part of real estate</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/locatedIn" title="https://w3id.org/rec/core/locatedIn">located in</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/observationGeneratedBy" title="https://w3id.org/rec/core/observationGeneratedBy">observation generated by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/observedBy" title="https://w3id.org/rec/core/observedBy">observed by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/observes" title="https://w3id.org/rec/core/observes">observes</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/operatedBy" title="https://w3id.org/rec/core/operatedBy">operated by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ownedBy" title="https://w3id.org/rec/core/ownedBy">owned by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/owns" title="https://w3id.org/rec/core/owns">owns</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/premisesType" title="https://w3id.org/rec/core/premisesType">
+         <span>premises type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/producedBy" title="https://w3id.org/rec/core/producedBy">produced by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasQuantityKind" title="https://w3id.org/rec/core/hasQuantityKind">quantity kind</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/qkMeasurementUnit" title="https://w3id.org/rec/core/qkMeasurementUnit">quantity kind measurement unit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/sensorInterface" title="https://w3id.org/rec/core/sensorInterface">sensor interface</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/servedBy" title="https://w3id.org/rec/core/servedBy">served by</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/serves" title="https://w3id.org/rec/core/serves">serves</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/servesBuilding" title="https://w3id.org/rec/core/servesBuilding">serves building</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/servesBuildingComponent"
+         title="https://w3id.org/rec/core/servesBuildingComponent">serves building component</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/servesDevice" title="https://w3id.org/rec/core/servesDevice">serves device</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#asGML" title="http://www.opengis.net/ont/geosparql#asGML">asGML</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#asWKT" title="http://www.opengis.net/ont/geosparql#asWKT">asWKT</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/comment" title="https://w3id.org/rec/core/comment">comment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasAliasID" title="https://w3id.org/rec/core/hasAliasID">has alias ID</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasAuxiliaryData" title="https://w3id.org/rec/core/hasAuxiliaryData">has auxiliary data</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasCity" title="https://w3id.org/rec/core/hasCity">has city</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasComment" title="https://w3id.org/rec/core/hasComment">has comment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasCountry" title="https://w3id.org/rec/core/hasCountry">has country</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasCreatedTime" title="https://w3id.org/rec/core/hasCreatedTime">has created time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasDeletedTime" title="https://w3id.org/rec/core/hasDeletedTime">has deleted time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasDuration" title="https://w3id.org/rec/core/hasDuration">has duration</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasGeoReferenceBearing"
+         title="https://w3id.org/rec/core/hasGeoReferenceBearing">has geo reference bearing</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasGeonamesId" title="https://w3id.org/rec/core/hasGeonamesId">has geonames ID</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasLittera" title="https://w3id.org/rec/core/hasLittera">has littera</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasLocationAttribute" title="https://w3id.org/rec/core/hasLocationAttribute">has location attribute</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasObservationTime" title="https://w3id.org/rec/core/hasObservationTime">has observation time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasPointInTime" title="https://w3id.org/rec/core/hasPointInTime">has point in time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasPopularName" title="https://w3id.org/rec/core/hasPopularName">has popular name</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasPostalAddress" title="https://w3id.org/rec/core/hasPostalAddress">has postal address</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasProcessedTime" title="https://w3id.org/rec/core/hasProcessedTime">has processed time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasReadTime" title="https://w3id.org/rec/core/hasReadTime">has read time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasRegion" title="https://w3id.org/rec/core/hasRegion">has region</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#hasSerialization"
+         title="http://www.opengis.net/ont/geosparql#hasSerialization">has serialization</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasSource" title="https://w3id.org/rec/core/hasSource">has source</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasStartTime" title="https://w3id.org/rec/core/hasStartTime">has start time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasStopTime" title="https://w3id.org/rec/core/hasStopTime">has stop time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasSustainabilityCertification"
+         title="https://w3id.org/rec/core/hasSustainabilityCertification">has sustainability certification</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasTime" title="https://w3id.org/rec/core/hasTime">has time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasUpdatedTime" title="https://w3id.org/rec/core/hasUpdatedTime">has updated time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasValue" title="https://w3id.org/rec/core/hasValue">has value</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasVistingAddress" title="https://w3id.org/rec/core/hasVistingAddress">has visting address</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/hasZipCode" title="https://w3id.org/rec/core/hasZipCode">has zip code</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/IPAddress" title="https://w3id.org/rec/core/IPAddress">IP address</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/isLocatedAtLocalCoordinates"
+         title="https://w3id.org/rec/core/isLocatedAtLocalCoordinates">is located at local coordinates</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/lastValue" title="https://w3id.org/rec/core/lastValue">last value</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/lastValueTime" title="https://w3id.org/rec/core/lastValueTime">last value time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/levelNumber" title="https://w3id.org/rec/core/levelNumber">level number</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/MACAddress" title="https://w3id.org/rec/core/MACAddress">MAC address</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/modelNumber" title="https://w3id.org/rec/core/modelNumber">model number</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/personCapacity" title="https://w3id.org/rec/core/personCapacity">person capacity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/personOccupancy" title="https://w3id.org/rec/core/personOccupancy">person occupancy</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/physicalTagNumber" title="https://w3id.org/rec/core/physicalTagNumber">physical tag number</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/propertyRegisterDesignation"
+         title="https://w3id.org/rec/core/propertyRegisterDesignation">property register designation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/schemaName" title="https://w3id.org/rec/core/schemaName">
+         <span>schema name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/serialNumber" title="https://w3id.org/rec/core/serialNumber">serial number</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/timeInterval" title="https://w3id.org/rec/core/timeInterval">time interval</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/type" title="https://w3id.org/rec/core/type">type</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/unitSign" title="https://w3id.org/rec/core/unitSign">unit sign</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/url" title="https://w3id.org/rec/core/url">URL</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/value" title="https://w3id.org/rec/core/value">value</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/rec/core/ActiveEnergyL1" title="https://w3id.org/rec/core/ActiveEnergyL1">ActiveEnergyL1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActiveEnergyL2" title="https://w3id.org/rec/core/ActiveEnergyL2">ActiveEnergyL2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActiveEnergyL3" title="https://w3id.org/rec/core/ActiveEnergyL3">ActiveEnergyL3</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActiveEnergyTotal" title="https://w3id.org/rec/core/ActiveEnergyTotal">ActiveEnergyTotal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActivePowerL1" title="https://w3id.org/rec/core/ActivePowerL1">ActivePowerL1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActivePowerL2" title="https://w3id.org/rec/core/ActivePowerL2">ActivePowerL2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActivePowerL3" title="https://w3id.org/rec/core/ActivePowerL3">ActivePowerL3</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ActivePowerTotal" title="https://w3id.org/rec/core/ActivePowerTotal">ActivePowerTotal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/AgentInteraction" title="https://w3id.org/rec/core/AgentInteraction">AgentInteraction</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/AlarmMajor" title="https://w3id.org/rec/core/AlarmMajor">AlarmMajor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/AlarmMinor" title="https://w3id.org/rec/core/AlarmMinor">AlarmMinor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/AlarmSevere" title="https://w3id.org/rec/core/AlarmSevere">AlarmSevere</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Ampere" title="https://w3id.org/rec/core/Ampere">Ampere</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Angle" title="https://w3id.org/rec/core/Angle">Angle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Area" title="https://w3id.org/rec/core/Area">Area</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/AreaPresence" title="https://w3id.org/rec/core/AreaPresence">Area presence</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Binary" title="https://w3id.org/rec/core/Binary">Binary</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/BooleanDetection" title="https://w3id.org/rec/core/BooleanDetection">BooleanDetection</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Celsius" title="https://w3id.org/rec/core/Celsius">Celsius</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CO" title="https://w3id.org/rec/core/CO">CO</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CO2" title="https://w3id.org/rec/core/CO2">CO2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CoffeePremises" title="https://w3id.org/rec/core/CoffeePremises">
+         <span>coffee premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Concentration" title="https://w3id.org/rec/core/Concentration">Concentration</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CosPhi" title="https://w3id.org/rec/core/CosPhi">CosPhi</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CubicMeter" title="https://w3id.org/rec/core/CubicMeter">CubicMeter</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Current" title="https://w3id.org/rec/core/Current">Current</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CurrentL1" title="https://w3id.org/rec/core/CurrentL1">CurrentL1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CurrentL2" title="https://w3id.org/rec/core/CurrentL2">CurrentL2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/CurrentL3" title="https://w3id.org/rec/core/CurrentL3">CurrentL3</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Decibel" title="https://w3id.org/rec/core/Decibel">Decibel</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Degrees" title="https://w3id.org/rec/core/Degrees">Degrees</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/EducationalPremises" title="https://w3id.org/rec/core/EducationalPremises">
+         <span>educational premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Efficiency" title="https://w3id.org/rec/core/Efficiency">Efficiency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/EnergyTotal" title="https://w3id.org/rec/core/EnergyTotal">EnergyTotal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Fahrenheit" title="https://w3id.org/rec/core/Fahrenheit">Fahrenheit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Flow" title="https://w3id.org/rec/core/Flow">Flow</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Footfall" title="https://w3id.org/rec/core/Footfall">Footfall</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/GaragePremises" title="https://w3id.org/rec/core/GaragePremises">
+         <span>garage premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/GlobalIrradiance" title="https://w3id.org/rec/core/GlobalIrradiance">GlobalIrradiance</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Hertz" title="https://w3id.org/rec/core/Hertz">Hertz</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/HotelPremises" title="https://w3id.org/rec/core/HotelPremises">
+         <span>hotel premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Humidity" title="https://w3id.org/rec/core/Humidity">Humidity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Illuminance" title="https://w3id.org/rec/core/Illuminance">Illuminance</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Integer" title="https://w3id.org/rec/core/Integer">Integer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Kelvin" title="https://w3id.org/rec/core/Kelvin">Kelvin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Kilogram" title="https://w3id.org/rec/core/Kilogram">Kilogram</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LaboratoryPremises" title="https://w3id.org/rec/core/LaboratoryPremises">
+         <span>laboratory premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Lenght" title="https://w3id.org/rec/core/Lenght">Lenght</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Length" title="https://w3id.org/rec/core/Length">Length</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LightIndustryPremises" title="https://w3id.org/rec/core/LightIndustryPremises">
+         <span>light industry premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/LiterPerSecond" title="https://w3id.org/rec/core/LiterPerSecond">LiterPerSecond</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Lumen" title="https://w3id.org/rec/core/Lumen">Lumen</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Lux" title="https://w3id.org/rec/core/Lux">Lux</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Meter" title="https://w3id.org/rec/core/Meter">Meter</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/MeterPerSecond" title="https://w3id.org/rec/core/MeterPerSecond">MeterPerSecond</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/MillimeterPerHour" title="https://w3id.org/rec/core/MillimeterPerHour">MillimeterPerHour</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Number" title="https://w3id.org/rec/core/Number">Number</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/NumPeople" title="https://w3id.org/rec/core/NumPeople">NumPeople</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/OfficePremises" title="https://w3id.org/rec/core/OfficePremises">
+         <span>office premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PartsPerBillion" title="https://w3id.org/rec/core/PartsPerBillion">PartsPerBillion</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PartsPerMillion" title="https://w3id.org/rec/core/PartsPerMillion">PartsPerMillion</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Pascal" title="https://w3id.org/rec/core/Pascal">Pascal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Percentage" title="https://w3id.org/rec/core/Percentage">Percentage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PowerFactor" title="https://w3id.org/rec/core/PowerFactor">PowerFactor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PowerFactorL1" title="https://w3id.org/rec/core/PowerFactorL1">PowerFactorL1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PowerFactorL2" title="https://w3id.org/rec/core/PowerFactorL2">PowerFactorL2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PowerFactorL3" title="https://w3id.org/rec/core/PowerFactorL3">PowerFactorL3</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/PowerFrequency" title="https://w3id.org/rec/core/PowerFrequency">PowerFrequency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Precipation" title="https://w3id.org/rec/core/Precipation">Precipation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Precipitation" title="https://w3id.org/rec/core/Precipitation">Precipitation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Presence" title="https://w3id.org/rec/core/Presence">Presence</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Pressure" title="https://w3id.org/rec/core/Pressure">Pressure</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Radiation" title="https://w3id.org/rec/core/Radiation">Radiation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ReactivePowerL1" title="https://w3id.org/rec/core/ReactivePowerL1">ReactivePowerL1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ReactivePowerL2" title="https://w3id.org/rec/core/ReactivePowerL2">ReactivePowerL2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ReactivePowerL3" title="https://w3id.org/rec/core/ReactivePowerL3">ReactivePowerL3</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ReactivePowerTotal" title="https://w3id.org/rec/core/ReactivePowerTotal">ReactivePowerTotal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RelativeHumidity" title="https://w3id.org/rec/core/RelativeHumidity">RelativeHumidity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/ResidentialPremises" title="https://w3id.org/rec/core/ResidentialPremises">
+         <span>residential premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RestaurantPremises" title="https://w3id.org/rec/core/RestaurantPremises">
+         <span>restaurant premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RetailPremises" title="https://w3id.org/rec/core/RetailPremises">
+         <span>retail premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RevolutionsPerMinute" title="https://w3id.org/rec/core/RevolutionsPerMinute">RevoultionsPerMinute</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/RotationSpeed" title="https://w3id.org/rec/core/RotationSpeed">RotationSpeed</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Second" title="https://w3id.org/rec/core/Second">Second</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Sound" title="https://w3id.org/rec/core/Sound">Sound</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Speed" title="https://w3id.org/rec/core/Speed">Speed</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/SquareMeter" title="https://w3id.org/rec/core/SquareMeter">SquareMeter</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/StoragePremises" title="https://w3id.org/rec/core/StoragePremises">
+         <span>storage premises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/SunshineTimePerHour" title="https://w3id.org/rec/core/SunshineTimePerHour">SunshineTimePerHour</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Temperature" title="https://w3id.org/rec/core/Temperature">Temperature</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/TVOC" title="https://w3id.org/rec/core/TVOC">TVOC</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Velocity" title="https://w3id.org/rec/core/Velocity">Velocity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Volt" title="https://w3id.org/rec/core/Volt">Volt</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Voltage" title="https://w3id.org/rec/core/Voltage">Voltage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/VoltageL1" title="https://w3id.org/rec/core/VoltageL1">VoltageL1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/VoltageL2" title="https://w3id.org/rec/core/VoltageL2">VoltageL2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/VoltageL3" title="https://w3id.org/rec/core/VoltageL3">VoltageL3</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Volume" title="https://w3id.org/rec/core/Volume">Volume</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/WasteDiverted" title="https://w3id.org/rec/core/WasteDiverted">Waste diverted</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/WasteTotal" title="https://w3id.org/rec/core/WasteTotal">Waste total</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/Watt" title="https://w3id.org/rec/core/Watt">Watt</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/WattHour" title="https://w3id.org/rec/core/WattHour">WattHour</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/rec/core/WattPerSquareMeter" title="https://w3id.org/rec/core/WattPerSquareMeter">WattPerSquareMeter</a>
+   </li>
+</ul><h4> Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist"/>
