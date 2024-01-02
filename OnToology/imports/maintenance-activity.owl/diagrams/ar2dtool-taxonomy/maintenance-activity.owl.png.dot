@@ -1,0 +1,21 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:assemble" "base:isolate" "base:admin" "base:service" "base:operate" "base:move" "base:perform" "base:repair" "base:SupportingActivity" "base:MaintenanceActivity" "base:replace" "base:modify" "base:inspect" "base:adjust" "base:diagnose" "base:teamwork" "base:calibrate" ; /*classes style*/
+	"base:repair" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:admin" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:operate" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:assemble" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:perform" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:diagnose" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:inspect" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:modify" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:isolate" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:adjust" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:teamwork" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+	"base:service" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:calibrate" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:replace" -> "base:MaintenanceActivity" [ label = "rdfs:subClassOf" ];
+	"base:move" -> "base:SupportingActivity" [ label = "rdfs:subClassOf" ];
+
+}

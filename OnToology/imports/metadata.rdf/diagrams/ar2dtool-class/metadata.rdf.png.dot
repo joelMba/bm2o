@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"metadata:" -> "https://opensource.org/licenses/MIT" [ label = "cc:license" ];
+	"metadata:" -> "http://bloody-byte.net/rdf/dc_owl2dl/" [ label = "dc:source" ];
+	"metadata:" -> "https://w3id.org/rec/metadata/3.3/" [ label = "owl:versionIRI" ];
+	"metadata:" -> "vann:vann-vocab-20050401.rdf" [ label = "dc:source" ];
+	"dcterms:date" -> "dc:date" [ label = "rdfs:subPropertyOf" ];
+	"dcterms:date" -> "http://www.w3.org/TR/NOTE-datetime" [ label = "rdfs:seeAlso" ];
+	"dc:date" -> "http://www.w3.org/TR/NOTE-datetime" [ label = "rdfs:seeAlso" ];
+	"dc:coverage" -> "http://www.getty.edu/research/tools/vocabulary/tgn/index.html" [ label = "rdfs:seeAlso" ];
+	"dcterms:modified" -> "dcterms:date" [ label = "rdfs:subPropertyOf" ];
+	"dc:format" -> "http://www.iana.org/assignments/media-types/" [ label = "rdfs:seeAlso" ];
+	"dc:type" -> "http://dublincore.org/documents/dcmi-type-vocabulary/" [ label = "rdfs:seeAlso" ];
+	"dc:language" -> "http://www.ietf.org/rfc/rfc4646.txt" [ label = "rdfs:seeAlso" ];
+	"owl:Thing" -> "xsd:string" [ label = "metadata:semanticType" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "o2o:listProperty" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "dcterms:date" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "dcterms:modified" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "o2o:included" ];
+
+}
