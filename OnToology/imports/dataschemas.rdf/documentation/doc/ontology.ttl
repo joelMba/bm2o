@@ -1,0 +1,234 @@
+@prefix : <https://w3id.org/rec/dataschemas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/dataschemas/> .
+
+<https://w3id.org/rec/dataschemas/> rdf:type owl:Ontology ;
+                                     owl:versionIRI <https://w3id.org/rec/dataschemas/3.3/> ;
+                                     owl:imports <https://w3id.org/rec/core/3.3/> ;
+                                     <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" ;
+                                     <http://purl.org/dc/elements/1.1/description> "This REC module models primitive and complex (object/array) data schemas for sensors, actuators, services, etc."@en ;
+                                     <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                                     <http://purl.org/dc/elements/1.1/title> "RealEstateCore Data Schemas Module"@en ;
+                                     <http://purl.org/dc/terms/modified> "2020-06-23" ;
+                                     <http://purl.org/vocab/vann/preferredNamespacePrefix> "dataschemas" ;
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/dataschemas/3.3/" ;
+                                     rdfs:seeAlso <https://w3id.org/rec/> ;
+                                     owl:versionInfo "3.3" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/rec/dataschemas/elementSchema
+:elementSchema rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :ArraySchema ;
+               rdfs:range :PrimitiveSchema ;
+               rdfs:comment "Defines the primitive schema of all members of the array."@en ;
+               rdfs:label "element schema"@en .
+
+
+###  https://w3id.org/rec/dataschemas/objectFields
+:objectFields rdf:type owl:ObjectProperty ;
+              rdfs:domain :ObjectSchema ;
+              rdfs:range :PrimitiveSchema ;
+              rdfs:comment "Defines the individual object fields on this schema."@en ;
+              rdfs:label "object fields"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/rec/dataschemas/enumerationValues
+:enumerationValues rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :PrimitiveSchema ;
+                   rdfs:comment "Defines allowed values for this primitive schema instance."@en ;
+                   rdfs:label "enumeration values"@en .
+
+
+###  https://w3id.org/rec/dataschemas/fieldName
+:fieldName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :PrimitiveSchema ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Defines the name by which this primitive schema will be referred to, when defined as a part of an object schema."@en ;
+           rdfs:label "field name"@en .
+
+
+###  https://w3id.org/rec/dataschemas/maximum
+:maximum rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:comment "The maximum allowed value (inclusive)."@en ;
+         rdfs:label "maximum"@en .
+
+
+###  https://w3id.org/rec/dataschemas/minimum
+:minimum rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:comment "The minimum allowed value (inclusive)."@en ;
+         rdfs:label "minimum"@en .
+
+
+###  https://w3id.org/rec/dataschemas/regEx
+:regEx rdf:type owl:DatatypeProperty ;
+       rdfs:domain :StringSchema ;
+       rdfs:range xsd:string ;
+       rdfs:comment "A regular expression that defines valid input per this string schema."@en ;
+       rdfs:label "regular expression"@en .
+
+
+###  https://w3id.org/rec/dataschemas/resolution
+:resolution rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Defines the valid granularity or \"step size\" for numeric input (i.e., FloatSchemas and IntSchemas). Used in conjunction with maximum and minimum, as an alternative to enumerations: e.g., minimum = 5, resolution = 10, maximum = 50 gives valid values 5, 15, 25, 35, and 45."@en ;
+            rdfs:label "resolution"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/rec/dataschemas/ArraySchema
+:ArraySchema rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/DataSchema> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :elementSchema ;
+                               owl:someValuesFrom :PrimitiveSchema
+                             ] .
+
+
+###  https://w3id.org/rec/dataschemas/BooleanSchema
+:BooleanSchema rdf:type owl:Class ;
+               rdfs:subClassOf :PrimitiveSchema ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :enumerationValues ;
+                                 owl:allValuesFrom xsd:boolean
+                               ] .
+
+
+###  https://w3id.org/rec/dataschemas/DateTimeSchema
+:DateTimeSchema rdf:type owl:Class ;
+                rdfs:subClassOf :PrimitiveSchema ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :enumerationValues ;
+                                  owl:allValuesFrom xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :maximum ;
+                                  owl:allValuesFrom xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :minimum ;
+                                  owl:allValuesFrom xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :maximum ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :minimum ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
+                                ] .
+
+
+###  https://w3id.org/rec/dataschemas/FloatSchema
+:FloatSchema rdf:type owl:Class ;
+             rdfs:subClassOf :PrimitiveSchema ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :enumerationValues ;
+                               owl:allValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :maximum ;
+                               owl:allValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :minimum ;
+                               owl:allValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :resolution ;
+                               owl:allValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :maximum ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :minimum ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :resolution ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] .
+
+
+###  https://w3id.org/rec/dataschemas/IntSchema
+:IntSchema rdf:type owl:Class ;
+           rdfs:subClassOf :PrimitiveSchema ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :enumerationValues ;
+                             owl:allValuesFrom xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :maximum ;
+                             owl:allValuesFrom xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :minimum ;
+                             owl:allValuesFrom xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :resolution ;
+                             owl:allValuesFrom xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :maximum ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :minimum ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :resolution ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:int
+                           ] .
+
+
+###  https://w3id.org/rec/dataschemas/ObjectSchema
+:ObjectSchema rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/DataSchema> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :objectFields ;
+                                owl:someValuesFrom :PrimitiveSchema
+                              ] .
+
+
+###  https://w3id.org/rec/dataschemas/PrimitiveSchema
+:PrimitiveSchema rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/rec/core/DataSchema> .
+
+
+###  https://w3id.org/rec/dataschemas/StringSchema
+:StringSchema rdf:type owl:Class ;
+              rdfs:subClassOf :PrimitiveSchema ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :enumerationValues ;
+                                owl:allValuesFrom xsd:string
+                              ] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
