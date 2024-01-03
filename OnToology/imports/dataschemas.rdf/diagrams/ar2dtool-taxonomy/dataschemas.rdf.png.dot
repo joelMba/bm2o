@@ -1,0 +1,53 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "dataschemas:StringSchema" "dataschemas:PrimitiveSchema" "dataschemas:ObjectSchema" "dataschemas:IntSchema" "dataschemas:FloatSchema" "dataschemas:DateTimeSchema" "dataschemas:BooleanSchema" "dataschemas:ArraySchema" "core:Premises" "core:LogicalServer" "core:Capability" "core:Observation" "core:LogicalGateway" "core:Information" "core:Level" "core:RealEstateComponent" "core:PropertySet" "core:Space" "core:AssetCollection" "core:Land" "core:Zone" "core:Device" "core:Sensor" "core:Portfolio" "geo:Geometry" "core:Type" "core:Building" "core:Actuator" "core:RealEstate" "core:Workspace" "core:Event" "core:GeoReferenceOrigo" "core:Region" "core:DataSchema" "core:Campus" "core:BuildingComponent" "core:PremisesType" "core:SubBuilding" "core:LogicalDevice" "core:Apartment" "core:State" "core:Collection" "core:HVACZone" "core:Room" "core:Software" "core:Parameter" "core:LogicalController" "core:SensorInterface" "core:OccupancyZone" "core:Setpoint" "core:SpaceCollection" "qudt:Unit" "qudt:LogarithmicUnit" "qudt:DimensionlessUnit" "qudt:DerivedUnit" ; /*classes style*/
+	"core:PropertySet" -> "core:Information" [ label = "rdfs:subClassOf" ];
+	"core:Parameter" -> "core:Capability" [ label = "rdfs:subClassOf" ];
+	"core:OccupancyZone" -> "core:Zone" [ label = "rdfs:subClassOf" ];
+	"core:Zone" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"dataschemas:ArraySchema" -> "core:DataSchema" [ label = "rdfs:subClassOf" ];
+	"core:Portfolio" -> "core:Collection" [ label = "rdfs:subClassOf" ];
+	"core:Room" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"core:Room" -> "core:BuildingComponent" [ label = "rdfs:subClassOf" ];
+	"core:PremisesType" -> "core:Type" [ label = "rdfs:subClassOf" ];
+	"dataschemas:IntSchema" -> "dataschemas:PrimitiveSchema" [ label = "rdfs:subClassOf" ];
+	"qudt:DimensionlessUnit" -> "qudt:Unit" [ label = "rdfs:subClassOf" ];
+	"core:Actuator" -> "core:Capability" [ label = "rdfs:subClassOf" ];
+	"dataschemas:DateTimeSchema" -> "dataschemas:PrimitiveSchema" [ label = "rdfs:subClassOf" ];
+	"core:Observation" -> "core:Event" [ label = "rdfs:subClassOf" ];
+	"core:Land" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"core:Land" -> "core:RealEstateComponent" [ label = "rdfs:subClassOf" ];
+	"core:AssetCollection" -> "core:Collection" [ label = "rdfs:subClassOf" ];
+	"core:Campus" -> "core:SpaceCollection" [ label = "rdfs:subClassOf" ];
+	"core:Sensor" -> "core:Device" [ label = "rdfs:subClassOf" ];
+	"core:Sensor" -> "core:Capability" [ label = "rdfs:subClassOf" ];
+	"core:Setpoint" -> "core:Parameter" [ label = "rdfs:subClassOf" ];
+	"dataschemas:PrimitiveSchema" -> "core:DataSchema" [ label = "rdfs:subClassOf" ];
+	"dataschemas:BooleanSchema" -> "dataschemas:PrimitiveSchema" [ label = "rdfs:subClassOf" ];
+	"core:SubBuilding" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"core:DataSchema" -> "core:Information" [ label = "rdfs:subClassOf" ];
+	"core:GeoReferenceOrigo" -> "geo:Geometry" [ label = "rdfs:subClassOf" ];
+	"core:Workspace" -> "core:Zone" [ label = "rdfs:subClassOf" ];
+	"dataschemas:FloatSchema" -> "dataschemas:PrimitiveSchema" [ label = "rdfs:subClassOf" ];
+	"NULL" -> "rdfs:subClassOf" [ label = "owl:annotatedProperty" ];
+	"core:State" -> "core:Capability" [ label = "rdfs:subClassOf" ];
+	"qudt:LogarithmicUnit" -> "qudt:DimensionlessUnit" [ label = "rdfs:subClassOf" ];
+	"core:Building" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"core:Building" -> "core:RealEstateComponent" [ label = "rdfs:subClassOf" ];
+	"core:LogicalServer" -> "core:LogicalDevice" [ label = "rdfs:subClassOf" ];
+	"core:LogicalGateway" -> "core:LogicalDevice" [ label = "rdfs:subClassOf" ];
+	"dataschemas:ObjectSchema" -> "core:DataSchema" [ label = "rdfs:subClassOf" ];
+	"core:Premises" -> "core:SpaceCollection" [ label = "rdfs:subClassOf" ];
+	"core:SpaceCollection" -> "core:Collection" [ label = "rdfs:subClassOf" ];
+	"core:Level" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"core:HVACZone" -> "core:Zone" [ label = "rdfs:subClassOf" ];
+	"qudt:DerivedUnit" -> "qudt:Unit" [ label = "rdfs:subClassOf" ];
+	"core:Apartment" -> "core:SpaceCollection" [ label = "rdfs:subClassOf" ];
+	"core:RealEstate" -> "core:SpaceCollection" [ label = "rdfs:subClassOf" ];
+	"core:SensorInterface" -> "core:Software" [ label = "rdfs:subClassOf" ];
+	"dataschemas:StringSchema" -> "dataschemas:PrimitiveSchema" [ label = "rdfs:subClassOf" ];
+	"core:Region" -> "core:Space" [ label = "rdfs:subClassOf" ];
+	"core:LogicalController" -> "core:LogicalDevice" [ label = "rdfs:subClassOf" ];
+
+}
