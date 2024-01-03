@@ -1,0 +1,1115 @@
+<https://w3id.org/rec/building/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rec/building/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/building/3.3/> .
+<https://w3id.org/rec/building/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rec/core/3.3/> .
+<https://w3id.org/rec/building/> <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+<https://w3id.org/rec/building/> <http://purl.org/dc/elements/1.1/contributor> "Karl Hammar" .
+<https://w3id.org/rec/building/> <http://purl.org/dc/elements/1.1/creator> "Erik Wallin" .
+<https://w3id.org/rec/building/> <http://purl.org/dc/elements/1.1/description> "This REC module covers different types of building components and rooms."@en .
+<https://w3id.org/rec/building/> <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" .
+<https://w3id.org/rec/building/> <http://purl.org/dc/elements/1.1/title> "RealEstateCore Building Module" .
+<https://w3id.org/rec/building/> <http://purl.org/dc/terms/modified> "2020-06-23" .
+<https://w3id.org/rec/building/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "building" .
+<https://w3id.org/rec/building/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/building/3.3/" .
+<https://w3id.org/rec/building/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "Are there any labs in Building 7?"@en .
+<https://w3id.org/rec/building/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "How many entrances are there to Building 7?"@en .
+<https://w3id.org/rec/building/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "How many of each type of room does Building 7 contain?"@en .
+<https://w3id.org/rec/building/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What equipment is mounted in server rooms in Building 7?"@en .
+<https://w3id.org/rec/building/> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "Which facade- or roof-mounted sensors are installed in Building 7?"@en .
+<https://w3id.org/rec/building/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/rec/> .
+<https://w3id.org/rec/building/> <http://www.w3.org/2002/07/owl#versionInfo> "3.3" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/building/roomType
+<https://w3id.org/rec/building/roomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/building/roomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/core/hasType> .
+<https://w3id.org/rec/building/roomType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/core/Room> .
+<https://w3id.org/rec/building/roomType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/building/RoomType> .
+<https://w3id.org/rec/building/roomType> <http://www.w3.org/2000/01/rdf-schema#label> "room type"@en .
+<https://w3id.org/rec/building/roomType> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/building/AdmittingRoom
+<https://w3id.org/rec/building/AdmittingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/AdmittingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/AdmittingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Admitting room"@en .
+# 
+# https://w3id.org/rec/building/Atrium
+<https://w3id.org/rec/building/Atrium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Atrium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Auditorium
+<https://w3id.org/rec/building/Auditorium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Auditorium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/BackOffice
+<https://w3id.org/rec/building/BackOffice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/BackOffice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Balcony
+<https://w3id.org/rec/building/Balcony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Balcony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Balcony> <http://www.w3.org/2000/01/rdf-schema#label> "Balcony"@en .
+# 
+# https://w3id.org/rec/building/BarRoom
+<https://w3id.org/rec/building/BarRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/BarRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/BasementLevel
+<https://w3id.org/rec/building/BasementLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/BasementLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Level> .
+<https://w3id.org/rec/building/BasementLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Basement level"@en .
+# 
+# https://w3id.org/rec/building/Bathroom
+<https://w3id.org/rec/building/Bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Bathroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Bedroom
+<https://w3id.org/rec/building/Bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Bedroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/BicycleGarage
+<https://w3id.org/rec/building/BicycleGarage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/BicycleGarage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Garage> .
+# 
+# https://w3id.org/rec/building/Cabinet
+<https://w3id.org/rec/building/Cabinet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Cabinet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/UtilitiesRoom> .
+# 
+# https://w3id.org/rec/building/CableRoom
+<https://w3id.org/rec/building/CableRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CableRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/UtilitiesRoom> .
+# 
+# https://w3id.org/rec/building/CafeteriaRoom
+<https://w3id.org/rec/building/CafeteriaRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CafeteriaRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/Cinema
+<https://w3id.org/rec/building/Cinema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Cinema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Classroom
+<https://w3id.org/rec/building/Classroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Classroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/EducationalRoom> .
+# 
+# https://w3id.org/rec/building/CleaningRoom
+<https://w3id.org/rec/building/CleaningRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CleaningRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ClimateControlRoom
+<https://w3id.org/rec/building/ClimateControlRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ClimateControlRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/UtilitiesRoom> .
+# 
+# https://w3id.org/rec/building/CloakRoom
+<https://w3id.org/rec/building/CloakRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CloakRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/CoffeeRoom
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/ConferenceRoom
+<https://w3id.org/rec/building/ConferenceRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ConferenceRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ConversationRoom
+<https://w3id.org/rec/building/ConversationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ConversationRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/CookingRoom
+<https://w3id.org/rec/building/CookingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CookingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/CopyingRoom
+<https://w3id.org/rec/building/CopyingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/CopyingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/DataServerRoom
+<https://w3id.org/rec/building/DataServerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/DataServerRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/UtilitiesRoom> .
+# 
+# https://w3id.org/rec/building/DiningRoom
+<https://w3id.org/rec/building/DiningRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/DiningRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/DisabledToilet
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/PersonalHygiene> .
+# 
+# https://w3id.org/rec/building/DishingRoom
+<https://w3id.org/rec/building/DishingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/DishingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/DressingRoom
+<https://w3id.org/rec/building/DressingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/DressingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/EducationalRoom
+<https://w3id.org/rec/building/EducationalRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/EducationalRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ElectricityRoom
+<https://w3id.org/rec/building/ElectricityRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ElectricityRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/UtilitiesRoom> .
+# 
+# https://w3id.org/rec/building/ElevatorRoom
+<https://w3id.org/rec/building/ElevatorRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ElevatorRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ElevatorShaft
+<https://w3id.org/rec/building/ElevatorShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ElevatorShaft> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Entrance
+<https://w3id.org/rec/building/Entrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Entrance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ExerciseRoom
+<https://w3id.org/rec/building/ExerciseRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ExerciseRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ExhibitionRoom
+<https://w3id.org/rec/building/ExhibitionRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ExhibitionRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Facade
+<https://w3id.org/rec/building/Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Facade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Facade> <http://www.w3.org/2000/01/rdf-schema#label> "Facade"@en .
+# 
+# https://w3id.org/rec/building/FittingRoom
+<https://w3id.org/rec/building/FittingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/FittingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/RetailRoom> .
+# 
+# https://w3id.org/rec/building/Floor
+<https://w3id.org/rec/building/Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Floor"@en .
+# 
+# https://w3id.org/rec/building/FoodHandlingRoom
+<https://w3id.org/rec/building/FoodHandlingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/FoodHandlingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Garage
+<https://w3id.org/rec/building/Garage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Garage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/GroupRoom
+<https://w3id.org/rec/building/GroupRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/GroupRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/EducationalRoom> .
+# 
+# https://w3id.org/rec/building/Hallway
+<https://w3id.org/rec/building/Hallway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Hallway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/HealthcareRoom
+<https://w3id.org/rec/building/HealthcareRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/HealthcareRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+<https://w3id.org/rec/building/HealthcareRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Healthcare room"@en .
+# 
+# https://w3id.org/rec/building/Hospital
+<https://w3id.org/rec/building/Hospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Hospital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Building> .
+<https://w3id.org/rec/building/Hospital> <http://www.w3.org/2000/01/rdf-schema#label> "Hospital"@en .
+# 
+# https://w3id.org/rec/building/Kitchenette
+<https://w3id.org/rec/building/Kitchenette> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Kitchenette> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+<https://w3id.org/rec/building/Kitchenette> <http://www.w3.org/2000/01/rdf-schema#label> "Kitechenette"@en .
+# 
+# https://w3id.org/rec/building/Laboratory
+<https://w3id.org/rec/building/Laboratory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Laboratory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/LaboratoryDry
+<https://w3id.org/rec/building/LaboratoryDry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/LaboratoryDry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Laboratory> .
+# 
+# https://w3id.org/rec/building/LaboratoryWet
+<https://w3id.org/rec/building/LaboratoryWet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/LaboratoryWet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Laboratory> .
+# 
+# https://w3id.org/rec/building/LaundryRoom
+<https://w3id.org/rec/building/LaundryRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/LaundryRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Library
+<https://w3id.org/rec/building/Library> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Library> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/LivingRoom
+<https://w3id.org/rec/building/LivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/LivingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/LoadingReceivingRoom
+<https://w3id.org/rec/building/LoadingReceivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/LoadingReceivingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/LockerRoom
+<https://w3id.org/rec/building/LockerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/LockerRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+<https://w3id.org/rec/building/LockerRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Locker room"@en .
+# 
+# https://w3id.org/rec/building/MailRoom
+<https://w3id.org/rec/building/MailRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/MailRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/BackOffice> .
+# 
+# https://w3id.org/rec/building/MainEntrance
+<https://w3id.org/rec/building/MainEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/MainEntrance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Entrance> .
+# 
+# https://w3id.org/rec/building/MeditationRoom
+<https://w3id.org/rec/building/MeditationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/MeditationRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/MezzanineLevel
+<https://w3id.org/rec/building/MezzanineLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/MezzanineLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Level> .
+<https://w3id.org/rec/building/MezzanineLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Mezzanine level"@en .
+# 
+# https://w3id.org/rec/building/Morgue
+<https://w3id.org/rec/building/Morgue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Morgue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/Morgue> <http://www.w3.org/2000/01/rdf-schema#label> "Morgue"@en .
+# 
+# https://w3id.org/rec/building/MothersRoom
+<https://w3id.org/rec/building/MothersRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/MothersRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/MultiPurposeRoom
+<https://w3id.org/rec/building/MultiPurposeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/MultiPurposeRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/NeonatalNursingRoom
+<https://w3id.org/rec/building/NeonatalNursingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/NeonatalNursingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/NeonatalNursingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Neonatal nursing room"@en .
+# 
+# https://w3id.org/rec/building/Office
+<https://w3id.org/rec/building/Office> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Office> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/OfficeLandscape
+<https://w3id.org/rec/building/OfficeLandscape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/OfficeLandscape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Office> .
+# 
+# https://w3id.org/rec/building/OfficeRoom
+<https://w3id.org/rec/building/OfficeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/OfficeRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Office> .
+# 
+# https://w3id.org/rec/building/OperatingRoom
+<https://w3id.org/rec/building/OperatingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/OperatingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/OperatingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Operating room"@en .
+# 
+# https://w3id.org/rec/building/OutpatientServicesRoom
+<https://w3id.org/rec/building/OutpatientServicesRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/OutpatientServicesRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/OutpatientServicesRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Outpatient services room"@en .
+# 
+# https://w3id.org/rec/building/Pantry
+<https://w3id.org/rec/building/Pantry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Pantry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+<https://w3id.org/rec/building/Pantry> <http://www.w3.org/2000/01/rdf-schema#label> "Pantry"@en .
+# 
+# https://w3id.org/rec/building/ParkingSlotCold
+<https://w3id.org/rec/building/ParkingSlotCold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ParkingSlotCold> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Garage> .
+# 
+# https://w3id.org/rec/building/ParkingSlotWarm
+<https://w3id.org/rec/building/ParkingSlotWarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ParkingSlotWarm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Garage> .
+# 
+# https://w3id.org/rec/building/Pentry
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/FoodHandlingRoom> .
+# 
+# https://w3id.org/rec/building/PersonalHygiene
+<https://w3id.org/rec/building/PersonalHygiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/PersonalHygiene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/PharmacyRoom
+<https://w3id.org/rec/building/PharmacyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/PharmacyRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/PharmacyRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Pharmacy room"@en .
+# 
+# https://w3id.org/rec/building/PhoneBooth
+<https://w3id.org/rec/building/PhoneBooth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/PhoneBooth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Office> .
+# 
+# https://w3id.org/rec/building/RadiologyRoom
+<https://w3id.org/rec/building/RadiologyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RadiologyRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/RadiologyRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Radiology room"@en .
+# 
+# https://w3id.org/rec/building/Reception
+<https://w3id.org/rec/building/Reception> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Reception> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/RecordingRoom
+<https://w3id.org/rec/building/RecordingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RecordingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/RecreationalRoom
+<https://w3id.org/rec/building/RecreationalRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RecreationalRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/RestingRoom
+<https://w3id.org/rec/building/RestingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RestingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/RetailRoom
+<https://w3id.org/rec/building/RetailRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RetailRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/RoofInner
+<https://w3id.org/rec/building/RoofInner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RoofInner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/RoofInner> <http://www.w3.org/2000/01/rdf-schema#label> "Roof, inner"@en .
+# 
+# https://w3id.org/rec/building/RoofLevel
+<https://w3id.org/rec/building/RoofLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RoofLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Level> .
+<https://w3id.org/rec/building/RoofLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Roof level"@en .
+# 
+# https://w3id.org/rec/building/RoofOuter
+<https://w3id.org/rec/building/RoofOuter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RoofOuter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/RoofOuter> <http://www.w3.org/2000/01/rdf-schema#label> "Roof, outer"@en .
+# 
+# https://w3id.org/rec/building/RoomType
+<https://w3id.org/rec/building/RoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/RoomType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Type> .
+<https://w3id.org/rec/building/RoomType> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of traditional rdf:type-based typing, using core:Room subclasses."@en .
+<https://w3id.org/rec/building/RoomType> <http://www.w3.org/2000/01/rdf-schema#label> "Room type"@en .
+<https://w3id.org/rec/building/RoomType> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/rec/building/RoomType> <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "roomtype" .
+<https://w3id.org/rec/building/RoomType> <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/rec/building/Sauna
+<https://w3id.org/rec/building/Sauna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Sauna> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/PersonalHygiene> .
+# 
+# https://w3id.org/rec/building/School
+<https://w3id.org/rec/building/School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/School> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Building> .
+<https://w3id.org/rec/building/School> <http://www.w3.org/2000/01/rdf-schema#label> "School"@en .
+# 
+# https://w3id.org/rec/building/SecurityRoom
+<https://w3id.org/rec/building/SecurityRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/SecurityRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ServiceEntrance
+<https://w3id.org/rec/building/ServiceEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ServiceEntrance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Entrance> .
+# 
+# https://w3id.org/rec/building/ServiceShaft
+<https://w3id.org/rec/building/ServiceShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ServiceShaft> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Shelter
+<https://w3id.org/rec/building/Shelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Shelter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/ShelterGasLock
+<https://w3id.org/rec/building/ShelterGasLock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ShelterGasLock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Shelter> .
+# 
+# https://w3id.org/rec/building/ShelterRoom
+<https://w3id.org/rec/building/ShelterRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ShelterRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Shelter> .
+# 
+# https://w3id.org/rec/building/ShoppingMall
+<https://w3id.org/rec/building/ShoppingMall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ShoppingMall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Building> .
+<https://w3id.org/rec/building/ShoppingMall> <http://www.w3.org/2000/01/rdf-schema#label> "Shopping mall"@en .
+# 
+# https://w3id.org/rec/building/ShowerRoom
+<https://w3id.org/rec/building/ShowerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/ShowerRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/PersonalHygiene> .
+# 
+# https://w3id.org/rec/building/Slab
+<https://w3id.org/rec/building/Slab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Slab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Slab> <http://www.w3.org/2000/01/rdf-schema#label> "Slab"@en .
+# 
+# https://w3id.org/rec/building/SmallStudyRoom
+<https://w3id.org/rec/building/SmallStudyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/SmallStudyRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/EducationalRoom> .
+# 
+# https://w3id.org/rec/building/SprinklerRoom
+<https://w3id.org/rec/building/SprinklerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/SprinklerRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/UtilitiesRoom> .
+# 
+# https://w3id.org/rec/building/Stadium
+<https://w3id.org/rec/building/Stadium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Stadium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Building> .
+<https://w3id.org/rec/building/Stadium> <http://www.w3.org/2000/01/rdf-schema#label> "Stadium"@en .
+# 
+# https://w3id.org/rec/building/StaffRoom
+<https://w3id.org/rec/building/StaffRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/StaffRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Stairwell
+<https://w3id.org/rec/building/Stairwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Stairwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Storage
+<https://w3id.org/rec/building/Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Storey
+<https://w3id.org/rec/building/Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "The level of storey, a.k.a. floorplan.\n\nDeprecated in favour of core:Level"@en .
+<https://w3id.org/rec/building/Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey"@en .
+<https://w3id.org/rec/building/Storey> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/rec/building/Storey> <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "storey" .
+<https://w3id.org/rec/building/Storey> <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/rec/building/StoreyLevel
+<https://w3id.org/rec/building/StoreyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/StoreyLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/StoreyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The level of storey, a.k.a. floorplan"@en .
+<https://w3id.org/rec/building/StoreyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Storey level"@en .
+<https://w3id.org/rec/building/StoreyLevel> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/rec/building/StoreyLevel> <http://www.w3.org/2002/07/owl#versionInfo> "Deprecated in favour of :Storey"@en .
+# 
+# https://w3id.org/rec/building/TelecommunicationRoom
+<https://w3id.org/rec/building/TelecommunicationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/TelecommunicationRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/CableRoom> .
+# 
+# https://w3id.org/rec/building/Terrace
+<https://w3id.org/rec/building/Terrace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Terrace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Terrace> <http://www.w3.org/2000/01/rdf-schema#label> "Terrace"@en .
+# 
+# https://w3id.org/rec/building/Theater
+<https://w3id.org/rec/building/Theater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Theater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/TherapyRoom
+<https://w3id.org/rec/building/TherapyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/TherapyRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/HealthcareRoom> .
+<https://w3id.org/rec/building/TherapyRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Therapy room"@en .
+# 
+# https://w3id.org/rec/building/Toilet
+<https://w3id.org/rec/building/Toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Toilet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/PersonalHygiene> .
+# 
+# https://w3id.org/rec/building/TreatmentRoom
+<https://w3id.org/rec/building/TreatmentRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/TreatmentRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/TreatmentWaitingRoom
+<https://w3id.org/rec/building/TreatmentWaitingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/TreatmentWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/TreatmentRoom> .
+# 
+# https://w3id.org/rec/building/UtilitiesRoom
+<https://w3id.org/rec/building/UtilitiesRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/UtilitiesRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/VirtualBuilding
+<https://w3id.org/rec/building/VirtualBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/VirtualBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Building> .
+<https://w3id.org/rec/building/VirtualBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-physical Building. Belongs to a RealEstate."@en .
+<https://w3id.org/rec/building/VirtualBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual building"@en .
+# 
+# https://w3id.org/rec/building/VirtualBuildingComponent
+<https://w3id.org/rec/building/VirtualBuildingComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/VirtualBuildingComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/VirtualBuildingComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building."@en .
+<https://w3id.org/rec/building/VirtualBuildingComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual building component"@en .
+# 
+# https://w3id.org/rec/building/Wall
+<https://w3id.org/rec/building/Wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/BuildingComponent> .
+<https://w3id.org/rec/building/Wall> <http://www.w3.org/2000/01/rdf-schema#label> "Wall"@en .
+# 
+# https://w3id.org/rec/building/WallInner
+<https://w3id.org/rec/building/WallInner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/WallInner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/building/Wall> .
+<https://w3id.org/rec/building/WallInner> <http://www.w3.org/2000/01/rdf-schema#label> "Inner wall"@en .
+# 
+# https://w3id.org/rec/building/WasteManagementRoom
+<https://w3id.org/rec/building/WasteManagementRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/WasteManagementRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/building/Workshop
+<https://w3id.org/rec/building/Workshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/building/Workshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Room> .
+# 
+# https://w3id.org/rec/core/Room
+<https://w3id.org/rec/core/Room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/building/Atrium
+<https://w3id.org/rec/building/Atrium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Atrium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Auditorium
+<https://w3id.org/rec/building/Auditorium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Auditorium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/BackOffice
+<https://w3id.org/rec/building/BackOffice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/BackOffice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/BankVault
+<https://w3id.org/rec/building/BankVault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/BankVault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/BarRoom
+<https://w3id.org/rec/building/BarRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/BarRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Bathroom
+<https://w3id.org/rec/building/Bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Bedroom
+<https://w3id.org/rec/building/Bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/BicycleGarage
+<https://w3id.org/rec/building/BicycleGarage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/BicycleGarage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Cabinet
+<https://w3id.org/rec/building/Cabinet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Cabinet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CableRoom
+<https://w3id.org/rec/building/CableRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CableRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CafeteriaRoom
+<https://w3id.org/rec/building/CafeteriaRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CafeteriaRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Cinema
+<https://w3id.org/rec/building/Cinema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Cinema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Classroom
+<https://w3id.org/rec/building/Classroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Classroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CleaningRoom
+<https://w3id.org/rec/building/CleaningRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CleaningRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ClimateControlRoom
+<https://w3id.org/rec/building/ClimateControlRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ClimateControlRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CloakRoom
+<https://w3id.org/rec/building/CloakRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CloakRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CoffeeRoom
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ConferenceRoom
+<https://w3id.org/rec/building/ConferenceRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ConferenceRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ConversationRoom
+<https://w3id.org/rec/building/ConversationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ConversationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CookingRoom
+<https://w3id.org/rec/building/CookingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CookingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/CopyingRoom
+<https://w3id.org/rec/building/CopyingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/CopyingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/DataServerRoom
+<https://w3id.org/rec/building/DataServerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/DataServerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/DeliRoom
+<https://w3id.org/rec/building/DeliRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/DeliRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/DiningRoom
+<https://w3id.org/rec/building/DiningRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/DiningRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/DisabledToilet
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/DishingRoom
+<https://w3id.org/rec/building/DishingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/DishingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/DressingRoom
+<https://w3id.org/rec/building/DressingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/DressingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/EducationalRoom
+<https://w3id.org/rec/building/EducationalRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/EducationalRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ElectricityRoom
+<https://w3id.org/rec/building/ElectricityRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ElectricityRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ElevatorRoom
+<https://w3id.org/rec/building/ElevatorRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ElevatorRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ElevatorShaft
+<https://w3id.org/rec/building/ElevatorShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ElevatorShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Entrance
+<https://w3id.org/rec/building/Entrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Entrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ExerciseRoom
+<https://w3id.org/rec/building/ExerciseRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ExerciseRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ExhibitionRoom
+<https://w3id.org/rec/building/ExhibitionRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ExhibitionRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/FittingRoom
+<https://w3id.org/rec/building/FittingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/FittingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/FoodHandlingRoom
+<https://w3id.org/rec/building/FoodHandlingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/FoodHandlingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/FoodStorageFreezerRoom
+<https://w3id.org/rec/building/FoodStorageFreezerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/FoodStorageFreezerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/FoodStorageRefrigeratorRoom
+<https://w3id.org/rec/building/FoodStorageRefrigeratorRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/FoodStorageRefrigeratorRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/FoodStorageRoom
+<https://w3id.org/rec/building/FoodStorageRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/FoodStorageRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Garage
+<https://w3id.org/rec/building/Garage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Garage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/GroupRoom
+<https://w3id.org/rec/building/GroupRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/GroupRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Hallway
+<https://w3id.org/rec/building/Hallway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Hallway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Laboratory
+<https://w3id.org/rec/building/Laboratory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Laboratory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/LaboratoryDry
+<https://w3id.org/rec/building/LaboratoryDry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/LaboratoryDry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/LaboratoryWet
+<https://w3id.org/rec/building/LaboratoryWet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/LaboratoryWet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/LaundryRoom
+<https://w3id.org/rec/building/LaundryRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/LaundryRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Library
+<https://w3id.org/rec/building/Library> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Library> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/LivingRoom
+<https://w3id.org/rec/building/LivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/LivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/LoadingReceivingRoom
+<https://w3id.org/rec/building/LoadingReceivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/LoadingReceivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/MailRoom
+<https://w3id.org/rec/building/MailRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/MailRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/MainEntrance
+<https://w3id.org/rec/building/MainEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/MainEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/MeditationRoom
+<https://w3id.org/rec/building/MeditationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/MeditationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/MothersRoom
+<https://w3id.org/rec/building/MothersRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/MothersRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/MultiPurposeRoom
+<https://w3id.org/rec/building/MultiPurposeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/MultiPurposeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Office
+<https://w3id.org/rec/building/Office> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Office> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/OfficeLandscape
+<https://w3id.org/rec/building/OfficeLandscape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/OfficeLandscape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/OfficeRoom
+<https://w3id.org/rec/building/OfficeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/OfficeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ParkingSlotCold
+<https://w3id.org/rec/building/ParkingSlotCold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ParkingSlotCold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ParkingSlotWarm
+<https://w3id.org/rec/building/ParkingSlotWarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ParkingSlotWarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Pentry
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/PersonalHygiene
+<https://w3id.org/rec/building/PersonalHygiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/PersonalHygiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/PhoneBooth
+<https://w3id.org/rec/building/PhoneBooth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/PhoneBooth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Reception
+<https://w3id.org/rec/building/Reception> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Reception> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/RecordingRoom
+<https://w3id.org/rec/building/RecordingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/RecordingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/RecreationalRoom
+<https://w3id.org/rec/building/RecreationalRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/RecreationalRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/RestingRoom
+<https://w3id.org/rec/building/RestingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/RestingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/RetailRoom
+<https://w3id.org/rec/building/RetailRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/RetailRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Sauna
+<https://w3id.org/rec/building/Sauna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Sauna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/SecurityRoom
+<https://w3id.org/rec/building/SecurityRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/SecurityRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ServiceEntrance
+<https://w3id.org/rec/building/ServiceEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ServiceEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ServiceShaft
+<https://w3id.org/rec/building/ServiceShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ServiceShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Shelter
+<https://w3id.org/rec/building/Shelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Shelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ShelterGasLock
+<https://w3id.org/rec/building/ShelterGasLock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ShelterGasLock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ShelterRoom
+<https://w3id.org/rec/building/ShelterRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ShelterRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/ShowerRoom
+<https://w3id.org/rec/building/ShowerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/ShowerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/SmallStudyRoom
+<https://w3id.org/rec/building/SmallStudyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/SmallStudyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/SprinklerRoom
+<https://w3id.org/rec/building/SprinklerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/SprinklerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/StaffRoom
+<https://w3id.org/rec/building/StaffRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/StaffRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Stairwell
+<https://w3id.org/rec/building/Stairwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Stairwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Storage
+<https://w3id.org/rec/building/Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/StudyRoom
+<https://w3id.org/rec/building/StudyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/StudyRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/TelecommunicationRoom
+<https://w3id.org/rec/building/TelecommunicationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/TelecommunicationRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Theater
+<https://w3id.org/rec/building/Theater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Theater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Toilet
+<https://w3id.org/rec/building/Toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/TreatmentRoom
+<https://w3id.org/rec/building/TreatmentRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/TreatmentRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/TreatmentWaitingRoom
+<https://w3id.org/rec/building/TreatmentWaitingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/TreatmentWaitingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/UtilitiesRoom
+<https://w3id.org/rec/building/UtilitiesRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/UtilitiesRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Vault
+<https://w3id.org/rec/building/Vault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Vault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/WasteManagementRoom
+<https://w3id.org/rec/building/WasteManagementRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/WasteManagementRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# https://w3id.org/rec/building/Workshop
+<https://w3id.org/rec/building/Workshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rec/building/Workshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rec/building/RoomType> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/rec/building/Atrium> <http://www.w3.org/2000/01/rdf-schema#label> "Atrium"@en .
+# 
+<https://w3id.org/rec/building/Auditorium> <http://www.w3.org/2000/01/rdf-schema#label> "Auditorium"@en .
+# 
+<https://w3id.org/rec/building/BackOffice> <http://www.w3.org/2000/01/rdf-schema#label> "BackOffice"@en .
+# 
+<https://w3id.org/rec/building/BarRoom> <http://www.w3.org/2000/01/rdf-schema#label> "BarRoom"@en .
+# 
+<https://w3id.org/rec/building/Bathroom> <http://www.w3.org/2000/01/rdf-schema#label> "Bathroom"@en .
+# 
+<https://w3id.org/rec/building/Bedroom> <http://www.w3.org/2000/01/rdf-schema#label> "Bedroom"@en .
+# 
+<https://w3id.org/rec/building/BicycleGarage> <http://www.w3.org/2000/01/rdf-schema#label> "BicycleGarage"@en .
+# 
+<https://w3id.org/rec/building/Cabinet> <http://www.w3.org/2000/01/rdf-schema#label> "Cabinet"@en .
+# 
+<https://w3id.org/rec/building/CableRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Cable room"@en .
+# 
+<https://w3id.org/rec/building/CafeteriaRoom> <http://www.w3.org/2000/01/rdf-schema#label> "CafeteriaRoom"@en .
+# 
+<https://w3id.org/rec/building/Cinema> <http://www.w3.org/2000/01/rdf-schema#label> "Cinema"@en .
+# 
+<https://w3id.org/rec/building/Classroom> <http://www.w3.org/2000/01/rdf-schema#label> "Classroom"@en .
+# 
+<https://w3id.org/rec/building/CleaningRoom> <http://www.w3.org/2000/01/rdf-schema#label> "CleaningRoom"@en .
+# 
+<https://w3id.org/rec/building/ClimateControlRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ClimateControlRoom"@en .
+# 
+<https://w3id.org/rec/building/CloakRoom> <http://www.w3.org/2000/01/rdf-schema#label> "CloakRoom"@en .
+# 
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of building:CafeteriaRoom"@en .
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/2000/01/rdf-schema#label> "CoffeeRoom"@en .
+<https://w3id.org/rec/building/CoffeeRoom> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://w3id.org/rec/building/ConferenceRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ConferenceRoom"@en .
+# 
+<https://w3id.org/rec/building/ConversationRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ConversationRoom"@en .
+# 
+<https://w3id.org/rec/building/CookingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "CookingRoom"@en .
+# 
+<https://w3id.org/rec/building/CopyingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "CopyingRoom"@en .
+# 
+<https://w3id.org/rec/building/DataServerRoom> <http://www.w3.org/2000/01/rdf-schema#label> "DataServerRoom"@en .
+# 
+<https://w3id.org/rec/building/DiningRoom> <http://www.w3.org/2000/01/rdf-schema#label> "DiningRoom"@en .
+# 
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/2000/01/rdf-schema#label> "DisabledToilet"@en .
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "HWC"@en .
+<https://w3id.org/rec/building/DisabledToilet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "RWC"@en .
+# 
+<https://w3id.org/rec/building/DishingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "DishingRoom"@en .
+# 
+<https://w3id.org/rec/building/DressingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "DressingRoom"@en .
+# 
+<https://w3id.org/rec/building/EducationalRoom> <http://www.w3.org/2000/01/rdf-schema#label> "EducationalRoom"@en .
+# 
+<https://w3id.org/rec/building/ElectricityRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricityRoom"@en .
+# 
+<https://w3id.org/rec/building/ElevatorRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ElevatorRoom"@en .
+# 
+<https://w3id.org/rec/building/ElevatorShaft> <http://www.w3.org/2000/01/rdf-schema#label> "ElevatorShaft"@en .
+# 
+<https://w3id.org/rec/building/Entrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrance"@en .
+# 
+<https://w3id.org/rec/building/ExerciseRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ExerciseRoom"@en .
+# 
+<https://w3id.org/rec/building/ExhibitionRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ExhibitionRoom"@en .
+# 
+<https://w3id.org/rec/building/FittingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "FittingRoom"@en .
+# 
+<https://w3id.org/rec/building/FoodHandlingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "FoodHandlingRoom"@en .
+# 
+<https://w3id.org/rec/building/Garage> <http://www.w3.org/2000/01/rdf-schema#label> "Garage"@en .
+# 
+<https://w3id.org/rec/building/GroupRoom> <http://www.w3.org/2000/01/rdf-schema#label> "GroupRoom"@en .
+# 
+<https://w3id.org/rec/building/Hallway> <http://www.w3.org/2000/01/rdf-schema#label> "Hallway"@en .
+# 
+<https://w3id.org/rec/building/Laboratory> <http://www.w3.org/2000/01/rdf-schema#label> "Laboratory"@en .
+# 
+<https://w3id.org/rec/building/LaboratoryDry> <http://www.w3.org/2000/01/rdf-schema#comment> "A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm."@en .
+<https://w3id.org/rec/building/LaboratoryDry> <http://www.w3.org/2000/01/rdf-schema#label> "LaboratoryDry"@en .
+# 
+<https://w3id.org/rec/building/LaboratoryWet> <http://www.w3.org/2000/01/rdf-schema#comment> "A LaboratoryWet is a type of laboratory where it is necessary to handle various types of chemicals and potential \"wet\" hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination."@en .
+<https://w3id.org/rec/building/LaboratoryWet> <http://www.w3.org/2000/01/rdf-schema#label> "LaboratoryWet"@en .
+# 
+<https://w3id.org/rec/building/LaundryRoom> <http://www.w3.org/2000/01/rdf-schema#label> "LaundryRoom"@en .
+# 
+<https://w3id.org/rec/building/Library> <http://www.w3.org/2000/01/rdf-schema#label> "Library"@en .
+# 
+<https://w3id.org/rec/building/LivingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "LivingRoom"@en .
+# 
+<https://w3id.org/rec/building/LoadingReceivingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Loading/receiving room"@en .
+# 
+<https://w3id.org/rec/building/MailRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Mail room"@en .
+# 
+<https://w3id.org/rec/building/MainEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "MainEntrance"@en .
+# 
+<https://w3id.org/rec/building/MeditationRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Meditation room"@en .
+# 
+<https://w3id.org/rec/building/MothersRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Mothers' room"@en .
+# 
+<https://w3id.org/rec/building/MultiPurposeRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-purpose room"@en .
+# 
+<https://w3id.org/rec/building/Office> <http://www.w3.org/2000/01/rdf-schema#label> "Office"@en .
+# 
+<https://w3id.org/rec/building/OfficeLandscape> <http://www.w3.org/2000/01/rdf-schema#label> "OfficeLandscape"@en .
+# 
+<https://w3id.org/rec/building/OfficeRoom> <http://www.w3.org/2000/01/rdf-schema#label> "OfficeRoom"@en .
+# 
+<https://w3id.org/rec/building/ParkingSlotCold> <http://www.w3.org/2000/01/rdf-schema#label> "ParkingSlotCold"@en .
+# 
+<https://w3id.org/rec/building/ParkingSlotWarm> <http://www.w3.org/2000/01/rdf-schema#label> "ParkingSlotWarm"@en .
+# 
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of building:Pantry"@en .
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/2000/01/rdf-schema#label> "Pentry"@en .
+<https://w3id.org/rec/building/Pentry> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://w3id.org/rec/building/PersonalHygiene> <http://www.w3.org/2000/01/rdf-schema#label> "PersonalHygiene"@en .
+# 
+<https://w3id.org/rec/building/PhoneBooth> <http://www.w3.org/2000/01/rdf-schema#label> "PhoneBooth"@en .
+# 
+<https://w3id.org/rec/building/Reception> <http://www.w3.org/2000/01/rdf-schema#label> "Reception"@en .
+# 
+<https://w3id.org/rec/building/RecordingRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "Room for making audio and/or video recordings. A.ka. studio."@en .
+<https://w3id.org/rec/building/RecordingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "RecordingRoom"@en .
+# 
+<https://w3id.org/rec/building/RecreationalRoom> <http://www.w3.org/2000/01/rdf-schema#label> "RecreationalRoom"@en .
+# 
+<https://w3id.org/rec/building/RestingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "RestingRoom"@en .
+# 
+<https://w3id.org/rec/building/RetailRoom> <http://www.w3.org/2000/01/rdf-schema#label> "RetailRoom"@en .
+# 
+<https://w3id.org/rec/building/Sauna> <http://www.w3.org/2000/01/rdf-schema#label> "Sauna"@en .
+# 
+<https://w3id.org/rec/building/SecurityRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Security room"@en .
+# 
+<https://w3id.org/rec/building/ServiceEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceEntrance"@en .
+# 
+<https://w3id.org/rec/building/ServiceShaft> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceShaft"@en .
+# 
+<https://w3id.org/rec/building/Shelter> <http://www.w3.org/2000/01/rdf-schema#label> "Shelter"@en .
+# 
+<https://w3id.org/rec/building/ShelterGasLock> <http://www.w3.org/2000/01/rdf-schema#label> "ShelterGasLock"@en .
+# 
+<https://w3id.org/rec/building/ShelterRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ShelterRoom"@en .
+# 
+<https://w3id.org/rec/building/ShowerRoom> <http://www.w3.org/2000/01/rdf-schema#label> "ShowerRoom"@en .
+# 
+<https://w3id.org/rec/building/SmallStudyRoom> <http://www.w3.org/2000/01/rdf-schema#label> "SmallStudyRoom"@en .
+# 
+<https://w3id.org/rec/building/SprinklerRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Sprinkler room"@en .
+# 
+<https://w3id.org/rec/building/StaffRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "Room for staff to take breaks."@en .
+<https://w3id.org/rec/building/StaffRoom> <http://www.w3.org/2000/01/rdf-schema#label> "StaffRoom"@en .
+# 
+<https://w3id.org/rec/building/Stairwell> <http://www.w3.org/2000/01/rdf-schema#label> "Stairwell"@en .
+# 
+<https://w3id.org/rec/building/Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage"@en .
+# 
+<https://w3id.org/rec/building/TelecommunicationRoom> <http://www.w3.org/2000/01/rdf-schema#label> "TelecommunicationRoom"@en .
+# 
+<https://w3id.org/rec/building/Theater> <http://www.w3.org/2000/01/rdf-schema#label> "Theater"@en .
+# 
+<https://w3id.org/rec/building/Toilet> <http://www.w3.org/2000/01/rdf-schema#label> "Toilet"@en .
+# 
+<https://w3id.org/rec/building/TreatmentRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "For e.g. medical or other treatment or consultation."@en .
+<https://w3id.org/rec/building/TreatmentRoom> <http://www.w3.org/2000/01/rdf-schema#label> "TreatmentRoom"@en .
+# 
+<https://w3id.org/rec/building/TreatmentWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "TreatmentWaitingRoom"@en .
+# 
+<https://w3id.org/rec/building/UtilitiesRoom> <http://www.w3.org/2000/01/rdf-schema#label> "UtilitiesRoom"@en .
+# 
+<https://w3id.org/rec/building/WasteManagementRoom> <http://www.w3.org/2000/01/rdf-schema#label> "WasteManagementRoom"@en .
+<https://w3id.org/rec/building/WasteManagementRoom> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Recycling room"@en .
+# 
+<https://w3id.org/rec/building/Workshop> <http://www.w3.org/2000/01/rdf-schema#label> "Workshop"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
