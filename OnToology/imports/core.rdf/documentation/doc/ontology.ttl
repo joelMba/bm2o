@@ -1,0 +1,2361 @@
+@prefix : <https://w3id.org/rec/core/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/core/> .
+
+<https://w3id.org/rec/core/> rdf:type owl:Ontology ;
+                              owl:versionIRI <https://w3id.org/rec/core/3.3/> ;
+                              owl:imports <https://w3id.org/rec/metadata/3.3/> ,
+                                          <https://w3id.org/rec/units/3.3/> ;
+                              <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> ;
+                              <http://purl.org/dc/elements/1.1/creator> "Erik Wallin" ,
+                                                                        "Karl Hammar" ;
+                              <http://purl.org/dc/elements/1.1/description> """The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.
+
+Note that this module reuses certain classes, properties, and named individuals from other vocabularies, e.g., GeoSPARQL; the copyright conditions on those reused entities are stated in their respective rdfs:comments annotations."""@en ;
+                              <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                              <http://purl.org/dc/elements/1.1/title> "RealEstateCore Core Module" ;
+                              <http://purl.org/dc/terms/modified> "2020-06-23" ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "core" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/core/3.3/" ;
+                              <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "How many rooms are there in Building 1?"@en ,
+                                                                                                                        "What does electricity meter 3 measure? In what units?"@en ,
+                                                                                                                        "Where in Building 1 (i.e., in which rooms) are there devices mounted?"@en ,
+                                                                                                                        "Where is Building 1 located?"@en ,
+                                                                                                                        "Where is the real estate Ulvsnaes 1:7 located?"@en ,
+                                                                                                                        "Which buildings and land make up the real estate Ulvsnaes 1:7?"@en ,
+                                                                                                                        "Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?"@en ;
+                              rdfs:seeAlso <https://realestatecore.io> ;
+                              owl:versionInfo "3.3" .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#gmlLiteral
+<http://www.opengis.net/ont/geosparql#gmlLiteral> rdf:type rdfs:Datatype ;
+                                                  rdfs:comment """A GML serialization of a geometry object.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                                  rdfs:label "GML Literal"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype ;
+                                                  rdfs:comment """A Well-known Text serialization of a geometry object.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                                  rdfs:label "Well-known Text Literal"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#defaultGeometry
+<http://www.opengis.net/ont/geosparql#defaultGeometry> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                       rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                       rdfs:comment """The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                                       rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                                       rdfs:label "default geometry"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:comment """A spatial representation for a given feature.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                                   rdfs:label "has geometry"@en .
+
+
+###  https://w3id.org/rec/core/architectedBy
+:architectedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :Space ;
+               rdfs:range :Agent ;
+               rdfs:label "architected by"@en .
+
+
+###  https://w3id.org/rec/core/categorizationProperties
+:categorizationProperties rdf:type owl:ObjectProperty ;
+                          rdfs:range :PropertySet ;
+                          rdfs:label "categorization properties"@en .
+
+
+###  https://w3id.org/rec/core/componentOf
+:componentOf rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasBuildingComponent ;
+             rdfs:domain :BuildingComponent ;
+             rdfs:range :Space ;
+             rdfs:comment "Links a Building Component to a Space, that the Building Component is either contained in, adjacent to or intersecting with."@en ;
+             rdfs:label "component of"@en .
+
+
+###  https://w3id.org/rec/core/componentOfBuilding
+:componentOfBuilding rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :componentOf ;
+                     rdfs:domain :BuildingComponent ;
+                     rdfs:range :Building ;
+                     rdfs:comment "Indicates which Building a certain Building Component is part of."@en ;
+                     rdfs:label "component of building"@en .
+
+
+###  https://w3id.org/rec/core/constructedBy
+:constructedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :Space ;
+               rdfs:range :Agent ;
+               rdfs:label "constructed by"@en .
+
+
+###  https://w3id.org/rec/core/containsMountedDevice
+:containsMountedDevice rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasPart ;
+                       owl:inverseOf :isMountedIn ;
+                       rdfs:comment "Parthood traversal property linking to mounted Devices."@en ;
+                       rdfs:label "contains mounted device"@en ;
+                       owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/controlledBy
+:controlledBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Capability ;
+              rdfs:range :Capability ;
+              rdfs:label "controlled by"@en .
+
+
+###  https://w3id.org/rec/core/dataSchema
+:dataSchema rdf:type owl:ObjectProperty ;
+            rdfs:range :DataSchema ;
+            rdfs:label "data schema"@en .
+
+
+###  https://w3id.org/rec/core/deviceMeasurementUnit
+:deviceMeasurementUnit rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasMeasurementUnit ;
+                       rdfs:range :MeasurementUnit ;
+                       rdfs:comment """The measurement unit used by some Device.
+
+Deprecated in favour of qudt:unit"""@en ;
+                       rdfs:label "device measurement unit"@en ;
+                       owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/deviceQuantityKind
+:deviceQuantityKind rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasQuantityKind ;
+                    rdfs:range :QuantityKind ;
+                    rdfs:comment """The Quantity Kind that a device measures or affects.
+
+Deprecated in favour of qudt:hasQuantityKind"""@en ;
+                    rdfs:label "device quantity kind"@en ;
+                    owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/documentTopic
+:documentTopic rdf:type owl:ObjectProperty ;
+               owl:inverseOf :hasDocument ;
+               rdfs:domain :Document ;
+               rdfs:label "document topic"@en .
+
+
+###  https://w3id.org/rec/core/eventMeasurementUnit
+:eventMeasurementUnit rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasMeasurementUnit ;
+                      rdfs:domain :Event ;
+                      rdfs:range :MeasurementUnit ;
+                      rdfs:comment """A unit used to measure some aspect of some Event.
+
+Deprecated in favour of qudt:unit"""@en ;
+                      rdfs:label "event measurement unit"@en ;
+                      owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/eventQuantityKind
+:eventQuantityKind rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasQuantityKind ;
+                   rdfs:domain :Event ;
+                   rdfs:range :QuantityKind ;
+                   rdfs:comment """The Quantity Kind that an event measures or affects.
+
+Deprecated in favour of qudt:hasQuantityKind"""@en ;
+                   rdfs:label "event quantity kind"@en ;
+                   owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/generatedObservation
+:generatedObservation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :producedEvent ;
+                      owl:inverseOf :observationGeneratedBy ;
+                      rdfs:range :Observation ;
+                      rdfs:label "generated observation"@en .
+
+
+###  https://w3id.org/rec/core/hasBuildingComponent
+:hasBuildingComponent rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isPartOfBuilding ;
+                      rdfs:domain :Space ;
+                      rdfs:range :BuildingComponent ;
+                      rdfs:comment "Links a Space to a BuildingComponent that is either contained in, adjacent to or intersecting with the Space."@en ;
+                      rdfs:label "has building component"@en .
+
+
+###  https://w3id.org/rec/core/hasCapability
+:hasCapability rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isCapabilityOf ;
+               rdfs:range :Capability ;
+               rdfs:label "has capability"@en .
+
+
+###  https://w3id.org/rec/core/hasDocument
+:hasDocument rdf:type owl:ObjectProperty ;
+             rdfs:range :Document ;
+             rdfs:label "has document"@en .
+
+
+###  https://w3id.org/rec/core/hasGeoReferenceOrigo
+:hasGeoReferenceOrigo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                      rdfs:domain :Building ;
+                      rdfs:range :GeoReferenceOrigo ;
+                      rdfs:comment "Associates a building with a point in some coordinate reference system which can be used to resolve local (building-specific) coordinates against this outer coordinate reference system."@en ;
+                      rdfs:label "has geo-reference origo"@en .
+
+
+###  https://w3id.org/rec/core/hasMeasurementUnit
+:hasMeasurementUnit rdf:type owl:ObjectProperty ;
+                    rdfs:range :MeasurementUnit ;
+                    rdfs:comment """The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.
+
+Deprecated in favour of qudt:unit"""@en ;
+                    rdfs:label "has measurement unit"@en ;
+                    owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasMember
+:hasMember rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isMemberOf ;
+           rdfs:domain :Collection ;
+           rdfs:comment "has member"@en ;
+           owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isPartOf ;
+         rdfs:comment "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.)."@en ;
+         rdfs:label "has part"@en .
+
+
+###  https://w3id.org/rec/core/hasQuantityKind
+:hasQuantityKind rdf:type owl:ObjectProperty ;
+                 rdfs:range :QuantityKind ;
+                 rdfs:comment """Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.
+
+Deprecated in favour of qudt:hasQuantityKind"""@en ;
+                 rdfs:label "quantity kind"@en ;
+                 owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasRealEstateComponent
+:hasRealEstateComponent rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasPart ;
+                        owl:inverseOf :isPartOfRealEstate ;
+                        rdfs:domain :RealEstate ;
+                        rdfs:range :RealEstateComponent ;
+                        rdfs:comment "Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land)."@en ;
+                        rdfs:label "has real estate component"@en ;
+                        owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasSubBuildingComponent
+:hasSubBuildingComponent rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :hasSuperBuildingComponent ;
+                         rdfs:domain :BuildingComponent ;
+                         rdfs:range :BuildingComponent ;
+                         rdfs:comment "Parthood traversal property linking BuildingComponents to their constituent sub-components."@en ;
+                         rdfs:label "has sub-BuildingComponent"@en ;
+                         owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasSubDevice
+:hasSubDevice rdf:type owl:ObjectProperty ;
+              owl:inverseOf :hasSuperDevice ;
+              rdfs:comment "Parthood traversal property linking a Device to any sub-Devices that it contains."@en ;
+              rdfs:label "has sub-device"@en ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasSuperBuildingComponent
+:hasSuperBuildingComponent rdf:type owl:ObjectProperty ;
+                           rdfs:domain :BuildingComponent ;
+                           rdfs:range :BuildingComponent ;
+                           rdfs:comment "Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc."@en ;
+                           rdfs:label "has super-BuildingComponent"@en ;
+                           owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasSuperDevice
+:hasSuperDevice rdf:type owl:ObjectProperty ;
+                rdfs:comment "A property that allows for nesting of devices within devices."@en ;
+                rdfs:label "has super-Device"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasType
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:range :Type ;
+         rdfs:comment "A generic typing relation, holding between individuals and their types (which are also expressed as individuals). This construct allows implementors to add their own types without modifying the ontology and its classes. See the Explicit Typing design pattern in the MODL design library for further discussion."@en ;
+         rdfs:label "has type"@en ;
+         owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hostedBy
+:hostedBy rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hosts ;
+          rdfs:domain :LogicalDevice ;
+          rdfs:range :Asset ;
+          rdfs:comment "Indicates the physical hardware asset that a given logical device is hosted and executed on."@en ;
+          rdfs:label "hosted by"@en .
+
+
+###  https://w3id.org/rec/core/hosts
+:hosts rdf:type owl:ObjectProperty ;
+       rdfs:domain :Asset ;
+       rdfs:range :LogicalDevice ;
+       rdfs:comment "Indicates that a given Asset hosts a logical device; e.g., a Raspberry Pi hosts a Home Assistant installation, or an IoT-connect smart camera unit hosts an IoT Edge runtime."@en ;
+       rdfs:label "hosts"@en .
+
+
+###  https://w3id.org/rec/core/includedIn
+:includedIn rdf:type owl:ObjectProperty ;
+            owl:inverseOf :includes ;
+            rdfs:range :Collection ;
+            rdfs:comment "Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment."@en ;
+            rdfs:label "included in"@en .
+
+
+###  https://w3id.org/rec/core/includes
+:includes rdf:type owl:ObjectProperty ;
+          rdfs:domain :Collection ;
+          rdfs:comment "Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc."@en ;
+          rdfs:label "includes"@en .
+
+
+###  https://w3id.org/rec/core/isCapabilityOf
+:isCapabilityOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Capability ;
+                rdfs:comment "The entity (Asset, Space, LogicalDevice, etc.) that has this Capability."@en ;
+                rdfs:label "is capabilty of"@en .
+
+
+###  https://w3id.org/rec/core/isLocationOf
+:isLocationOf rdf:type owl:ObjectProperty ;
+              owl:inverseOf :locatedIn ;
+              rdfs:domain :Space ;
+              rdfs:label "is location of"@en .
+
+
+###  https://w3id.org/rec/core/isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty ;
+            rdfs:range :Collection ;
+            rdfs:label "is member of"@en ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/isMountedIn
+:isMountedIn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isPartOf ;
+             rdfs:comment "Property describing where a Device is mounted."@en ;
+             rdfs:label "is mounted in"@en ;
+             owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/isMountedInBuildingComponent
+:isMountedInBuildingComponent rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :isMountedIn ;
+                              rdfs:range :BuildingComponent ;
+                              rdfs:comment "Property describing in which Building Component (most typically a Room) that a Device is mounted."@en ;
+                              rdfs:label "is mounted in Building Component"@en ;
+                              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/isPartOf
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:comment "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc)."@en ;
+          rdfs:label "is part of"@en .
+
+
+###  https://w3id.org/rec/core/isPartOfBuilding
+:isPartOfBuilding rdf:type owl:ObjectProperty ;
+                  rdfs:domain :BuildingComponent ;
+                  rdfs:range :Building ;
+                  rdfs:comment """Indicates which Building a certain Building Component is part of.
+
+Deprecated in favour of core:componentOfBuilding"""@en ;
+                  rdfs:label "is part of building"@en ;
+                  owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/isPartOfRealEstate
+:isPartOfRealEstate rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isPartOf ;
+                    rdfs:domain :RealEstateComponent ;
+                    rdfs:range :RealEstate ;
+                    rdfs:comment "Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate."@en ;
+                    owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:range :Space ;
+           rdfs:label "located in"@en .
+
+
+###  https://w3id.org/rec/core/observationGeneratedBy
+:observationGeneratedBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :producedBy ;
+                        rdfs:domain :Observation ;
+                        rdfs:label "observation generated by"@en .
+
+
+###  https://w3id.org/rec/core/observedBy
+:observedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :observes ;
+            rdfs:comment "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."@en ;
+            rdfs:label "observed by"@en .
+
+
+###  https://w3id.org/rec/core/observes
+:observes rdf:type owl:ObjectProperty ;
+          rdfs:comment "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for. This allows systems to perform graph propagation of sensor values, e.g., letting a temperature sensor that observes a given room set the temperature for that room."@en ;
+          rdfs:label "observes"@en .
+
+
+###  https://w3id.org/rec/core/operatedBy
+:operatedBy rdf:type owl:ObjectProperty ;
+            rdfs:range :Agent ;
+            rdfs:label "operated by"@en .
+
+
+###  https://w3id.org/rec/core/ownedBy
+:ownedBy rdf:type owl:ObjectProperty ;
+         owl:inverseOf :owns ;
+         rdfs:range :Agent ;
+         rdfs:comment "Property that defines the legal owner(s) of a given entity."@en ;
+         rdfs:label "owned by"@en .
+
+
+###  https://w3id.org/rec/core/owns
+:owns rdf:type owl:ObjectProperty ;
+      rdfs:domain :Agent ;
+      rdfs:comment "Indicates that an agent is the legal owner of a given entity, e.g., a Company owns some Real Estate."@en ;
+      rdfs:label "owns"@en .
+
+
+###  https://w3id.org/rec/core/premisesType
+:premisesType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasType ;
+              rdfs:domain :Premises ;
+              rdfs:range :PremisesType ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/producedBy
+:producedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :producedEvent ;
+            rdfs:domain :Event ;
+            rdfs:comment "The entity responsible for generating or producing the event."@en ;
+            rdfs:label "produced by"@en .
+
+
+###  https://w3id.org/rec/core/producedEvent
+:producedEvent rdf:type owl:ObjectProperty ;
+               rdfs:range :Event ;
+               rdfs:comment "Event(s) generated or produced by an entity."@en ;
+               rdfs:label "associated with event"@en .
+
+
+###  https://w3id.org/rec/core/qkMeasurementUnit
+:qkMeasurementUnit rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasMeasurementUnit ;
+                   rdfs:domain :QuantityKind ;
+                   rdfs:range :MeasurementUnit ;
+                   rdfs:comment """A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.
+
+Deprecated in favour of qudt:unit"""@en ;
+                   rdfs:label "quantity kind measurement unit"@en ;
+                   owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/sensorInterface
+:sensorInterface rdf:type owl:ObjectProperty ;
+                 rdfs:range :SensorInterface ;
+                 rdfs:label "sensor interface"@en .
+
+
+###  https://w3id.org/rec/core/servedBy
+:servedBy rdf:type owl:ObjectProperty ;
+          owl:inverseOf :serves ;
+          rdfs:comment "Indicates that a Space or Asset is served by some Sensor/Actuator or other Asset. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset."@en ;
+          rdfs:label "served by"@en .
+
+
+###  https://w3id.org/rec/core/serves
+:serves rdf:type owl:ObjectProperty ;
+        rdfs:comment "The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset."@en ;
+        rdfs:label "serves"@en .
+
+
+###  https://w3id.org/rec/core/servesBuilding
+:servesBuilding rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :serves ;
+                rdfs:range :Building ;
+                rdfs:comment """Indicates how a Device serves an entire Building.
+
+Deprecated in favour of core:servesSpace"""@en ;
+                rdfs:label "serves building"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/servesBuildingComponent
+:servesBuildingComponent rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :serves ;
+                         rdfs:range :BuildingComponent ;
+                         rdfs:comment """Indicates how a Device serves a particular Building Component (e.g., a Room).
+
+Deprecated in favour of core:servesSpace"""@en ;
+                         rdfs:label "serves building component"@en ;
+                         owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/servesDevice
+:servesDevice rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :serves ;
+              rdfs:comment """Indicates how a Device serves another Device.
+
+Deprecated in favour of core:servesAsset"""@en ;
+              rdfs:label "serves device"@en ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#asGML
+<http://www.opengis.net/ont/geosparql#asGML> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             rdfs:range <http://www.opengis.net/ont/geosparql#gmlLiteral> ;
+                                             rdfs:comment """The GML serialization of a geometry.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                             rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                             rdfs:label "asGML" .
+
+
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
+                                             rdfs:comment """The WKT serialization of a geometry.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                             rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                             rdfs:label "asWKT" .
+
+
+###  http://www.opengis.net/ont/geosparql#hasSerialization
+<http://www.opengis.net/ont/geosparql#hasSerialization> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:comment """Connects a geometry object with its text-based serialization.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                                        rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                                        rdfs:label "has serialization"@en .
+
+
+###  https://w3id.org/rec/core/IPAddress
+:IPAddress rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "IP address"@en .
+
+
+###  https://w3id.org/rec/core/MACAddress
+:MACAddress rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "MAC address"@en .
+
+
+###  https://w3id.org/rec/core/comment
+:comment rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:label "comment"@en .
+
+
+###  https://w3id.org/rec/core/hasAliasID
+:hasAliasID rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAuxiliaryData ;
+            rdfs:comment """Was originally intented to map an Id in an external system to an instance (e.g. an UUID).
+
+After discussion in REC technical committee, an approach based on owl:sameAs and/or rdfs:seeAlso (depending on the needed semantics) is recommended instead. This property will therefore be removed in future versions."""@en ;
+            rdfs:label "has alias ID"@en ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasAuxiliaryData
+:hasAuxiliaryData rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "This parent property groups a number of sub-properties that provide additional richness to building or device model and that are often used in practice in various systems, but which have not yet (REC 3.0) been fully modelled their respecive REC modules."@en ;
+                  rdfs:label "has auxiliary data"@en .
+
+
+###  https://w3id.org/rec/core/hasCity
+:hasCity rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :hasLocationAttribute ;
+         rdfs:comment "Indicates a city that a certain Geometry is part of."@en ;
+         rdfs:label "has city"@en .
+
+
+###  https://w3id.org/rec/core/hasComment
+:hasComment rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAuxiliaryData ;
+            rdfs:range xsd:string ;
+            rdfs:comment """Extra information about an object that is of a more exceptional character. E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\".
+
+Deprecated in favour of core:comment."""@en ;
+            rdfs:label "has comment"@en ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasCountry
+:hasCountry rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasLocationAttribute ;
+            rdfs:comment "Indicates a country that a certain Geometry is part of."@en ;
+            rdfs:label "has country"@en .
+
+
+###  https://w3id.org/rec/core/hasCreatedTime
+:hasCreatedTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "has created time"@en .
+
+
+###  https://w3id.org/rec/core/hasDeletedTime
+:hasDeletedTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "has deleted time"@en .
+
+
+###  https://w3id.org/rec/core/hasDuration
+:hasDuration rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasTime ;
+             rdfs:domain :Event ;
+             rdfs:range xsd:double ;
+             rdfs:comment "Measured in ms (milliseconds). Duration is defined as the length of time that something lasts."@en ;
+             rdfs:label "has duration"@en .
+
+
+###  https://w3id.org/rec/core/hasGeoReferenceBearing
+:hasGeoReferenceBearing rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                        rdfs:domain :GeoReferenceOrigo ;
+                        rdfs:range xsd:double ;
+                        rdfs:comment """The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
+
+Bearings are never greater than 90°.
+Bearings are based on true north."""@en ;
+                        rdfs:label "has geo reference bearing"@en .
+
+
+###  https://w3id.org/rec/core/hasGeonamesId
+:hasGeonamesId rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasLocationAttribute ;
+               rdfs:comment """Linking to https://www.geonames.org
+
+E.g. for Stockholm (Sweden):
+LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html"""@en ;
+               rdfs:label "has geonames ID"@en .
+
+
+###  https://w3id.org/rec/core/hasLittera
+:hasLittera rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAuxiliaryData ;
+            rdfs:comment "Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room."@en ;
+            rdfs:label "has littera"@en .
+
+
+###  https://w3id.org/rec/core/hasLocationAttribute
+:hasLocationAttribute rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                      rdfs:comment "This property is a cognitive clustering for human consumption, grouping sub-properties that assign labels (e.g., place names, addresses, etc.) to Geometry entities. This branch of the property hierarchy may need some further development and cleaning up in future versions."@en ;
+                      rdfs:label "has location attribute"@en .
+
+
+###  https://w3id.org/rec/core/hasObservationTime
+:hasObservationTime rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasTime ;
+                    rdfs:domain :Event ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:label "has observation time"@en .
+
+
+###  https://w3id.org/rec/core/hasPointInTime
+:hasPointInTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "has point in time"@en .
+
+
+###  https://w3id.org/rec/core/hasPopularName
+:hasPopularName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasAuxiliaryData ;
+                rdfs:comment "Human-readable-friendly name."@en ;
+                rdfs:label "has popular name"@en .
+
+
+###  https://w3id.org/rec/core/hasPostalAddress
+:hasPostalAddress rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasLocationAttribute ;
+                  rdfs:comment "Address used for postal delivery."@en ;
+                  rdfs:label "has postal address"@en .
+
+
+###  https://w3id.org/rec/core/hasProcessedTime
+:hasProcessedTime rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasTime ;
+                  rdfs:domain :Observation ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "Time when an object or result was processed in a system."@en ;
+                  rdfs:label "has processed time"@en .
+
+
+###  https://w3id.org/rec/core/hasReadTime
+:hasReadTime rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasTime ;
+             rdfs:domain :Event ;
+             rdfs:range xsd:dateTime ;
+             rdfs:label "has read time"@en .
+
+
+###  https://w3id.org/rec/core/hasRegion
+:hasRegion rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasLocationAttribute ;
+           rdfs:comment "Indicates a region that a certain Geometry is part of."@en ;
+           rdfs:label "has region"@en .
+
+
+###  https://w3id.org/rec/core/hasSource
+:hasSource rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasAuxiliaryData ;
+           rdfs:comment "Used for information about a source system or data."@en ;
+           rdfs:label "has source"@en .
+
+
+###  https://w3id.org/rec/core/hasStartTime
+:hasStartTime rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasTime ;
+              rdfs:domain :Event ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "has start time"@en .
+
+
+###  https://w3id.org/rec/core/hasStopTime
+:hasStopTime rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasTime ;
+             rdfs:domain :Event ;
+             rdfs:range xsd:dateTime ;
+             rdfs:label "has stop time"@en .
+
+
+###  https://w3id.org/rec/core/hasSustainabilityCertification
+:hasSustainabilityCertification rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf :hasAuxiliaryData ;
+                                rdfs:comment "Indicates any sustainability certifications that a Building or piece of Real Estate has achieved. This is a stub for now and will likely be more expressively modelled as classes and properties in future REC releases."@en ;
+                                rdfs:label "has sustainability certification"@en .
+
+
+###  https://w3id.org/rec/core/hasTime
+:hasTime rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:comment """Cognitive clustering of time-related properties that can apply to time-indexed objects (i.e., events of various sorts).
+
+Certain time properties are given using xsd:DateTime, i.e., ISO8601 (see below), whereas others are given as ints or floats, depending on use case.
+
+Time format ISO8601:
+
+Complete date, hour, minutes, seconds, and decimal fraction of second
+
+      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
+
+Where:
+     YYYY = 4 numbers for year.
+     MM = 2 numbers for month (01=January, etc.)
+     DD = 2 numbers for day of month (01 till 31)
+     hh = 2 numbers for hour (00 till 23) (am/pm not allowed)
+     mm = 2 numbers for minutes (00 till 59)
+     ss = 2 numbers for second (00 till 59)
+     s = 1 or more numbers represent a decimal fraction of second
+
+TZD  = time zone designator (Z or +hh:mm or -hh:mm)
+Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (\"Z\") for GMT."""@en ;
+         rdfs:label "has time"@en .
+
+
+###  https://w3id.org/rec/core/hasUpdatedTime
+:hasUpdatedTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "has updated time"@en .
+
+
+###  https://w3id.org/rec/core/hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:comment """REC entities may be associated with values (e.g., Sensors, Setpoints, etc).
+
+Deprecated in favor of core:value."""@en ;
+          rdfs:label "has value"@en ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/hasVistingAddress
+:hasVistingAddress rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasLocationAttribute ;
+                   rdfs:comment "An address for visiting the Geometry. If a Geometry has multiple visiting addresses, then just add as many hasVistingAddress as needed."@en ;
+                   rdfs:label "has visting address"@en .
+
+
+###  https://w3id.org/rec/core/hasZipCode
+:hasZipCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasLocationAttribute ;
+            rdfs:comment "Indicates a certain Geometry's zip code."@en ;
+            rdfs:label "has zip code"@en .
+
+
+###  https://w3id.org/rec/core/isLocatedAtLocalCoordinates
+:isLocatedAtLocalCoordinates rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                             rdfs:comment "Expressed as a string adhering to the notation \"(x,y,z)\", where x, y, and z ar whole or decimal numbers indicating the position in the local building coordinate system, measured in meters. This relates to the outside world coordinate refence system via the values expressed by GeoReferenceOrigo."@en ;
+                             rdfs:label "is located at local coordinates"@en .
+
+
+###  https://w3id.org/rec/core/lastValue
+:lastValue rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Capability ;
+           rdfs:comment "Most recently reported or set value of a core:Capability."@en ;
+           rdfs:label "last value"@en .
+
+
+###  https://w3id.org/rec/core/lastValueTime
+:lastValueTime rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Capability ;
+               rdfs:range xsd:dateTime ;
+               rdfs:comment "Time when a core:Capability's value was last updated (see core:lastValue)."@en ;
+               rdfs:label "last value time"@en .
+
+
+###  https://w3id.org/rec/core/levelNumber
+:levelNumber rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Level ;
+             rdfs:range xsd:int ;
+             rdfs:comment "A number indicating the ordinal number of this level within the building. Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."@en ;
+             rdfs:label "level number"@en .
+
+
+###  https://w3id.org/rec/core/modelNumber
+:modelNumber rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "model number"@en .
+
+
+###  https://w3id.org/rec/core/personCapacity
+:personCapacity rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Space ;
+                rdfs:range xsd:int ;
+                rdfs:comment "The number of people who can fit in a Space."@en ;
+                rdfs:label "person capacity"@en .
+
+
+###  https://w3id.org/rec/core/personOccupancy
+:personOccupancy rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Space ;
+                 rdfs:range xsd:int ;
+                 rdfs:comment "The number of people presently occupying a Space."@en ;
+                 rdfs:label "person occupancy"@en .
+
+
+###  https://w3id.org/rec/core/physicalTagNumber
+:physicalTagNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "physical tag number"@en .
+
+
+###  https://w3id.org/rec/core/propertyRegisterDesignation
+:propertyRegisterDesignation rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :RealEstate ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "Reference to the unique identity of the real estate in the property register in the country where the real estate is located."@en ;
+                             rdfs:label "property register designation"@en .
+
+
+###  https://w3id.org/rec/core/schemaName
+:schemaName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DataSchema ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/rec/core/serialNumber
+:serialNumber rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "serial number"@en .
+
+
+###  https://w3id.org/rec/core/timeInterval
+:timeInterval rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Indicates a time interval during which something occured, or that something refers to. Intervals are expressed as combinations of some time point and a duration, or as two time points, per ISO 8601; see https://en.wikipedia.org/wiki/ISO_8601."@en ;
+              rdfs:label "time interval"@en .
+
+
+###  https://w3id.org/rec/core/type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string ;
+      rdfs:label "type"@en .
+
+
+###  https://w3id.org/rec/core/unitSign
+:unitSign rdf:type owl:DatatypeProperty ;
+          rdfs:domain :MeasurementUnit ;
+          rdfs:comment "The syntactical representation of a unit, e.g., m^3 for cubic meter, etc."@en ;
+          rdfs:label "unit sign"@en .
+
+
+###  https://w3id.org/rec/core/url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Document ;
+     rdfs:range xsd:string ;
+     rdfs:label "URL"@en .
+
+
+###  https://w3id.org/rec/core/value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Observation ;
+       rdfs:comment "REC observations (core:Observation) encapsulate observation values that are serialized using this property."@en ;
+       rdfs:label "value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:comment """The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."""@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                                rdfs:label "Geometry"@en ;
+                                                <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "geometry" ;
+                                                <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:subClassOf :Capability ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :controlledBy ;
+                            owl:allValuesFrom :Capability
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :lastValue ;
+                            owl:allValuesFrom rdfs:Literal
+                          ] ;
+          rdfs:comment "An actuator takes some control input and executes some real-world action based on this input. Examples include setting dampers/valves in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, adhering to REC."@en ;
+          rdfs:label "Actuator"@en ;
+          <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "actuator" ;
+          <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Agent
+:Agent rdf:type owl:Class ;
+       rdfs:comment "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Company, Department...) to be anchored in one joint place, on the Agent class."@en ;
+       rdfs:label "Agent"@en ;
+       <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "agent" ;
+       <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Apartment
+:Apartment rdf:type owl:Class ;
+           rdfs:subClassOf :SpaceCollection ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :includes ;
+                             owl:someValuesFrom :Room
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :includes ;
+                             owl:allValuesFrom :Room
+                           ] ;
+           rdfs:label "Apartment"@en .
+
+
+###  https://w3id.org/rec/core/Asset
+:Asset rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :locatedIn ;
+                         owl:someValuesFrom :Space
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCapability ;
+                         owl:allValuesFrom :Capability
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDocument ;
+                         owl:allValuesFrom :Document
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasPart ;
+                         owl:allValuesFrom :Asset
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hosts ;
+                         owl:allValuesFrom :LogicalDevice
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :includedIn ;
+                         owl:allValuesFrom :Collection
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isPartOf ;
+                         owl:allValuesFrom :Asset
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :locatedIn ;
+                         owl:allValuesFrom :Space
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :servedBy ;
+                         owl:allValuesFrom owl:Thing
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :serves ;
+                         owl:allValuesFrom owl:Thing
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :IPAddress ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :MACAddress ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasComment ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :modelNumber ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :physicalTagNumber ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :serialNumber ;
+                         owl:allValuesFrom xsd:string
+                       ] ;
+       rdfs:comment "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."@en ;
+       rdfs:label "Asset"@en ;
+       <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "asset" ;
+       <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/AssetCollection
+:AssetCollection rdf:type owl:Class ;
+                 rdfs:subClassOf :Collection ;
+                 rdfs:label "Asset collection"@en .
+
+
+###  https://w3id.org/rec/core/Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :RealEstateComponent ,
+                          :Space ;
+          rdfs:comment "A confined building structure."@en ;
+          rdfs:label "Building"@en .
+
+
+###  https://w3id.org/rec/core/BuildingComponent
+:BuildingComponent rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :componentOfBuilding ;
+                                     owl:allValuesFrom :Building
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDocument ;
+                                     owl:allValuesFrom :Document
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasPart ;
+                                     owl:allValuesFrom :BuildingComponent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :includedIn ;
+                                     owl:allValuesFrom :Collection
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isPartOf ;
+                                     owl:allValuesFrom :BuildingComponent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :componentOfBuilding ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :Building
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isPartOf ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :BuildingComponent
+                                   ] ;
+                   rdfs:comment "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, RoofInner, etc."@en ;
+                   rdfs:label "Building component"@en ;
+                   <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "buildingcomponent" ;
+                   <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Campus
+:Campus rdf:type owl:Class ;
+        rdfs:subClassOf :SpaceCollection ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :includes ;
+                          owl:someValuesFrom :Space
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :includes ;
+                          owl:allValuesFrom :Space
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :operatedBy ;
+                          owl:allValuesFrom :Agent
+                        ] ;
+        rdfs:comment "A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc."@en ;
+        rdfs:label "Campus"@en .
+
+
+###  https://w3id.org/rec/core/Capability
+:Capability rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :serves ;
+                              owl:allValuesFrom owl:Thing
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass <http://qudt.org/schema/qudt/Unit>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass <http://qudt.org/schema/qudt/QuantityKind>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :lastValue ;
+                              owl:allValuesFrom rdfs:Literal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :lastValueTime ;
+                              owl:allValuesFrom xsd:dateTime
+                            ] ;
+            rdfs:comment "A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term \"point\". Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system."@en ;
+            rdfs:label "Capability"@en .
+
+
+###  https://w3id.org/rec/core/Collection
+:Collection rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasDocument ;
+                              owl:allValuesFrom :Document
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :includedIn ;
+                              owl:allValuesFrom :Collection
+                            ] ;
+            rdfs:comment "An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings)."@en ;
+            rdfs:label "Collection"@en ;
+            <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "collection" ;
+            <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/DataSchema
+:DataSchema rdf:type owl:Class ;
+            rdfs:subClassOf :Information ;
+            rdfs:comment "A data schema for a service, a sensor, an actuator, etc. See the REC dataschemas module for concrete schema semantics."@en ;
+            rdfs:label "Data schema"@en .
+
+
+###  https://w3id.org/rec/core/Document
+:Document rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :includedIn ;
+                            owl:allValuesFrom :Collection
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :url ;
+                            owl:allValuesFrom xsd:string
+                          ] ;
+          rdfs:label "Document"@en ;
+          <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "document" ;
+          <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Event
+:Event rdf:type owl:Class ;
+       rdfs:comment "A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive."@en ;
+       rdfs:label "Event"@en ;
+       <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "event" ;
+       <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/GeoReferenceOrigo
+:GeoReferenceOrigo rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Geometry> ;
+                   rdfs:comment "A fixed point for e.g. a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for LocalCoordinates."@en ;
+                   rdfs:label "Geo-reference origo"@en .
+
+
+###  https://w3id.org/rec/core/HVACZone
+:HVACZone rdf:type owl:Class ;
+          rdfs:subClassOf :Zone ;
+          rdfs:label "HVAC zone"@en .
+
+
+###  https://w3id.org/rec/core/Information
+:Information rdf:type owl:Class ;
+             rdfs:comment "A generic catch-all superclass for all kinds of intangible REC types used in a broad variety of contexts, e.g., configurations, tags, data series, etc."@en ;
+             rdfs:label "Information"@en .
+
+
+###  https://w3id.org/rec/core/Land
+:Land rdf:type owl:Class ;
+      rdfs:subClassOf :RealEstateComponent ,
+                      :Space ;
+      rdfs:comment "A piece of land upon which one or more buildings may be situated."@en ;
+      rdfs:label "Land"@en .
+
+
+###  https://w3id.org/rec/core/Level
+:Level rdf:type owl:Class ;
+       rdfs:subClassOf :Space ;
+       rdfs:comment "The level of a building, a.k.a. storey, floor, etc."@en ;
+       rdfs:label "Level"@en ;
+       <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "level" ;
+       <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/LogicalController
+:LogicalController rdf:type owl:Class ;
+                   rdfs:subClassOf :LogicalDevice ;
+                   rdfs:label "Logical controller"@en .
+
+
+###  https://w3id.org/rec/core/LogicalDevice
+:LogicalDevice rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCapability ;
+                                 owl:allValuesFrom :Capability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDocument ;
+                                 owl:allValuesFrom :Document
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasPart ;
+                                 owl:allValuesFrom :LogicalDevice
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hostedBy ;
+                                 owl:allValuesFrom :Asset
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :includedIn ;
+                                 owl:allValuesFrom :Collection
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPartOf ;
+                                 owl:allValuesFrom :LogicalDevice
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hostedBy ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Asset
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPartOf ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :LogicalDevice
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :IPAddress ;
+                                 owl:allValuesFrom xsd:string
+                               ] ;
+               rdfs:comment "A piece of equipment or software that communicates and interacts with a digital twin platform. Could, e.g., be an integrated circuit inside of a smart HVAC unit, or a virtual server running on a Kubernetes cluster. Logical devices can have Capability instances (through hasCapability) that describe their input/output capabilties. If Logical Devices are embedded within Asset entities (through the locatedIn property) such capabilties typically denote the capabilities of the asset."@en ;
+               rdfs:label "Logical device"@en ;
+               <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "logicaldevice" ;
+               <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/LogicalGateway
+:LogicalGateway rdf:type owl:Class ;
+                rdfs:subClassOf :LogicalDevice ;
+                rdfs:label "Logical gateway"@en .
+
+
+###  https://w3id.org/rec/core/LogicalServer
+:LogicalServer rdf:type owl:Class ;
+               rdfs:subClassOf :LogicalDevice ;
+               rdfs:label "Logical server"@en .
+
+
+###  https://w3id.org/rec/core/MeasurementUnit
+:MeasurementUnit rdf:type owl:Class ;
+                 rdfs:comment """Deprecated in favour of qudt:Unit
+
+The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
+
+Exceptions to SI:
+Express temperature in Celsius,
+Energy in Watt hour (Wh),
+Angle i degrees (360 degress = 1 revolution)
+MillimeterPerHour for Precipation"""@en ;
+                 rdfs:label "Measurement unit"@en ;
+                 rdfs:seeAlso "https://www.qudt.org/"@en ;
+                 owl:deprecated "true"^^xsd:boolean ;
+                 <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "measurementunit" ;
+                 <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Observation
+:Observation rdf:type owl:Class ;
+             rdfs:subClassOf :Event ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                               owl:someValuesFrom <http://qudt.org/schema/qudt/QuantityKind>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                               owl:someValuesFrom <http://qudt.org/schema/qudt/Unit>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :value ;
+                               owl:someValuesFrom rdfs:Literal
+                             ] ;
+             rdfs:comment "A sensor observation."@en ;
+             rdfs:label "Observation"@en .
+
+
+###  https://w3id.org/rec/core/OccupancyZone
+:OccupancyZone rdf:type owl:Class ;
+               rdfs:subClassOf :Zone ;
+               rdfs:comment "Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)"@en ;
+               rdfs:label "Occupancy zone"@en .
+
+
+###  https://w3id.org/rec/core/Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:subClassOf :Capability ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :controlledBy ;
+                             owl:allValuesFrom :Capability
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :lastValue ;
+                             owl:allValuesFrom rdfs:Literal
+                           ] ;
+           rdfs:label "Parameter"@en ;
+           <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "parameter" ;
+           <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Portfolio
+:Portfolio rdf:type owl:Class ;
+           rdfs:subClassOf :Collection ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :includes ;
+                             owl:someValuesFrom owl:Thing
+                           ] ;
+           rdfs:comment "A portfolio is a grouping of real estates, spaces, or other portfolios that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc."@en ;
+           rdfs:label "Portfolio"@en .
+
+
+###  https://w3id.org/rec/core/Premises
+:Premises rdf:type owl:Class ;
+          rdfs:subClassOf :SpaceCollection ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :includes ;
+                            owl:someValuesFrom :Space
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :includes ;
+                            owl:allValuesFrom :Space
+                          ] ;
+          rdfs:comment "A premises is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant."@en ;
+          rdfs:label "Premises"@en ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/PremisesType
+:PremisesType rdf:type owl:Class ;
+              rdfs:subClassOf :Type ;
+              rdfs:label "Premises type"@en ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/PropertySet
+:PropertySet rdf:type owl:Class ;
+             rdfs:subClassOf :Information ;
+             rdfs:comment "A set of categorization properties associated with a REC entity, complementing the subsumpion hierarchy and allowing orthogonal categorization without the use of multiple inheritance structures. Used for compatibility with legacy point- or tag-based systems."@en ;
+             rdfs:label "Property set"@en ;
+             <https://w3id.org/rec/metadata/dtdlType> "component" .
+
+
+###  https://w3id.org/rec/core/QuantityKind
+:QuantityKind rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasMeasurementUnit ;
+                                owl:allValuesFrom :MeasurementUnit
+                              ] ;
+              rdfs:comment """Deprecated in favour of qudt:QuantityKind
+
+Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT."""@en ;
+              rdfs:label "Quantity kind"@en ;
+              rdfs:seeAlso <http://qudt.org/schema/qudt/QuantityKind> ;
+              owl:deprecated "true"^^xsd:boolean ;
+              <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "quantitykind" ;
+              <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/RealEstate
+:RealEstate rdf:type owl:Class ;
+            rdfs:subClassOf :SpaceCollection ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :includes ;
+                              owl:someValuesFrom :Space
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :ownedBy ;
+                              owl:someValuesFrom :Agent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :includes ;
+                              owl:allValuesFrom :Space
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :ownedBy ;
+                              owl:allValuesFrom :Agent
+                            ] ;
+            rdfs:comment "The legal/administrative representation of some lands and/or buildings."@en ;
+            rdfs:label "Real estate"@en ;
+            <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "realestate" ;
+            <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/RealEstateComponent
+:RealEstateComponent rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :isPartOfRealEstate ;
+                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                     ] ;
+                     rdfs:comment "Types of objects that can make up a piece of real estate, e.g., land and buildings."@en ;
+                     rdfs:label "Real estate component"@en ;
+                     owl:deprecated "true"^^xsd:boolean ;
+                     <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "realestatecomponent" ;
+                     <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :Space ;
+        rdfs:comment "An administrative geospatial unit larger than the individual real estate. For instance, \"Lombary\", \"North America\", \"The Back Bay\", \"Elnätsområde Syd\", etc."@en ;
+        rdfs:label "Region"@en .
+
+
+###  https://w3id.org/rec/core/Room
+:Room rdf:type owl:Class ;
+      rdfs:subClassOf :BuildingComponent ,
+                      :Space ;
+      rdfs:comment "Base class for all more specific room types."@en ;
+      rdfs:label "Room"@en ;
+      <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "room" ;
+      <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Room ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget :BuildingComponent ;
+   owl:deprecated "true"^^xsd:boolean
+ ] .
+
+
+###  https://w3id.org/rec/core/SensorInterface
+:SensorInterface rdf:type owl:Class ;
+                 rdfs:subClassOf :Software ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :dataSchema ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :DataSchema
+                                 ] ;
+                 <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "sensorinterface" ;
+                 <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :dataSchema ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :DataSchema
+                         ] ;
+         rdfs:label "Service"@en ;
+         <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "service" ;
+         <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Setpoint
+:Setpoint rdf:type owl:Class ;
+          rdfs:subClassOf :Parameter ;
+          rdfs:label "Setpoint"@en .
+
+
+###  https://w3id.org/rec/core/Software
+:Software rdf:type owl:Class ;
+          rdfs:comment "Any piece of software or similar digital resource (including data schemas, etc) that executes or can be loaded on some or many parts of a RealEstateCore-enabled distributed system."@en ;
+          rdfs:label "Software"@en ;
+          <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "software" ;
+          <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Space
+:Space rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                         owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                         owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :architectedBy ;
+                         owl:allValuesFrom :Agent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :constructedBy ;
+                         owl:allValuesFrom :Agent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCapability ;
+                         owl:allValuesFrom :Capability
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDocument ;
+                         owl:allValuesFrom :Document
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasPart ;
+                         owl:allValuesFrom :Space
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :includedIn ;
+                         owl:allValuesFrom :Collection
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isPartOf ;
+                         owl:allValuesFrom :Space
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :operatedBy ;
+                         owl:allValuesFrom :Agent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :ownedBy ;
+                         owl:allValuesFrom :Agent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :servedBy ;
+                         owl:allValuesFrom owl:Thing
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :personCapacity ;
+                         owl:allValuesFrom xsd:int
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :personOccupancy ;
+                         owl:allValuesFrom xsd:int
+                       ] ;
+       rdfs:comment "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings."@en ;
+       rdfs:label "Space"@en ;
+       <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "space" ;
+       <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/SpaceCollection
+:SpaceCollection rdf:type owl:Class ;
+                 rdfs:subClassOf :Collection ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :includes ;
+                                   owl:someValuesFrom :Space
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :includes ;
+                                   owl:allValuesFrom :Space
+                                 ] ;
+                 rdfs:label "Space collection"@en .
+
+
+###  https://w3id.org/rec/core/State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf :Capability ;
+       rdfs:label "State"@en ;
+       <https://karlhammar.com/owl2oas/o2o.owl#endpoint> "state" ;
+       <https://karlhammar.com/owl2oas/o2o.owl#included> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/SubBuilding
+:SubBuilding rdf:type owl:Class ;
+             rdfs:subClassOf :Space ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :type ;
+                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                   owl:oneOf [ rdf:type rdf:List ;
+                                                               rdf:first "Tower" ;
+                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                          rdf:first "Wing" ;
+                                                                          rdf:rest rdf:nil
+                                                                        ]
+                                                             ]
+                                                 ]
+                             ] ;
+             rdfs:comment "A part of a larger building complex, e.g., a wing, a tower, or an interconnected (through walkways or other means) but largely free-standing building."@en ;
+             rdfs:label "Sub-building"@en .
+
+
+###  https://w3id.org/rec/core/Type
+:Type rdf:type owl:Class ;
+      rdfs:label "Type"@en ;
+      owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Workspace
+:Workspace rdf:type owl:Class ;
+           rdfs:subClassOf :Zone ;
+           rdfs:label "Workspace"@en .
+
+
+###  https://w3id.org/rec/core/Zone
+:Zone rdf:type owl:Class ;
+      rdfs:subClassOf :Space ;
+      rdfs:comment "A sub-zone within a building, e.g., an HVAC zone, a security zone, etc."@en ;
+      rdfs:label "Zone"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/rec/core/ActiveEnergyL1
+:ActiveEnergyL1 rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                :hasMeasurementUnit :Watt ;
+                rdfs:label "ActiveEnergyL1"@en .
+
+
+###  https://w3id.org/rec/core/ActiveEnergyL2
+:ActiveEnergyL2 rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                rdfs:label "ActiveEnergyL2"@en .
+
+
+###  https://w3id.org/rec/core/ActiveEnergyL3
+:ActiveEnergyL3 rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                rdfs:label "ActiveEnergyL3"@en .
+
+
+###  https://w3id.org/rec/core/ActiveEnergyTotal
+:ActiveEnergyTotal rdf:type owl:NamedIndividual ,
+                            :QuantityKind ;
+                   rdfs:label "ActiveEnergyTotal"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerL1
+:ActivePowerL1 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "ActivePowerL1"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerL2
+:ActivePowerL2 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "ActivePowerL2"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerL3
+:ActivePowerL3 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "ActivePowerL3"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerTotal
+:ActivePowerTotal rdf:type owl:NamedIndividual ,
+                           :QuantityKind ;
+                  rdfs:label "ActivePowerTotal"@en .
+
+
+###  https://w3id.org/rec/core/AgentInteraction
+:AgentInteraction rdf:type owl:NamedIndividual ,
+                           :QuantityKind ;
+                  rdfs:comment "When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation."@en ;
+                  rdfs:label "AgentInteraction"@en .
+
+
+###  https://w3id.org/rec/core/AlarmMajor
+:AlarmMajor rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:comment "Danger for property"@en ;
+            rdfs:label "AlarmMajor"@en .
+
+
+###  https://w3id.org/rec/core/AlarmMinor
+:AlarmMinor rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:comment "Notifications"@en ;
+            rdfs:label "AlarmMinor"@en .
+
+
+###  https://w3id.org/rec/core/AlarmSevere
+:AlarmSevere rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:comment "Danger for life and property"@en ;
+             rdfs:label "AlarmSevere"@en .
+
+
+###  https://w3id.org/rec/core/Ampere
+:Ampere rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "A"@en ;
+        rdfs:comment "Ampere. Current in a circuit."@en ;
+        rdfs:label "Ampere"@en .
+
+
+###  https://w3id.org/rec/core/Angle
+:Angle rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Angle"@en .
+
+
+###  https://w3id.org/rec/core/Area
+:Area rdf:type owl:NamedIndividual ,
+               :QuantityKind ;
+      rdfs:label "Area"@en .
+
+
+###  https://w3id.org/rec/core/AreaPresence
+:AreaPresence rdf:type owl:NamedIndividual ,
+                       :QuantityKind ;
+              :hasMeasurementUnit :NumPeople ;
+              rdfs:comment "Number of people counted in a specified area (at the observation time)."@en ;
+              rdfs:label "Area presence"@en .
+
+
+###  https://w3id.org/rec/core/Binary
+:Binary rdf:type owl:NamedIndividual ;
+        rdfs:label "Binary"@en .
+
+
+###  https://w3id.org/rec/core/BooleanDetection
+:BooleanDetection rdf:type owl:NamedIndividual ,
+                           :MeasurementUnit ;
+                  rdfs:comment "This measurement unit is used to quantify the detection or lack thereof of a phenomenon, e.g., in a simple IR-sensor that can only detect some presence within its detection range, but is not able to quantify anything more specific about that presence."@en ;
+                  rdfs:label "BooleanDetection"@en .
+
+
+###  https://w3id.org/rec/core/CO
+:CO rdf:type owl:NamedIndividual ,
+             :QuantityKind ;
+    rdfs:label "CO"@en .
+
+
+###  https://w3id.org/rec/core/CO2
+:CO2 rdf:type owl:NamedIndividual ,
+              :QuantityKind ;
+     rdfs:label "CO2"@en .
+
+
+###  https://w3id.org/rec/core/Celsius
+:Celsius rdf:type owl:NamedIndividual ,
+                  :MeasurementUnit ;
+         :unitSign "C"@en ;
+         rdfs:comment "Temperature in Celsius degress. Note that correct SI Unit is Kelvin."@en ;
+         rdfs:label "Celsius"@en .
+
+
+###  https://w3id.org/rec/core/CoffeePremises
+:CoffeePremises rdf:type owl:NamedIndividual ,
+                         :PremisesType .
+
+
+###  https://w3id.org/rec/core/Concentration
+:Concentration rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "Concentration"@en .
+
+
+###  https://w3id.org/rec/core/CosPhi
+:CosPhi rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "cos-phi"@en ;
+        rdfs:comment "The angle between two electrical phases."@en ;
+        rdfs:label "CosPhi"@en .
+
+
+###  https://w3id.org/rec/core/CubicMeter
+:CubicMeter rdf:type owl:NamedIndividual ,
+                     :MeasurementUnit ;
+            :unitSign "m3"@en ;
+            rdfs:comment "Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3)."@en ;
+            rdfs:label "CubicMeter"@en .
+
+
+###  https://w3id.org/rec/core/Current
+:Current rdf:type owl:NamedIndividual ,
+                  :QuantityKind ;
+         rdfs:label "Current"@en .
+
+
+###  https://w3id.org/rec/core/CurrentL1
+:CurrentL1 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "CurrentL1"@en .
+
+
+###  https://w3id.org/rec/core/CurrentL2
+:CurrentL2 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "CurrentL2"@en .
+
+
+###  https://w3id.org/rec/core/CurrentL3
+:CurrentL3 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "CurrentL3"@en .
+
+
+###  https://w3id.org/rec/core/Decibel
+:Decibel rdf:type owl:NamedIndividual ,
+                  :MeasurementUnit ;
+         :unitSign "db"@en ;
+         rdfs:comment "Sound level"@en ;
+         rdfs:label "Decibel"@en .
+
+
+###  https://w3id.org/rec/core/Degrees
+:Degrees rdf:type owl:NamedIndividual ,
+                  :MeasurementUnit ;
+         rdfs:label "Degrees"@en .
+
+
+###  https://w3id.org/rec/core/EducationalPremises
+:EducationalPremises rdf:type owl:NamedIndividual ,
+                              :PremisesType .
+
+
+###  https://w3id.org/rec/core/Efficiency
+:Efficiency rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:label "Efficiency"@en .
+
+
+###  https://w3id.org/rec/core/EnergyTotal
+:EnergyTotal rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:comment "Total energy (not specified as Active or Reactive, used for e.g. district heating)."@en ;
+             rdfs:label "EnergyTotal"@en .
+
+
+###  https://w3id.org/rec/core/Fahrenheit
+:Fahrenheit rdf:type owl:NamedIndividual ,
+                     :MeasurementUnit ;
+            :unitSign "F"@en ;
+            rdfs:comment "Temperature in Fahrenheit degress."@en ;
+            rdfs:label "Fahrenheit"@en .
+
+
+###  https://w3id.org/rec/core/Flow
+:Flow rdf:type owl:NamedIndividual ,
+               :QuantityKind ;
+      rdfs:label "Flow"@en .
+
+
+###  https://w3id.org/rec/core/Footfall
+:Footfall rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:comment "Number of people crossing a specified line (at the observation time)"@en ;
+          rdfs:label "Footfall"@en .
+
+
+###  https://w3id.org/rec/core/GaragePremises
+:GaragePremises rdf:type owl:NamedIndividual ,
+                         :PremisesType .
+
+
+###  https://w3id.org/rec/core/GlobalIrradiance
+:GlobalIrradiance rdf:type owl:NamedIndividual ,
+                           :QuantityKind ;
+                  rdfs:label "GlobalIrradiance"@en ;
+                  rdfs:seeAlso "https://en.wikipedia.org/wiki/Solar_irradiance"@en .
+
+
+###  https://w3id.org/rec/core/Hertz
+:Hertz rdf:type owl:NamedIndividual ,
+                :MeasurementUnit ;
+       :unitSign "Hz"@en ;
+       rdfs:comment "One cycle per second."@en ;
+       rdfs:label "Hertz"@en .
+
+
+###  https://w3id.org/rec/core/HotelPremises
+:HotelPremises rdf:type owl:NamedIndividual ,
+                        :PremisesType .
+
+
+###  https://w3id.org/rec/core/Humidity
+:Humidity rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:label "Humidity"@en ;
+          rdfs:seeAlso "Humidity"@en .
+
+
+###  https://w3id.org/rec/core/Illuminance
+:Illuminance rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:label "Illuminance"@en .
+
+
+###  https://w3id.org/rec/core/Integer
+:Integer rdf:type owl:NamedIndividual ;
+         rdfs:label "Integer"@en .
+
+
+###  https://w3id.org/rec/core/Kelvin
+:Kelvin rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "K"@en ;
+        rdfs:comment "Temperature in Kelvin degrees"@en ;
+        rdfs:label "Kelvin"@en .
+
+
+###  https://w3id.org/rec/core/Kilogram
+:Kilogram rdf:type owl:NamedIndividual ,
+                   :MeasurementUnit ;
+          :unitSign "kg"@en ;
+          rdfs:comment "Mass."@en ;
+          rdfs:label "Kilogram"@en .
+
+
+###  https://w3id.org/rec/core/LaboratoryPremises
+:LaboratoryPremises rdf:type owl:NamedIndividual ,
+                             :PremisesType .
+
+
+###  https://w3id.org/rec/core/Lenght
+:Lenght rdf:type owl:NamedIndividual ,
+                 :QuantityKind ;
+        rdfs:label "Lenght"@en ;
+        owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Length
+:Length rdf:type owl:NamedIndividual ,
+                 :QuantityKind ;
+        rdfs:label "Length"@en .
+
+
+###  https://w3id.org/rec/core/LightIndustryPremises
+:LightIndustryPremises rdf:type owl:NamedIndividual ,
+                                :PremisesType .
+
+
+###  https://w3id.org/rec/core/LiterPerSecond
+:LiterPerSecond rdf:type owl:NamedIndividual ,
+                         :MeasurementUnit ;
+                :unitSign "l/s"@en ;
+                rdfs:comment "Flow"@en ;
+                rdfs:label "LiterPerSecond"@en .
+
+
+###  https://w3id.org/rec/core/Lumen
+:Lumen rdf:type owl:NamedIndividual ,
+                :MeasurementUnit ;
+       :unitSign "Emitted light"@en ,
+                 "lm"@en ;
+       rdfs:label "Lumen"@en .
+
+
+###  https://w3id.org/rec/core/Lux
+:Lux rdf:type owl:NamedIndividual ,
+              :MeasurementUnit ;
+     :unitSign "lx"@en ;
+     rdfs:comment "Light intensity in a specific area."@en ;
+     rdfs:label "Lux"@en .
+
+
+###  https://w3id.org/rec/core/Meter
+:Meter rdf:type owl:NamedIndividual ,
+                :MeasurementUnit ;
+       :unitSign "m"@en ;
+       rdfs:comment "Lenght."@en ;
+       rdfs:label "Meter"@en .
+
+
+###  https://w3id.org/rec/core/MeterPerSecond
+:MeterPerSecond rdf:type owl:NamedIndividual ,
+                         :MeasurementUnit ;
+                rdfs:label "MeterPerSecond"@en .
+
+
+###  https://w3id.org/rec/core/MillimeterPerHour
+:MillimeterPerHour rdf:type owl:NamedIndividual ,
+                            :MeasurementUnit ;
+                   rdfs:comment "For measuring Precipation"@en ;
+                   rdfs:label "MillimeterPerHour"@en .
+
+
+###  https://w3id.org/rec/core/NumPeople
+:NumPeople rdf:type owl:NamedIndividual ,
+                    :MeasurementUnit ;
+           rdfs:comment "Number of people."@en ;
+           rdfs:label "NumPeople"@en .
+
+
+###  https://w3id.org/rec/core/Number
+:Number rdf:type owl:NamedIndividual ;
+        rdfs:label "Number"@en .
+
+
+###  https://w3id.org/rec/core/OfficePremises
+:OfficePremises rdf:type owl:NamedIndividual ,
+                         :PremisesType .
+
+
+###  https://w3id.org/rec/core/PartsPerBillion
+:PartsPerBillion rdf:type owl:NamedIndividual ,
+                          :MeasurementUnit ;
+                 rdfs:comment "Parts per billion."@en ;
+                 rdfs:label "PartsPerBillion"@en .
+
+
+###  https://w3id.org/rec/core/PartsPerMillion
+:PartsPerMillion rdf:type owl:NamedIndividual ,
+                          :MeasurementUnit ;
+                 :unitSign "ppm"@en ;
+                 rdfs:comment "Measurement for concentration"@en ;
+                 rdfs:label "PartsPerMillion"@en .
+
+
+###  https://w3id.org/rec/core/Pascal
+:Pascal rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "Pa"@en ;
+        rdfs:comment "The pascal is the SI derived unit of pressure used to quantify internal pressure, stress. It is defined as one newton per square metre."@en ;
+        rdfs:label "Pascal"@en ;
+        rdfs:seeAlso "In Haystack: barometric is described as \"Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.\""@en .
+
+
+###  https://w3id.org/rec/core/Percentage
+:Percentage rdf:type owl:NamedIndividual ,
+                     :MeasurementUnit ;
+            rdfs:label "Percentage"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactor
+:PowerFactor rdf:type owl:NamedIndividual ,
+                      :MeasurementUnit ;
+             :unitSign "pf"@en ;
+             rdfs:comment "The power factor of an AC electrical power system is defined as the ratio of the real power flowing to the load to the apparent power in the circuit, and is a dimensionless number in the closed interval of −1 to 1."@en ;
+             rdfs:label "PowerFactor"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactorL1
+:PowerFactorL1 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "PowerFactorL1"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactorL2
+:PowerFactorL2 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "PowerFactorL2"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactorL3
+:PowerFactorL3 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "PowerFactorL3"@en .
+
+
+###  https://w3id.org/rec/core/PowerFrequency
+:PowerFrequency rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                rdfs:label "PowerFrequency"@en .
+
+
+###  https://w3id.org/rec/core/Precipation
+:Precipation rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:comment "Measured in MillimeterPerHour"@en ;
+             rdfs:label "Precipation"@en ;
+             owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/core/Precipitation
+:Precipitation rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:comment "Measured in MillimeterPerHour"@en ;
+               rdfs:label "Precipitation"@en .
+
+
+###  https://w3id.org/rec/core/Presence
+:Presence rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          :hasMeasurementUnit :BooleanDetection ;
+          rdfs:comment "Presence equivivalent"@en ;
+          rdfs:label "Presence"@en .
+
+
+###  https://w3id.org/rec/core/Pressure
+:Pressure rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:label "Pressure"@en ;
+          rdfs:seeAlso "Pressure"@en ,
+                       "Tryck"@se .
+
+
+###  https://w3id.org/rec/core/Radiation
+:Radiation rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "Radiation"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerL1
+:ReactivePowerL1 rdf:type owl:NamedIndividual ,
+                          :QuantityKind ;
+                 rdfs:label "ReactivePowerL1"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerL2
+:ReactivePowerL2 rdf:type owl:NamedIndividual ,
+                          :QuantityKind ;
+                 rdfs:label "ReactivePowerL2"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerL3
+:ReactivePowerL3 rdf:type owl:NamedIndividual ,
+                          :QuantityKind ;
+                 rdfs:label "ReactivePowerL3"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerTotal
+:ReactivePowerTotal rdf:type owl:NamedIndividual ,
+                             :QuantityKind ;
+                    rdfs:label "ReactivePowerTotal"@en .
+
+
+###  https://w3id.org/rec/core/RelativeHumidity
+:RelativeHumidity rdf:type owl:NamedIndividual ,
+                           :MeasurementUnit ;
+                  :unitSign "RH"@en ;
+                  rdfs:comment "Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature."@en ;
+                  rdfs:label "RelativeHumidity"@en .
+
+
+###  https://w3id.org/rec/core/ResidentialPremises
+:ResidentialPremises rdf:type owl:NamedIndividual ,
+                              :PremisesType .
+
+
+###  https://w3id.org/rec/core/RestaurantPremises
+:RestaurantPremises rdf:type owl:NamedIndividual ,
+                             :PremisesType .
+
+
+###  https://w3id.org/rec/core/RetailPremises
+:RetailPremises rdf:type owl:NamedIndividual ,
+                         :PremisesType .
+
+
+###  https://w3id.org/rec/core/RevolutionsPerMinute
+:RevolutionsPerMinute rdf:type owl:NamedIndividual ,
+                               :MeasurementUnit ;
+                      :unitSign "rpm"@en ;
+                      rdfs:label "RevoultionsPerMinute"@en .
+
+
+###  https://w3id.org/rec/core/RotationSpeed
+:RotationSpeed rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "RotationSpeed"@en .
+
+
+###  https://w3id.org/rec/core/Second
+:Second rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "s"@en ;
+        rdfs:comment "The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom."@en ;
+        rdfs:label "Second"@en .
+
+
+###  https://w3id.org/rec/core/Sound
+:Sound rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Sound"@en .
+
+
+###  https://w3id.org/rec/core/Speed
+:Speed rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Speed"@en .
+
+
+###  https://w3id.org/rec/core/SquareMeter
+:SquareMeter rdf:type owl:NamedIndividual ,
+                      :MeasurementUnit ;
+             :unitSign "m2"@en ;
+             rdfs:comment "Area unit. It is the area of a square whose sides measure exactly one metre."@en ;
+             rdfs:label "SquareMeter"@en .
+
+
+###  https://w3id.org/rec/core/StoragePremises
+:StoragePremises rdf:type owl:NamedIndividual ,
+                          :PremisesType .
+
+
+###  https://w3id.org/rec/core/SunshineTimePerHour
+:SunshineTimePerHour rdf:type owl:NamedIndividual ,
+                              :QuantityKind ;
+                     rdfs:label "SunshineTimePerHour"@en .
+
+
+###  https://w3id.org/rec/core/TVOC
+:TVOC rdf:type owl:NamedIndividual ,
+               :QuantityKind ;
+      rdfs:label "TVOC"@en .
+
+
+###  https://w3id.org/rec/core/Temperature
+:Temperature rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             :hasMeasurementUnit :Celsius ,
+                                 :Kelvin ;
+             rdfs:label "Temperature"@en ;
+             rdfs:seeAlso "Temperature"@en .
+
+
+###  https://w3id.org/rec/core/Velocity
+:Velocity rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:label "Velocity"@en .
+
+
+###  https://w3id.org/rec/core/Volt
+:Volt rdf:type owl:NamedIndividual ,
+               :MeasurementUnit ;
+      :unitSign "V"@en ;
+      rdfs:comment "Voltage, electric potential difference, is the difference in electric potential between two points."@en ;
+      rdfs:label "Volt"@en .
+
+
+###  https://w3id.org/rec/core/Voltage
+:Voltage rdf:type owl:NamedIndividual ,
+                  :QuantityKind ;
+         rdfs:label "Voltage"@en .
+
+
+###  https://w3id.org/rec/core/VoltageL1
+:VoltageL1 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "VoltageL1"@en .
+
+
+###  https://w3id.org/rec/core/VoltageL2
+:VoltageL2 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "VoltageL2"@en .
+
+
+###  https://w3id.org/rec/core/VoltageL3
+:VoltageL3 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "VoltageL3"@en .
+
+
+###  https://w3id.org/rec/core/Volume
+:Volume rdf:type owl:NamedIndividual ,
+                 :QuantityKind ;
+        rdfs:label "Volume"@en .
+
+
+###  https://w3id.org/rec/core/WasteDiverted
+:WasteDiverted rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:comment "Waste that has been sent to, e.g., a landfill."@en ;
+               rdfs:label "Waste diverted"@en .
+
+
+###  https://w3id.org/rec/core/WasteTotal
+:WasteTotal rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:comment "The total amount of waste."@en ;
+            rdfs:label "Waste total"@en .
+
+
+###  https://w3id.org/rec/core/Watt
+:Watt rdf:type owl:NamedIndividual ,
+               :MeasurementUnit ;
+      :unitSign "W"@en ;
+      rdfs:comment "This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters."@en ;
+      rdfs:label "Watt"@en .
+
+
+###  https://w3id.org/rec/core/WattHour
+:WattHour rdf:type owl:NamedIndividual ,
+                   :MeasurementUnit ;
+          :unitSign "Wh"@en ;
+          rdfs:comment "Enery. Watthour."@en ;
+          rdfs:label "WattHour"@en .
+
+
+###  https://w3id.org/rec/core/WattPerSquareMeter
+:WattPerSquareMeter rdf:type owl:NamedIndividual ,
+                             :QuantityKind ;
+                    rdfs:label "WattPerSquareMeter"@en ;
+                    rdfs:seeAlso "https://www.rapidtables.com/calc/light/how-watt-to-lux.html"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
