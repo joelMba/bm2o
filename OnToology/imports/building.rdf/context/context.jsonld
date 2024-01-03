@@ -1,0 +1,426 @@
+{
+  "@context" : {
+    "CafeteriaRoom" : {
+      "@id" : "https://w3id.org/rec/building/CafeteriaRoom"
+    },
+    "Level" : {
+      "@id" : "https://w3id.org/rec/core/Level"
+    },
+    "DisabledToilet" : {
+      "@id" : "https://w3id.org/rec/building/DisabledToilet"
+    },
+    "DiningRoom" : {
+      "@id" : "https://w3id.org/rec/building/DiningRoom"
+    },
+    "roomType" : {
+      "@id" : "https://w3id.org/rec/building/roomType",
+      "@type" : "@id"
+    },
+    "Garage" : {
+      "@id" : "https://w3id.org/rec/building/Garage"
+    },
+    "ElectricityRoom" : {
+      "@id" : "https://w3id.org/rec/building/ElectricityRoom"
+    },
+    "LoadingReceivingRoom" : {
+      "@id" : "https://w3id.org/rec/building/LoadingReceivingRoom"
+    },
+    "ParkingSlotCold" : {
+      "@id" : "https://w3id.org/rec/building/ParkingSlotCold"
+    },
+    "Storage" : {
+      "@id" : "https://w3id.org/rec/building/Storage"
+    },
+    "CleaningRoom" : {
+      "@id" : "https://w3id.org/rec/building/CleaningRoom"
+    },
+    "RestingRoom" : {
+      "@id" : "https://w3id.org/rec/building/RestingRoom"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Entrance" : {
+      "@id" : "https://w3id.org/rec/building/Entrance"
+    },
+    "RecreationalRoom" : {
+      "@id" : "https://w3id.org/rec/building/RecreationalRoom"
+    },
+    "FoodHandlingRoom" : {
+      "@id" : "https://w3id.org/rec/building/FoodHandlingRoom"
+    },
+    "LaboratoryDry" : {
+      "@id" : "https://w3id.org/rec/building/LaboratoryDry"
+    },
+    "SmallStudyRoom" : {
+      "@id" : "https://w3id.org/rec/building/SmallStudyRoom"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "BackOffice" : {
+      "@id" : "https://w3id.org/rec/building/BackOffice"
+    },
+    "MothersRoom" : {
+      "@id" : "https://w3id.org/rec/building/MothersRoom"
+    },
+    "Type" : {
+      "@id" : "https://w3id.org/rec/core/Type"
+    },
+    "Pentry" : {
+      "@id" : "https://w3id.org/rec/building/Pentry"
+    },
+    "ServiceShaft" : {
+      "@id" : "https://w3id.org/rec/building/ServiceShaft"
+    },
+    "Cabinet" : {
+      "@id" : "https://w3id.org/rec/building/Cabinet"
+    },
+    "Room" : {
+      "@id" : "https://w3id.org/rec/core/Room"
+    },
+    "Pantry" : {
+      "@id" : "https://w3id.org/rec/building/Pantry"
+    },
+    "LaboratoryWet" : {
+      "@id" : "https://w3id.org/rec/building/LaboratoryWet"
+    },
+    "Workshop" : {
+      "@id" : "https://w3id.org/rec/building/Workshop"
+    },
+    "NeonatalNursingRoom" : {
+      "@id" : "https://w3id.org/rec/building/NeonatalNursingRoom"
+    },
+    "WasteManagementRoom" : {
+      "@id" : "https://w3id.org/rec/building/WasteManagementRoom"
+    },
+    "ElevatorShaft" : {
+      "@id" : "https://w3id.org/rec/building/ElevatorShaft"
+    },
+    "OutpatientServicesRoom" : {
+      "@id" : "https://w3id.org/rec/building/OutpatientServicesRoom"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "RadiologyRoom" : {
+      "@id" : "https://w3id.org/rec/building/RadiologyRoom"
+    },
+    "Reception" : {
+      "@id" : "https://w3id.org/rec/building/Reception"
+    },
+    "BuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/BuildingComponent"
+    },
+    "PharmacyRoom" : {
+      "@id" : "https://w3id.org/rec/building/PharmacyRoom"
+    },
+    "RoomType" : {
+      "@id" : "https://w3id.org/rec/building/RoomType"
+    },
+    "Facade" : {
+      "@id" : "https://w3id.org/rec/building/Facade"
+    },
+    "CableRoom" : {
+      "@id" : "https://w3id.org/rec/building/CableRoom"
+    },
+    "ClimateControlRoom" : {
+      "@id" : "https://w3id.org/rec/building/ClimateControlRoom"
+    },
+    "SprinklerRoom" : {
+      "@id" : "https://w3id.org/rec/building/SprinklerRoom"
+    },
+    "Bedroom" : {
+      "@id" : "https://w3id.org/rec/building/Bedroom"
+    },
+    "ExhibitionRoom" : {
+      "@id" : "https://w3id.org/rec/building/ExhibitionRoom"
+    },
+    "CookingRoom" : {
+      "@id" : "https://w3id.org/rec/building/CookingRoom"
+    },
+    "CopyingRoom" : {
+      "@id" : "https://w3id.org/rec/building/CopyingRoom"
+    },
+    "Storey" : {
+      "@id" : "https://w3id.org/rec/building/Storey"
+    },
+    "MainEntrance" : {
+      "@id" : "https://w3id.org/rec/building/MainEntrance"
+    },
+    "Balcony" : {
+      "@id" : "https://w3id.org/rec/building/Balcony"
+    },
+    "Terrace" : {
+      "@id" : "https://w3id.org/rec/building/Terrace"
+    },
+    "Hallway" : {
+      "@id" : "https://w3id.org/rec/building/Hallway"
+    },
+    "Theater" : {
+      "@id" : "https://w3id.org/rec/building/Theater"
+    },
+    "HealthcareRoom" : {
+      "@id" : "https://w3id.org/rec/building/HealthcareRoom"
+    },
+    "hasType" : {
+      "@id" : "https://w3id.org/rec/core/hasType",
+      "@type" : "@id"
+    },
+    "GroupRoom" : {
+      "@id" : "https://w3id.org/rec/building/GroupRoom"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "TreatmentRoom" : {
+      "@id" : "https://w3id.org/rec/building/TreatmentRoom"
+    },
+    "RoofLevel" : {
+      "@id" : "https://w3id.org/rec/building/RoofLevel"
+    },
+    "ConversationRoom" : {
+      "@id" : "https://w3id.org/rec/building/ConversationRoom"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/rec/core/Building"
+    },
+    "Bathroom" : {
+      "@id" : "https://w3id.org/rec/building/Bathroom"
+    },
+    "VirtualBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/building/VirtualBuildingComponent"
+    },
+    "ExerciseRoom" : {
+      "@id" : "https://w3id.org/rec/building/ExerciseRoom"
+    },
+    "Library" : {
+      "@id" : "https://w3id.org/rec/building/Library"
+    },
+    "StaffRoom" : {
+      "@id" : "https://w3id.org/rec/building/StaffRoom"
+    },
+    "DressingRoom" : {
+      "@id" : "https://w3id.org/rec/building/DressingRoom"
+    },
+    "MultiPurposeRoom" : {
+      "@id" : "https://w3id.org/rec/building/MultiPurposeRoom"
+    },
+    "Morgue" : {
+      "@id" : "https://w3id.org/rec/building/Morgue"
+    },
+    "RoofInner" : {
+      "@id" : "https://w3id.org/rec/building/RoofInner"
+    },
+    "BasementLevel" : {
+      "@id" : "https://w3id.org/rec/building/BasementLevel"
+    },
+    "PersonalHygiene" : {
+      "@id" : "https://w3id.org/rec/building/PersonalHygiene"
+    },
+    "TreatmentWaitingRoom" : {
+      "@id" : "https://w3id.org/rec/building/TreatmentWaitingRoom"
+    },
+    "DataServerRoom" : {
+      "@id" : "https://w3id.org/rec/building/DataServerRoom"
+    },
+    "Kitchenette" : {
+      "@id" : "https://w3id.org/rec/building/Kitchenette"
+    },
+    "StoreyLevel" : {
+      "@id" : "https://w3id.org/rec/building/StoreyLevel"
+    },
+    "ShelterRoom" : {
+      "@id" : "https://w3id.org/rec/building/ShelterRoom"
+    },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
+    "Toilet" : {
+      "@id" : "https://w3id.org/rec/building/Toilet"
+    },
+    "Stairwell" : {
+      "@id" : "https://w3id.org/rec/building/Stairwell"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "LockerRoom" : {
+      "@id" : "https://w3id.org/rec/building/LockerRoom"
+    },
+    "ShelterGasLock" : {
+      "@id" : "https://w3id.org/rec/building/ShelterGasLock"
+    },
+    "BicycleGarage" : {
+      "@id" : "https://w3id.org/rec/building/BicycleGarage"
+    },
+    "FittingRoom" : {
+      "@id" : "https://w3id.org/rec/building/FittingRoom"
+    },
+    "MailRoom" : {
+      "@id" : "https://w3id.org/rec/building/MailRoom"
+    },
+    "OfficeLandscape" : {
+      "@id" : "https://w3id.org/rec/building/OfficeLandscape"
+    },
+    "RecordingRoom" : {
+      "@id" : "https://w3id.org/rec/building/RecordingRoom"
+    },
+    "Office" : {
+      "@id" : "https://w3id.org/rec/building/Office"
+    },
+    "ConferenceRoom" : {
+      "@id" : "https://w3id.org/rec/building/ConferenceRoom"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Atrium" : {
+      "@id" : "https://w3id.org/rec/building/Atrium"
+    },
+    "ShowerRoom" : {
+      "@id" : "https://w3id.org/rec/building/ShowerRoom"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "ServiceEntrance" : {
+      "@id" : "https://w3id.org/rec/building/ServiceEntrance"
+    },
+    "UtilitiesRoom" : {
+      "@id" : "https://w3id.org/rec/building/UtilitiesRoom"
+    },
+    "TherapyRoom" : {
+      "@id" : "https://w3id.org/rec/building/TherapyRoom"
+    },
+    "LivingRoom" : {
+      "@id" : "https://w3id.org/rec/building/LivingRoom"
+    },
+    "Hospital" : {
+      "@id" : "https://w3id.org/rec/building/Hospital"
+    },
+    "BarRoom" : {
+      "@id" : "https://w3id.org/rec/building/BarRoom"
+    },
+    "Laboratory" : {
+      "@id" : "https://w3id.org/rec/building/Laboratory"
+    },
+    "RoofOuter" : {
+      "@id" : "https://w3id.org/rec/building/RoofOuter"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "PhoneBooth" : {
+      "@id" : "https://w3id.org/rec/building/PhoneBooth"
+    },
+    "coversRequirements" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"
+    },
+    "School" : {
+      "@id" : "https://w3id.org/rec/building/School"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Classroom" : {
+      "@id" : "https://w3id.org/rec/building/Classroom"
+    },
+    "endpoint" : {
+      "@id" : "https://karlhammar.com/owl2oas/o2o.owl#endpoint"
+    },
+    "Cinema" : {
+      "@id" : "https://w3id.org/rec/building/Cinema"
+    },
+    "DishingRoom" : {
+      "@id" : "https://w3id.org/rec/building/DishingRoom"
+    },
+    "Auditorium" : {
+      "@id" : "https://w3id.org/rec/building/Auditorium"
+    },
+    "Sauna" : {
+      "@id" : "https://w3id.org/rec/building/Sauna"
+    },
+    "Floor" : {
+      "@id" : "https://w3id.org/rec/building/Floor"
+    },
+    "VirtualBuilding" : {
+      "@id" : "https://w3id.org/rec/building/VirtualBuilding"
+    },
+    "LaundryRoom" : {
+      "@id" : "https://w3id.org/rec/building/LaundryRoom"
+    },
+    "Wall" : {
+      "@id" : "https://w3id.org/rec/building/Wall"
+    },
+    "OperatingRoom" : {
+      "@id" : "https://w3id.org/rec/building/OperatingRoom"
+    },
+    "ShoppingMall" : {
+      "@id" : "https://w3id.org/rec/building/ShoppingMall"
+    },
+    "CoffeeRoom" : {
+      "@id" : "https://w3id.org/rec/building/CoffeeRoom"
+    },
+    "Stadium" : {
+      "@id" : "https://w3id.org/rec/building/Stadium"
+    },
+    "ParkingSlotWarm" : {
+      "@id" : "https://w3id.org/rec/building/ParkingSlotWarm"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "AdmittingRoom" : {
+      "@id" : "https://w3id.org/rec/building/AdmittingRoom"
+    },
+    "EducationalRoom" : {
+      "@id" : "https://w3id.org/rec/building/EducationalRoom"
+    },
+    "WallInner" : {
+      "@id" : "https://w3id.org/rec/building/WallInner"
+    },
+    "MezzanineLevel" : {
+      "@id" : "https://w3id.org/rec/building/MezzanineLevel"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "SecurityRoom" : {
+      "@id" : "https://w3id.org/rec/building/SecurityRoom"
+    },
+    "Slab" : {
+      "@id" : "https://w3id.org/rec/building/Slab"
+    },
+    "OfficeRoom" : {
+      "@id" : "https://w3id.org/rec/building/OfficeRoom"
+    },
+    "ElevatorRoom" : {
+      "@id" : "https://w3id.org/rec/building/ElevatorRoom"
+    },
+    "RetailRoom" : {
+      "@id" : "https://w3id.org/rec/building/RetailRoom"
+    },
+    "included" : {
+      "@id" : "https://karlhammar.com/owl2oas/o2o.owl#included"
+    },
+    "CloakRoom" : {
+      "@id" : "https://w3id.org/rec/building/CloakRoom"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "TelecommunicationRoom" : {
+      "@id" : "https://w3id.org/rec/building/TelecommunicationRoom"
+    },
+    "MeditationRoom" : {
+      "@id" : "https://w3id.org/rec/building/MeditationRoom"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "Shelter" : {
+      "@id" : "https://w3id.org/rec/building/Shelter"
+    }
+  }
+}
