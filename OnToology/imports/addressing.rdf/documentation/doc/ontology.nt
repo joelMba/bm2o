@@ -1,0 +1,112 @@
+<https://w3id.org/rec/addressing/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rec/addressing/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/addressing/3.3/> .
+<https://w3id.org/rec/addressing/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rec/business/3.3/> .
+<https://w3id.org/rec/addressing/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rec/core/3.3/> .
+<https://w3id.org/rec/addressing/> <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+<https://w3id.org/rec/addressing/> <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" .
+<https://w3id.org/rec/addressing/> <http://purl.org/dc/elements/1.1/description> "This pluggable REC module covers the addressing domain."@en .
+<https://w3id.org/rec/addressing/> <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" .
+<https://w3id.org/rec/addressing/> <http://purl.org/dc/elements/1.1/title> "RealEstateCore Addressing Module" .
+<https://w3id.org/rec/addressing/> <http://purl.org/dc/terms/modified> "2021-09-14" .
+<https://w3id.org/rec/addressing/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "addressing" .
+<https://w3id.org/rec/addressing/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/addressing/3.3/" .
+<https://w3id.org/rec/addressing/> <http://www.w3.org/2002/07/owl#versionInfo> "3.3"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/addressing/address
+<https://w3id.org/rec/addressing/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/addressing/address> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/addressing/addressLine1
+<https://w3id.org/rec/addressing/addressLine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/addressing/addressLine1> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/addressLine1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/addressing/addressLine1> <http://www.w3.org/2000/01/rdf-schema#label> "address line 1"@en .
+# 
+# https://w3id.org/rec/addressing/addressLine2
+<https://w3id.org/rec/addressing/addressLine2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/addressing/addressLine2> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/addressLine2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/addressing/addressLine2> <http://www.w3.org/2000/01/rdf-schema#label> "address line 2"@en .
+# 
+# https://w3id.org/rec/addressing/city
+<https://w3id.org/rec/addressing/city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/addressing/city> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/city> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/addressing/city> <http://www.w3.org/2000/01/rdf-schema#label> "city"@en .
+# 
+# https://w3id.org/rec/addressing/country
+<https://w3id.org/rec/addressing/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/addressing/country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/addressing/country> <http://www.w3.org/2000/01/rdf-schema#label> "country"@en .
+# 
+# https://w3id.org/rec/addressing/postalCode
+<https://w3id.org/rec/addressing/postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/addressing/postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/addressing/postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "postal code"@en .
+# 
+# https://w3id.org/rec/addressing/region
+<https://w3id.org/rec/addressing/region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/addressing/region> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/addressing/Address> .
+<https://w3id.org/rec/addressing/region> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/addressing/region> <http://www.w3.org/2000/01/rdf-schema#label> "region (state/province)"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/addressing/Address
+<https://w3id.org/rec/addressing/Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/addressing/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Information> .
+<https://w3id.org/rec/addressing/Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
+<https://w3id.org/rec/addressing/Address> <https://w3id.org/rec/metadata/dtdlType> "component" .
+# 
+# https://w3id.org/rec/business/TenantUnit
+<https://w3id.org/rec/business/TenantUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/addressing/Address> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/addressing/address> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/core/Building
+<https://w3id.org/rec/core/Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/addressing/Address> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/addressing/address> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/core/Land
+<https://w3id.org/rec/core/Land> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/addressing/Address> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/addressing/address> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/core/SubBuilding
+<https://w3id.org/rec/core/SubBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rec/addressing/Address> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/addressing/address> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
