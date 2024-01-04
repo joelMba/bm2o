@@ -1,0 +1,92 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "DataSchema" : {
+      "@id" : "https://w3id.org/rec/core/DataSchema"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "elementSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/elementSchema",
+      "@type" : "@id"
+    },
+    "DateTimeSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/DateTimeSchema"
+    },
+    "PrimitiveSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/PrimitiveSchema"
+    },
+    "maximum" : {
+      "@id" : "https://w3id.org/rec/dataschemas/maximum"
+    },
+    "minimum" : {
+      "@id" : "https://w3id.org/rec/dataschemas/minimum"
+    },
+    "fieldName" : {
+      "@id" : "https://w3id.org/rec/dataschemas/fieldName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ArraySchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/ArraySchema"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "BooleanSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/BooleanSchema"
+    },
+    "enumerationValues" : {
+      "@id" : "https://w3id.org/rec/dataschemas/enumerationValues"
+    },
+    "IntSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/IntSchema"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "regEx" : {
+      "@id" : "https://w3id.org/rec/dataschemas/regEx",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "ObjectSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/ObjectSchema"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "objectFields" : {
+      "@id" : "https://w3id.org/rec/dataschemas/objectFields",
+      "@type" : "@id"
+    },
+    "FloatSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/FloatSchema"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "resolution" : {
+      "@id" : "https://w3id.org/rec/dataschemas/resolution"
+    },
+    "StringSchema" : {
+      "@id" : "https://w3id.org/rec/dataschemas/StringSchema"
+    }
+  }
+}
