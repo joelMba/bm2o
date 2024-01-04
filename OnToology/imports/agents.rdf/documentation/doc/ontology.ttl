@@ -1,0 +1,168 @@
+@prefix : <https://w3id.org/rec/agents/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/agents/> .
+
+<https://w3id.org/rec/agents/> rdf:type owl:Ontology ;
+                                owl:versionIRI <https://w3id.org/rec/agents/3.3/> ;
+                                owl:imports <https://w3id.org/rec/core/3.3/> ;
+                                <http://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> ;
+                                <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" ;
+                                <http://purl.org/dc/elements/1.1/description> "This REC model covers basic types of agents (people, organizations, groups), structurally mostly aligned with FOAF -- divergences are noted in the respective propertys' documentation."@en ;
+                                <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                                <http://purl.org/dc/elements/1.1/title> "RealEstateCore Agents Module" ;
+                                <http://purl.org/dc/terms/modified> "2020-06-23" ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "agents" ;
+                                <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/agents/3.3/" ;
+                                <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What is Karl Hammar's GitHub account ID?"@en ,
+                                                                                                                          "What is the RealEstateCore organizational GitHub account ID?"@en ,
+                                                                                                                          "Who are the members of the RealEstateCore release engineering team?"@en ;
+                                rdfs:comment "The Agents module is work-in-progress; requirements are rather unclear as of yet."@en ;
+                                rdfs:seeAlso <https://w3id.org/rec/> ;
+                                owl:versionInfo "3.3" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/rec/agents/hasMember
+:hasMember rdf:type owl:ObjectProperty ;
+           rdfs:domain :Organization ;
+           rdfs:range :Person ;
+           rdfs:comment "Indicates the individual Persons that are members of an Organization. For member Organizations, use hasPart."@en ;
+           rdfs:label "has member"@en .
+
+
+###  https://w3id.org/rec/agents/isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Organization ;
+            rdfs:comment "Indicates the Organization(s) that this Person is a member of."@en ;
+            rdfs:label "is member of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/rec/agents/familyName
+:familyName rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :name ;
+            rdfs:domain :Person ;
+            rdfs:comment "A person's family name."@en ;
+            rdfs:label "family name"@en .
+
+
+###  https://w3id.org/rec/agents/firstName
+:firstName rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :name ;
+           rdfs:domain :Person ;
+           rdfs:comment "A person's first name (if they have one; this varies across cultural contexts)."@en ;
+           rdfs:label "first name"@en .
+
+
+###  https://w3id.org/rec/agents/gender
+:gender rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Person ;
+        rdfs:comment "A gender designation for a Person."@en ;
+        rdfs:label "gender"@en .
+
+
+###  https://w3id.org/rec/agents/givenName
+:givenName rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :name ;
+           rdfs:domain :Person ;
+           rdfs:comment "A person's personal, individual name."@en ;
+           rdfs:label "given name"@en .
+
+
+###  https://w3id.org/rec/agents/image
+:image rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Person ;
+       rdfs:range xsd:string ;
+       rdfs:comment "URL link to an image that represents the person."@en ;
+       rdfs:label "image"@en .
+
+
+###  https://w3id.org/rec/agents/lastName
+:lastName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :name ;
+          rdfs:domain :Person ;
+          rdfs:comment "A person's last name (if they have one; this varies across cultural contexts)."@en ;
+          rdfs:label "last name"@en .
+
+
+###  https://w3id.org/rec/agents/logo
+:logo rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Organization ;
+      rdfs:comment "URL link to an image/logo that represents the organization."@en ;
+      rdfs:label "logo"@en .
+
+
+###  https://w3id.org/rec/agents/name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain <https://w3id.org/rec/core/Agent> ;
+      rdfs:comment "A name for some Agent."@en ;
+      rdfs:label "name"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/rec/agents/Company
+:Company rdf:type owl:Class ;
+         rdfs:subClassOf :Organization ;
+         rdfs:label "Company"@en .
+
+
+###  https://w3id.org/rec/agents/Department
+:Department rdf:type owl:Class ;
+            rdfs:subClassOf :Organization ;
+            rdfs:label "Department"@en .
+
+
+###  https://w3id.org/rec/agents/Group
+:Group rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/rec/core/Agent> ;
+       rdfs:comment "A collection of individual Agents (included in the Group via the object property hasMember). These agents can be organizations or persons."@en ;
+       rdfs:label "Group"@en ;
+       rdfs:seeAlso <http://xmlns.com/foaf/0.1/Group> ;
+       owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/rec/agents/Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Agent> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasMember ;
+                                owl:allValuesFrom :Person
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/rec/core/hasPart> ;
+                                owl:allValuesFrom :Organization
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/rec/core/isPartOf> ;
+                                owl:allValuesFrom :Organization
+                              ] ;
+              rdfs:comment "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"@en ;
+              rdfs:label "Organization"@en .
+
+
+###  https://w3id.org/rec/agents/Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Agent> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isMemberOf ;
+                          owl:allValuesFrom :Organization
+                        ] ;
+        rdfs:comment "A natural person (i.e., an individual human being)."@en ;
+        rdfs:label "Person"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
