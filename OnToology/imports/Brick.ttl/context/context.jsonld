@@ -1,0 +1,1329 @@
+{
+  "@context" : {
+    "Electrical_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Electrical_Meter"
+    },
+    "Stage_Riser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Stage_Riser"
+    },
+    "Switch" : {
+      "@id" : "https://brickschema.org/schema/Brick#Switch"
+    },
+    "Condenser_Heat_Exchanger" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condenser_Heat_Exchanger"
+    },
+    "Heat_Exchanger_Discharge_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heat_Exchanger_Discharge_Water_Temperature_Sensor"
+    },
+    "Hot_Water_Supply_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Supply_Temperature_Sensor"
+    },
+    "Discharge_Hot_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Hot_Water_Temperature_Setpoint"
+    },
+    "Heat_Wheel_VFD" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heat_Wheel_VFD"
+    },
+    "Discharge_Condenser_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Condenser_Water"
+    },
+    "message" : {
+      "@id" : "http://www.w3.org/ns/shacl#message"
+    },
+    "Cooling_Tower_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Cooling_Tower_Fan"
+    },
+    "CRAC" : {
+      "@id" : "https://brickschema.org/schema/Brick#CRAC"
+    },
+    "hasDimensionVector" : {
+      "@id" : "http://qudt.org/schema/qudt/hasDimensionVector"
+    },
+    "Hot_Water_Discharge_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Discharge_Flow_Sensor"
+    },
+    "Natural_Gas_Seismic_Shutoff_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Natural_Gas_Seismic_Shutoff_Valve"
+    },
+    "CRAH" : {
+      "@id" : "https://brickschema.org/schema/Brick#CRAH"
+    },
+    "object" : {
+      "@id" : "http://www.w3.org/ns/shacl#object"
+    },
+    "Passive_Chilled_Beam" : {
+      "@id" : "https://brickschema.org/schema/Brick#Passive_Chilled_Beam"
+    },
+    "Chilled_Water_Discharge_Flow_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Discharge_Flow_Setpoint"
+    },
+    "Battery" : {
+      "@id" : "https://brickschema.org/schema/Brick#Battery"
+    },
+    "Solar_Thermal_Collector" : {
+      "@id" : "https://brickschema.org/schema/Brick#Solar_Thermal_Collector"
+    },
+    "Hot_Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Valve"
+    },
+    "Supply_Condenser_Water_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Condenser_Water_Flow_Sensor"
+    },
+    "Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Meter"
+    },
+    "operationalStageCount" : {
+      "@id" : "https://brickschema.org/schema/Brick#operationalStageCount",
+      "@type" : "@id"
+    },
+    "buildingThermalTransmittance" : {
+      "@id" : "https://brickschema.org/schema/Brick#buildingThermalTransmittance",
+      "@type" : "@id"
+    },
+    "Furniture" : {
+      "@id" : "https://brickschema.org/schema/Brick#Furniture"
+    },
+    "Chilled_Water_Supply_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Supply_Flow_Sensor"
+    },
+    "Touchpanel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Touchpanel"
+    },
+    "Cold_Deck" : {
+      "@id" : "https://brickschema.org/schema/Brick#Cold_Deck"
+    },
+    "Economizer_Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Economizer_Damper"
+    },
+    "Return_Air_Filter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Air_Filter"
+    },
+    "Return_Water_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Water_Flow_Sensor"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Filter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Filter"
+    },
+    "feedsAir" : {
+      "@id" : "https://brickschema.org/schema/Brick#feedsAir",
+      "@type" : "@id"
+    },
+    "Supply_Condenser_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Condenser_Water"
+    },
+    "Economizer" : {
+      "@id" : "https://brickschema.org/schema/Brick#Economizer"
+    },
+    "Supply_Air_Plenum" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Air_Plenum"
+    },
+    "sparql" : {
+      "@id" : "http://www.w3.org/ns/shacl#sparql"
+    },
+    "Absorption_Chiller" : {
+      "@id" : "https://brickschema.org/schema/Brick#Absorption_Chiller"
+    },
+    "deprecatedInVersion" : {
+      "@id" : "https://brickschema.org/schema/Brick#deprecatedInVersion"
+    },
+    "Lighting" : {
+      "@id" : "https://brickschema.org/schema/Brick#Lighting"
+    },
+    "Supply_Water_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Water_Flow_Sensor"
+    },
+    "rule" : {
+      "@id" : "http://www.w3.org/ns/shacl#rule"
+    },
+    "Video_Intercom" : {
+      "@id" : "https://brickschema.org/schema/Brick#Video_Intercom"
+    },
+    "Security_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Security_Equipment"
+    },
+    "TABS_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#TABS_Panel"
+    },
+    "Domestic_Hot_Water_Discharge_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Domestic_Hot_Water_Discharge_Temperature_Setpoint"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "ratedVoltageInput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedVoltageInput",
+      "@type" : "@id"
+    },
+    "Supply_Condenser_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Condenser_Water_Temperature_Sensor"
+    },
+    "Discharge_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Fan"
+    },
+    "hasQuantity" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasQuantity",
+      "@type" : "@id"
+    },
+    "Natural_Gas_Boiler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Natural_Gas_Boiler"
+    },
+    "Steam_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Steam_Valve"
+    },
+    "Direct_Expansion_Cooling_Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Direct_Expansion_Cooling_Coil"
+    },
+    "targetClass" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetClass"
+    },
+    "Hot_Water_Return_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Return_Temperature_Sensor"
+    },
+    "Medium_Temperature_Hot_Water_Discharge_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Medium_Temperature_Hot_Water_Discharge_Temperature_Sensor"
+    },
+    "Variable_Air_Volume_Box" : {
+      "@id" : "https://brickschema.org/schema/Brick#Variable_Air_Volume_Box"
+    },
+    "Chilled_Water_Pump" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Pump"
+    },
+    "qualifiedValueShapesDisjoint" : {
+      "@id" : "http://www.w3.org/ns/shacl#qualifiedValueShapesDisjoint"
+    },
+    "Pre_Filter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Pre_Filter"
+    },
+    "Pump_VFD" : {
+      "@id" : "https://brickschema.org/schema/Brick#Pump_VFD"
+    },
+    "Chilled_Water_Discharge_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Discharge_Flow_Sensor"
+    },
+    "Air_Diffuser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Air_Diffuser"
+    },
+    "prefixes" : {
+      "@id" : "http://www.w3.org/ns/shacl#prefixes"
+    },
+    "Humidifier" : {
+      "@id" : "https://brickschema.org/schema/Brick#Humidifier"
+    },
+    "Relay" : {
+      "@id" : "https://brickschema.org/schema/Brick#Relay"
+    },
+    "Thermostatic_Mixing_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Thermostatic_Mixing_Valve"
+    },
+    "Smoke_Detector" : {
+      "@id" : "https://brickschema.org/schema/Brick#Smoke_Detector"
+    },
+    "aggregationFunction" : {
+      "@id" : "https://brickschema.org/schema/Brick#aggregationFunction",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Equipment"
+    },
+    "Fume_Hood" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fume_Hood"
+    },
+    "Dimmer" : {
+      "@id" : "https://brickschema.org/schema/Brick#Dimmer"
+    },
+    "hasAssociatedTag" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasAssociatedTag",
+      "@type" : "@id"
+    },
+    "Inverter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Inverter"
+    },
+    "Manual_Fire_Alarm_Activation_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Manual_Fire_Alarm_Activation_Equipment"
+    },
+    "ifcGlobalID" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#ifcGlobalID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Dedicated_Outdoor_Air_System_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Dedicated_Outdoor_Air_System_Unit"
+    },
+    "netArea" : {
+      "@id" : "https://brickschema.org/schema/Brick#netArea",
+      "@type" : "@id"
+    },
+    "HX" : {
+      "@id" : "https://brickschema.org/schema/Brick#HX"
+    },
+    "hasTag" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasTag",
+      "@type" : "@id"
+    },
+    "Variable_Frequency_Drive" : {
+      "@id" : "https://brickschema.org/schema/Brick#Variable_Frequency_Drive"
+    },
+    "deprecationMigitationRule" : {
+      "@id" : "https://brickschema.org/schema/Brick#deprecationMigitationRule",
+      "@type" : "@id"
+    },
+    "Differential_Pressure_Bypass_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Differential_Pressure_Bypass_Valve"
+    },
+    "ifcProjectID" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#ifcProjectID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "propertyEnum" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#propertyEnum"
+    },
+    "Return_Condenser_Water_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Condenser_Water_Flow_Sensor"
+    },
+    "Intake_Air_Filter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Intake_Air_Filter"
+    },
+    "Evaporative_Heat_Exchanger" : {
+      "@id" : "https://brickschema.org/schema/Brick#Evaporative_Heat_Exchanger"
+    },
+    "Booster_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Booster_Fan"
+    },
+    "Hot_Deck" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Deck"
+    },
+    "hasIfcProjectReference" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#hasIfcProjectReference",
+      "@type" : "@id"
+    },
+    "area" : {
+      "@id" : "https://brickschema.org/schema/Brick#area",
+      "@type" : "@id"
+    },
+    "Network_Video_Recorder" : {
+      "@id" : "https://brickschema.org/schema/Brick#Network_Video_Recorder"
+    },
+    "MAU" : {
+      "@id" : "https://brickschema.org/schema/Brick#MAU"
+    },
+    "not" : {
+      "@id" : "http://www.w3.org/ns/shacl#not"
+    },
+    "Direct_Expansion_Heating_Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Direct_Expansion_Heating_Coil"
+    },
+    "minLength" : {
+      "@id" : "http://www.w3.org/ns/shacl#minLength"
+    },
+    "Relief_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Relief_Fan"
+    },
+    "Condenser_Water_Bypass_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condenser_Water_Bypass_Valve"
+    },
+    "Air_Handler_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Air_Handler_Unit"
+    },
+    "Building_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Building_Meter"
+    },
+    "Outside_Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Outside_Damper"
+    },
+    "Return_Condenser_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Condenser_Water"
+    },
+    "deprecation" : {
+      "@id" : "https://brickschema.org/schema/Brick#deprecation",
+      "@type" : "@id"
+    },
+    "Bus_Riser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Bus_Riser"
+    },
+    "class" : {
+      "@id" : "http://www.w3.org/ns/shacl#class"
+    },
+    "maxCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#maxCount"
+    },
+    "Discharge_Condenser_Water_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Condenser_Water_Flow_Sensor"
+    },
+    "PlugStrip" : {
+      "@id" : "https://brickschema.org/schema/Brick#PlugStrip"
+    },
+    "minCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#minCount"
+    },
+    "Hot_Water_Discharge_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Discharge_Temperature_Sensor"
+    },
+    "Heat_Exchanger" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heat_Exchanger"
+    },
+    "Mixed_Air_Filter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Mixed_Air_Filter"
+    },
+    "Water_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Water_Meter"
+    },
+    "hasAddress" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#hasAddress",
+      "@type" : "@id"
+    },
+    "Condenser_Water_Isolation_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condenser_Water_Isolation_Valve"
+    },
+    "isVirtualMeter" : {
+      "@id" : "https://brickschema.org/schema/Brick#isVirtualMeter",
+      "@type" : "@id"
+    },
+    "ratedModuleConversionEfficiency" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedModuleConversionEfficiency",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Hot_Water_Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Coil"
+    },
+    "propertyOf" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#propertyOf"
+    },
+    "Supply_Hot_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Hot_Water_Temperature_Setpoint"
+    },
+    "Discharge_Chilled_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Chilled_Water_Temperature_Setpoint"
+    },
+    "narrower" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+      "@type" : "@id"
+    },
+    "FCU" : {
+      "@id" : "https://brickschema.org/schema/Brick#FCU"
+    },
+    "isPartOf" : {
+      "@id" : "https://brickschema.org/schema/Brick#isPartOf",
+      "@type" : "@id"
+    },
+    "targetSubjectsOf" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetSubjectsOf"
+    },
+    "DOAS" : {
+      "@id" : "https://brickschema.org/schema/Brick#DOAS"
+    },
+    "ratedMinimumCurrentInput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMinimumCurrentInput",
+      "@type" : "@id"
+    },
+    "longitude" : {
+      "@id" : "https://brickschema.org/schema/Brick#longitude"
+    },
+    "hasPart" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasPart",
+      "@type" : "@id"
+    },
+    "Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Damper"
+    },
+    "related" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#related"
+    },
+    "Jet_Nozzle_Air_Diffuser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Jet_Nozzle_Air_Diffuser"
+    },
+    "Fire_Alarm_Control_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fire_Alarm_Control_Panel"
+    },
+    "RC_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#RC_Panel"
+    },
+    "Steam_Distribution" : {
+      "@id" : "https://brickschema.org/schema/Brick#Steam_Distribution"
+    },
+    "Chilled_Water_Return_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Return_Temperature_Sensor"
+    },
+    "Boiler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Boiler"
+    },
+    "path" : {
+      "@id" : "http://www.w3.org/ns/shacl#path"
+    },
+    "Condenser_Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condenser_Water_Valve"
+    },
+    "ratedMinimumCurrentOutput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMinimumCurrentOutput",
+      "@type" : "@id"
+    },
+    "RTU" : {
+      "@id" : "https://brickschema.org/schema/Brick#RTU"
+    },
+    "VAV" : {
+      "@id" : "https://brickschema.org/schema/Brick#VAV"
+    },
+    "Emergency_Phone" : {
+      "@id" : "https://brickschema.org/schema/Brick#Emergency_Phone"
+    },
+    "Fire_Control_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fire_Control_Panel"
+    },
+    "Supply_Chilled_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Chilled_Water_Temperature_Setpoint"
+    },
+    "Return_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Water"
+    },
+    "propertyName" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#propertyName"
+    },
+    "Return_Hot_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Hot_Water"
+    },
+    "Hot_Water_Discharge_Flow_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Discharge_Flow_Setpoint"
+    },
+    "Safety_Shower" : {
+      "@id" : "https://brickschema.org/schema/Brick#Safety_Shower"
+    },
+    "Lighting_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Lighting_Equipment"
+    },
+    "Emergency_Wash_Station" : {
+      "@id" : "https://brickschema.org/schema/Brick#Emergency_Wash_Station"
+    },
+    "ratedMaximumVoltageInput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMaximumVoltageInput",
+      "@type" : "@id"
+    },
+    "hasTimeseriesId" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#hasTimeseriesId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "timestamp" : {
+      "@id" : "https://brickschema.org/schema/Brick#timestamp"
+    },
+    "Chilled_Water_Supply_Flow_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Supply_Flow_Setpoint"
+    },
+    "Fire_Alarm_Pull_Station" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fire_Alarm_Pull_Station"
+    },
+    "email" : {
+      "@id" : "http://schema.org/email"
+    },
+    "hasTimeseriesReference" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#hasTimeseriesReference",
+      "@type" : "@id"
+    },
+    "Automatic_Tint_Window" : {
+      "@id" : "https://brickschema.org/schema/Brick#Automatic_Tint_Window"
+    },
+    "Heat_Wheel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heat_Wheel"
+    },
+    "Makeup_Air_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Makeup_Air_Unit"
+    },
+    "aggregationInterval" : {
+      "@id" : "https://brickschema.org/schema/Brick#aggregationInterval"
+    },
+    "Interface" : {
+      "@id" : "https://brickschema.org/schema/Brick#Interface"
+    },
+    "Discharge_Hot_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Hot_Water"
+    },
+    "Electric_Baseboard_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Electric_Baseboard_Radiator"
+    },
+    "Hot_Water_Supply_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Supply_Flow_Sensor"
+    },
+    "Condenser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condenser"
+    },
+    "grossArea" : {
+      "@id" : "https://brickschema.org/schema/Brick#grossArea",
+      "@type" : "@id"
+    },
+    "hasSimpleValue" : {
+      "@id" : "http://data.ashrae.org/standard223#hasSimpleValue",
+      "@type" : "@id"
+    },
+    "Cooling_Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Cooling_Coil"
+    },
+    "Underfloor_Air_Plenum" : {
+      "@id" : "https://brickschema.org/schema/Brick#Underfloor_Air_Plenum"
+    },
+    "Domestic_Hot_Water_Discharge_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Domestic_Hot_Water_Discharge_Temperature_Sensor"
+    },
+    "hasQUDTReference" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasQUDTReference",
+      "@type" : "@id"
+    },
+    "Domestic_Hot_Water_Supply_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Domestic_Hot_Water_Supply_Temperature_Sensor"
+    },
+    "targetObjectsOf" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetObjectsOf"
+    },
+    "AED" : {
+      "@id" : "https://brickschema.org/schema/Brick#AED"
+    },
+    "latitude" : {
+      "@id" : "https://brickschema.org/schema/Brick#latitude"
+    },
+    "Steam_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Steam_Radiator"
+    },
+    "Switchgear" : {
+      "@id" : "https://brickschema.org/schema/Brick#Switchgear"
+    },
+    "ratedMinimumVoltageOutput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMinimumVoltageOutput",
+      "@type" : "@id"
+    },
+    "AHU" : {
+      "@id" : "https://brickschema.org/schema/Brick#AHU"
+    },
+    "Hot_Water_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Radiator"
+    },
+    "Return_Condenser_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Condenser_Water_Temperature_Sensor"
+    },
+    "hasSubMeter" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasSubMeter",
+      "@type" : "@id"
+    },
+    "Centrifugal_Chiller" : {
+      "@id" : "https://brickschema.org/schema/Brick#Centrifugal_Chiller"
+    },
+    "Eye_Wash_Station" : {
+      "@id" : "https://brickschema.org/schema/Brick#Eye_Wash_Station"
+    },
+    "PVT_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#PVT_Panel"
+    },
+    "Breaker_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Breaker_Panel"
+    },
+    "Return_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Water_Temperature_Sensor"
+    },
+    "Space_Heater" : {
+      "@id" : "https://brickschema.org/schema/Brick#Space_Heater"
+    },
+    "measuredModuleConversionEfficiency" : {
+      "@id" : "https://brickschema.org/schema/Brick#measuredModuleConversionEfficiency",
+      "@type" : "@id"
+    },
+    "Thermostat" : {
+      "@id" : "https://brickschema.org/schema/Brick#Thermostat"
+    },
+    "Hot_Water_Baseboard_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Baseboard_Radiator"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "deprecationMitigationMessage" : {
+      "@id" : "https://brickschema.org/schema/Brick#deprecationMitigationMessage"
+    },
+    "VFD" : {
+      "@id" : "https://brickschema.org/schema/Brick#VFD"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "Return_Air_Plenum" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Air_Plenum"
+    },
+    "PAU" : {
+      "@id" : "https://brickschema.org/schema/Brick#PAU"
+    },
+    "First_Aid_Kit" : {
+      "@id" : "https://brickschema.org/schema/Brick#First_Aid_Kit"
+    },
+    "Supply_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Water_Temperature_Sensor"
+    },
+    "bacnet-read-property" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#bacnet-read-property"
+    },
+    "Transformer" : {
+      "@id" : "https://brickschema.org/schema/Brick#Transformer"
+    },
+    "Fan_VFD" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fan_VFD"
+    },
+    "Shading_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Shading_Equipment"
+    },
+    "construct" : {
+      "@id" : "http://www.w3.org/ns/shacl#construct"
+    },
+    "Medium_Temperature_Hot_Water_Supply_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Medium_Temperature_Hot_Water_Supply_Temperature_Sensor"
+    },
+    "ambientTemperatureOfMeasurement" : {
+      "@id" : "https://brickschema.org/schema/Brick#ambientTemperatureOfMeasurement",
+      "@type" : "@id"
+    },
+    "Transfer_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Transfer_Fan"
+    },
+    "applicableUnit" : {
+      "@id" : "http://qudt.org/schema/qudt/applicableUnit"
+    },
+    "isFedBy" : {
+      "@id" : "https://brickschema.org/schema/Brick#isFedBy",
+      "@type" : "@id"
+    },
+    "Discharge_Condenser_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Condenser_Water_Temperature_Setpoint"
+    },
+    "hasPoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasPoint",
+      "@type" : "@id"
+    },
+    "value" : {
+      "@id" : "https://brickschema.org/schema/Brick#value"
+    },
+    "Chilled_Water_Return_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Return_Flow_Sensor"
+    },
+    "Exhaust_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Exhaust_Fan"
+    },
+    "Access_Reader" : {
+      "@id" : "https://brickschema.org/schema/Brick#Access_Reader"
+    },
+    "Motor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Motor"
+    },
+    "Exhaust_Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Exhaust_Damper"
+    },
+    "Hot_Water_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Meter"
+    },
+    "Water_Heater" : {
+      "@id" : "https://brickschema.org/schema/Brick#Water_Heater"
+    },
+    "Compressor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Compressor"
+    },
+    "ifcFileLocation" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#ifcFileLocation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "BACnetURI" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#BACnetURI"
+    },
+    "Baseboard_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Baseboard_Radiator"
+    },
+    "Hot_Water_Supply_Flow_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Supply_Flow_Setpoint"
+    },
+    "Supply_Condenser_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Condenser_Water_Temperature_Setpoint"
+    },
+    "ratedMaximumVoltageOutput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMaximumVoltageOutput",
+      "@type" : "@id"
+    },
+    "select" : {
+      "@id" : "http://www.w3.org/ns/shacl#select"
+    },
+    "Heating_Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heating_Coil"
+    },
+    "Discharge_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Water_Temperature_Sensor"
+    },
+    "coolingCapacity" : {
+      "@id" : "https://brickschema.org/schema/Brick#coolingCapacity",
+      "@type" : "@id"
+    },
+    "or" : {
+      "@id" : "http://www.w3.org/ns/shacl#or"
+    },
+    "Displacement_Flow_Air_Diffuser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"
+    },
+    "ratedMinimumVoltageInput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMinimumVoltageInput",
+      "@type" : "@id"
+    },
+    "NVR" : {
+      "@id" : "https://brickschema.org/schema/Brick#NVR"
+    },
+    "Steam_Baseboard_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Steam_Baseboard_Radiator"
+    },
+    "ratedCurrentOutput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedCurrentOutput",
+      "@type" : "@id"
+    },
+    "Air_Plenum" : {
+      "@id" : "https://brickschema.org/schema/Brick#Air_Plenum"
+    },
+    "ESS_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#ESS_Panel"
+    },
+    "object-identifier" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#object-identifier"
+    },
+    "Water_Distribution" : {
+      "@id" : "https://brickschema.org/schema/Brick#Water_Distribution"
+    },
+    "Domestic_Hot_Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Domestic_Hot_Water_Valve"
+    },
+    "Bypass_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Bypass_Valve"
+    },
+    "Intrusion_Detection_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Intrusion_Detection_Equipment"
+    },
+    "Chilled_Water_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Meter"
+    },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
+    "subject" : {
+      "@id" : "http://www.w3.org/ns/shacl#subject"
+    },
+    "Mixed_Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Mixed_Damper"
+    },
+    "Radiant_Ceiling_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Radiant_Ceiling_Panel"
+    },
+    "Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fan"
+    },
+    "Outside_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Outside_Fan"
+    },
+    "Isolation_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Isolation_Valve"
+    },
+    "symbol" : {
+      "@id" : "http://qudt.org/schema/qudt/symbol"
+    },
+    "Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Coil"
+    },
+    "Motor_Control_Center" : {
+      "@id" : "https://brickschema.org/schema/Brick#Motor_Control_Center"
+    },
+    "property" : {
+      "@id" : "http://www.w3.org/ns/shacl#property"
+    },
+    "object-type" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#object-type"
+    },
+    "Electric_Boiler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Electric_Boiler"
+    },
+    "Water_Pump" : {
+      "@id" : "https://brickschema.org/schema/Brick#Water_Pump"
+    },
+    "hasInputSubstance" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasInputSubstance",
+      "@type" : "@id"
+    },
+    "Ceiling_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Ceiling_Fan"
+    },
+    "Supply_Chilled_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Chilled_Water"
+    },
+    "meters" : {
+      "@id" : "https://brickschema.org/schema/Brick#meters",
+      "@type" : "@id"
+    },
+    "Noncondensing_Natural_Gas_Boiler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Noncondensing_Natural_Gas_Boiler"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Variable_Air_Volume_Box_With_Reheat" : {
+      "@id" : "https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"
+    },
+    "thermalTransmittance" : {
+      "@id" : "https://brickschema.org/schema/Brick#thermalTransmittance",
+      "@type" : "@id"
+    },
+    "Reheat_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Reheat_Valve"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "ratedCurrentInput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedCurrentInput",
+      "@type" : "@id"
+    },
+    "Video_Surveillance_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Video_Surveillance_Equipment"
+    },
+    "Discharge_Air_Plenum" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Air_Plenum"
+    },
+    "isSubMeterOf" : {
+      "@id" : "https://brickschema.org/schema/Brick#isSubMeterOf",
+      "@type" : "@id"
+    },
+    "Building_Electrical_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Building_Electrical_Meter"
+    },
+    "Computer_Room_Air_Handler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Computer_Room_Air_Handler"
+    },
+    "Hot_Water_Return_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Return_Flow_Sensor"
+    },
+    "Embedded_Surface_System_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Embedded_Surface_System_Panel"
+    },
+    "isPointOf" : {
+      "@id" : "https://brickschema.org/schema/Brick#isPointOf",
+      "@type" : "@id"
+    },
+    "Intercom_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Intercom_Equipment"
+    },
+    "Final_Filter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Final_Filter"
+    },
+    "ReadableProperty" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#ReadableProperty"
+    },
+    "Discharge_Chilled_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Chilled_Water"
+    },
+    "and" : {
+      "@id" : "http://www.w3.org/ns/shacl#and"
+    },
+    "Discharge_Water_Flow_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Water_Flow_Setpoint"
+    },
+    "maxInclusive" : {
+      "@id" : "http://www.w3.org/ns/shacl#maxInclusive"
+    },
+    "Elevator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Elevator"
+    },
+    "hasExternalReference" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#hasExternalReference",
+      "@type" : "@id"
+    },
+    "objectOf" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#objectOf",
+      "@type" : "@id"
+    },
+    "Chilled_Water_Supply_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Supply_Temperature_Sensor"
+    },
+    "Return_Condenser_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Condenser_Water_Temperature_Setpoint"
+    },
+    "Discharge_Condenser_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Condenser_Water_Temperature_Sensor"
+    },
+    "Preheat_Hot_Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Preheat_Hot_Water_Valve"
+    },
+    "Return_Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Damper"
+    },
+    "Fan_Coil_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fan_Coil_Unit"
+    },
+    "Automated_External_Defibrillator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Automated_External_Defibrillator"
+    },
+    "High_Temperature_Hot_Water_Discharge_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#High_Temperature_Hot_Water_Discharge_Temperature_Sensor"
+    },
+    "Luminaire" : {
+      "@id" : "https://brickschema.org/schema/Brick#Luminaire"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "Fire_Alarm" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fire_Alarm"
+    },
+    "Relief_Damper" : {
+      "@id" : "https://brickschema.org/schema/Brick#Relief_Damper"
+    },
+    "Discharge_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Water"
+    },
+    "Cooling_Tower" : {
+      "@id" : "https://brickschema.org/schema/Brick#Cooling_Tower"
+    },
+    "Return_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Fan"
+    },
+    "Condenser_Water_Pump" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condenser_Water_Pump"
+    },
+    "Chilled_Beam" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Beam"
+    },
+    "Return_Heating_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Heating_Valve"
+    },
+    "hasOutputSubstance" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasOutputSubstance",
+      "@type" : "@id"
+    },
+    "RVAV" : {
+      "@id" : "https://brickschema.org/schema/Brick#RVAV"
+    },
+    "isDeltaQuantity" : {
+      "@id" : "http://qudt.org/schema/qudt/isDeltaQuantity"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "Standby_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Standby_Fan"
+    },
+    "isAssociatedWith" : {
+      "@id" : "https://brickschema.org/schema/Brick#isAssociatedWith",
+      "@type" : "@id"
+    },
+    "Laminar_Flow_Air_Diffuser" : {
+      "@id" : "https://brickschema.org/schema/Brick#Laminar_Flow_Air_Diffuser"
+    },
+    "Building_Water_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Building_Water_Meter"
+    },
+    "predicate" : {
+      "@id" : "http://www.w3.org/ns/shacl#predicate"
+    },
+    "Hot_Water_Pump" : {
+      "@id" : "https://brickschema.org/schema/Brick#Hot_Water_Pump"
+    },
+    "hasUnit" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasUnit",
+      "@type" : "@id"
+    },
+    "legalName" : {
+      "@id" : "http://schema.org/legalName"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/shacl#datatype"
+    },
+    "Supply_Fan" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Fan"
+    },
+    "Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Radiator"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "qualifiedValueShape" : {
+      "@id" : "http://www.w3.org/ns/shacl#qualifiedValueShape"
+    },
+    "Pump" : {
+      "@id" : "https://brickschema.org/schema/Brick#Pump"
+    },
+    "Weather_Station" : {
+      "@id" : "https://brickschema.org/schema/Brick#Weather_Station"
+    },
+    "Heat_Exchanger_Supply_Water_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heat_Exchanger_Supply_Water_Temperature_Sensor"
+    },
+    "ifcName" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#ifcName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "conversionEfficiency" : {
+      "@id" : "https://brickschema.org/schema/Brick#conversionEfficiency",
+      "@type" : "@id"
+    },
+    "Active_Chilled_Beam" : {
+      "@id" : "https://brickschema.org/schema/Brick#Active_Chilled_Beam"
+    },
+    "broader" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+      "@type" : "@id"
+    },
+    "Dual_Duct_Air_Handling_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Dual_Duct_Air_Handling_Unit"
+    },
+    "Fire_Safety_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fire_Safety_Equipment"
+    },
+    "qualifiedMinCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#qualifiedMinCount"
+    },
+    "High_Temperature_Hot_Water_Supply_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#High_Temperature_Hot_Water_Supply_Temperature_Sensor"
+    },
+    "Gas_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Gas_Valve"
+    },
+    "Camera" : {
+      "@id" : "https://brickschema.org/schema/Brick#Camera"
+    },
+    "defaultValue" : {
+      "@id" : "http://www.w3.org/ns/shacl#defaultValue"
+    },
+    "Access_Control_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Access_Control_Equipment"
+    },
+    "Condensing_Natural_Gas_Boiler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Condensing_Natural_Gas_Boiler"
+    },
+    "HVAC_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#HVAC_Valve"
+    },
+    "Surveillance_Camera" : {
+      "@id" : "https://brickschema.org/schema/Brick#Surveillance_Camera"
+    },
+    "Blind" : {
+      "@id" : "https://brickschema.org/schema/Brick#Blind"
+    },
+    "Induction_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Induction_Unit"
+    },
+    "Air_Handling_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Air_Handling_Unit"
+    },
+    "feeds" : {
+      "@id" : "https://brickschema.org/schema/Brick#feeds",
+      "@type" : "@id"
+    },
+    "minInclusive" : {
+      "@id" : "http://www.w3.org/ns/shacl#minInclusive"
+    },
+    "Supply_Hot_Water" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Hot_Water"
+    },
+    "Heat_Detector" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heat_Detector"
+    },
+    "Heating_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Heating_Valve"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Disconnect_Switch" : {
+      "@id" : "https://brickschema.org/schema/Brick#Disconnect_Switch"
+    },
+    "Dry_Cooler" : {
+      "@id" : "https://brickschema.org/schema/Brick#Dry_Cooler"
+    },
+    "HVAC_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#HVAC_Equipment"
+    },
+    "ratedMaximumCurrentInput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMaximumCurrentInput",
+      "@type" : "@id"
+    },
+    "panelArea" : {
+      "@id" : "https://brickschema.org/schema/Brick#panelArea",
+      "@type" : "@id"
+    },
+    "Fire_Alarm_Manual_Call_Point" : {
+      "@id" : "https://brickschema.org/schema/Brick#Fire_Alarm_Manual_Call_Point"
+    },
+    "Chiller" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chiller"
+    },
+    "Building_Chilled_Water_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Building_Chilled_Water_Meter"
+    },
+    "DDAHU" : {
+      "@id" : "https://brickschema.org/schema/Brick#DDAHU"
+    },
+    "propertyRef" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#propertyRef"
+    },
+    "Collection_Basin_Water_Heater" : {
+      "@id" : "https://brickschema.org/schema/Brick#Collection_Basin_Water_Heater"
+    },
+    "severity" : {
+      "@id" : "http://www.w3.org/ns/shacl#severity"
+    },
+    "CAV" : {
+      "@id" : "https://brickschema.org/schema/Brick#CAV"
+    },
+    "Supply_Water_Flow_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Supply_Water_Flow_Setpoint"
+    },
+    "Terminal_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Terminal_Unit"
+    },
+    "storedAt" : {
+      "@id" : "https://brickschema.org/schema/Brick/ref#storedAt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Water_Valve"
+    },
+    "Drench_Hose" : {
+      "@id" : "https://brickschema.org/schema/Brick#Drench_Hose"
+    },
+    "Electric_Radiator" : {
+      "@id" : "https://brickschema.org/schema/Brick#Electric_Radiator"
+    },
+    "Constant_Air_Volume_Box" : {
+      "@id" : "https://brickschema.org/schema/Brick#Constant_Air_Volume_Box"
+    },
+    "Luminaire_Driver" : {
+      "@id" : "https://brickschema.org/schema/Brick#Luminaire_Driver"
+    },
+    "Chilled_Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Valve"
+    },
+    "Building_Gas_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Building_Gas_Meter"
+    },
+    "isTagOf" : {
+      "@id" : "https://brickschema.org/schema/Brick#isTagOf",
+      "@type" : "@id"
+    },
+    "Energy_Storage" : {
+      "@id" : "https://brickschema.org/schema/Brick#Energy_Storage"
+    },
+    "Gas_Distribution" : {
+      "@id" : "https://brickschema.org/schema/Brick#Gas_Distribution"
+    },
+    "Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Valve"
+    },
+    "isMeteredBy" : {
+      "@id" : "https://brickschema.org/schema/Brick#isMeteredBy",
+      "@type" : "@id"
+    },
+    "Return_Chilled_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Chilled_Water_Temperature_Setpoint"
+    },
+    "hasTimestamp" : {
+      "@id" : "http://data.ashrae.org/standard223#hasTimestamp"
+    },
+    "hasLocation" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasLocation",
+      "@type" : "@id"
+    },
+    "Thermal_Power_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Thermal_Power_Meter"
+    },
+    "hasSubstance" : {
+      "@id" : "https://brickschema.org/schema/Brick#hasSubstance",
+      "@type" : "@id"
+    },
+    "PV_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#PV_Panel"
+    },
+    "Chilled_Water_Coil" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Coil"
+    },
+    "Return_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Water_Temperature_Setpoint"
+    },
+    "Medium_Temperature_Hot_Water_Return_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Medium_Temperature_Hot_Water_Return_Temperature_Sensor"
+    },
+    "ratedVoltageOutput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedVoltageOutput",
+      "@type" : "@id"
+    },
+    "Building_Hot_Water_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Building_Hot_Water_Meter"
+    },
+    "Electrical_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Electrical_Equipment"
+    },
+    "qualifiedMaxCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#qualifiedMaxCount"
+    },
+    "Radiant_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Radiant_Panel"
+    },
+    "Safety_Equipment" : {
+      "@id" : "https://brickschema.org/schema/Brick#Safety_Equipment"
+    },
+    "Computer_Room_Air_Conditioning" : {
+      "@id" : "https://brickschema.org/schema/Brick#Computer_Room_Air_Conditioning"
+    },
+    "description" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#description"
+    },
+    "Return_Hot_Water_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Return_Hot_Water_Temperature_Setpoint"
+    },
+    "Rooftop_Unit" : {
+      "@id" : "https://brickschema.org/schema/Brick#Rooftop_Unit"
+    },
+    "ratedMaximumCurrentOutput" : {
+      "@id" : "https://brickschema.org/schema/Brick#ratedMaximumCurrentOutput",
+      "@type" : "@id"
+    },
+    "Standby_CRAC" : {
+      "@id" : "https://brickschema.org/schema/Brick#Standby_CRAC"
+    },
+    "object-name" : {
+      "@id" : "http://data.ashrae.org/bacnet/2020#object-name"
+    },
+    "Domestic_Hot_Water_Supply_Temperature_Setpoint" : {
+      "@id" : "https://brickschema.org/schema/Brick#Domestic_Hot_Water_Supply_Temperature_Setpoint"
+    },
+    "Discharge_Water_Flow_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Discharge_Water_Flow_Sensor"
+    },
+    "hasQuantityKind" : {
+      "@id" : "http://qudt.org/schema/qudt/hasQuantityKind",
+      "@type" : "@id"
+    },
+    "Gas_Meter" : {
+      "@id" : "https://brickschema.org/schema/Brick#Gas_Meter"
+    },
+    "in" : {
+      "@id" : "http://www.w3.org/ns/shacl#in"
+    },
+    "High_Temperature_Hot_Water_Return_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#High_Temperature_Hot_Water_Return_Temperature_Sensor"
+    },
+    "Makeup_Water_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Makeup_Water_Valve"
+    },
+    "Thermally_Activated_Building_System_Panel" : {
+      "@id" : "https://brickschema.org/schema/Brick#Thermally_Activated_Building_System_Panel"
+    },
+    "Chilled_Water_Discharge_Temperature_Sensor" : {
+      "@id" : "https://brickschema.org/schema/Brick#Chilled_Water_Discharge_Temperature_Sensor"
+    },
+    "Cooling_Valve" : {
+      "@id" : "https://brickschema.org/schema/Brick#Cooling_Valve"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "@context" : {
+    "Address" : {
+      "@id" : "https://w3id.org/rec/addressing/Address"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "country" : {
+      "@id" : "https://w3id.org/rec/addressing/country",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dtdlType" : {
+      "@id" : "https://w3id.org/rec/metadata/dtdlType"
+    },
+    "city" : {
+      "@id" : "https://w3id.org/rec/addressing/city",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "postalCode" : {
+      "@id" : "https://w3id.org/rec/addressing/postalCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Land" : {
+      "@id" : "https://w3id.org/rec/core/Land"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/rec/core/Building"
+    },
+    "address" : {
+      "@id" : "https://w3id.org/rec/addressing/address",
+      "@type" : "@id"
+    },
+    "SubBuilding" : {
+      "@id" : "https://w3id.org/rec/core/SubBuilding"
+    },
+    "Information" : {
+      "@id" : "https://w3id.org/rec/core/Information"
+    },
+    "region" : {
+      "@id" : "https://w3id.org/rec/addressing/region",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TenantUnit" : {
+      "@id" : "https://w3id.org/rec/business/TenantUnit"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "addressLine1" : {
+      "@id" : "https://w3id.org/rec/addressing/addressLine1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "addressLine2" : {
+      "@id" : "https://w3id.org/rec/addressing/addressLine2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}
