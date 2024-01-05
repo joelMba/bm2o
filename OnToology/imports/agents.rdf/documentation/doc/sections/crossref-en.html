@@ -1,0 +1,445 @@
+<h2 id="crossreference" class="list">Cross-reference for RealEstateCore Agents Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by RealEstateCore Agents Module.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/rec/agents/Company" title="https://w3id.org/rec/agents/Company">Company</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/Department" title="https://w3id.org/rec/agents/Department">Department</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/Group" title="https://w3id.org/rec/agents/Group">Group</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/Organization" title="https://w3id.org/rec/agents/Organization">Organization</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/rec/agents/Company">
+      <h3>Company<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/Company</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/Organization" title="https://w3id.org/rec/agents/Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/Department">
+      <h3>Department<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/Department</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/Organization" title="https://w3id.org/rec/agents/Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/Group">
+      <h3>Group<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/Group</p>
+      <div class="comment">
+         <span class="markdown">A collection of individual Agents (included in the Group via the object property hasMember). These agents can be organizations or persons.</span>
+      </div>
+      <dl>
+         <dt>Is deprecated</dt>
+         <dd>true</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/rec/core/Agent"
+               target="_blank"
+               title="https://w3id.org/rec/core/Agent">agent</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/Organization">
+      <h3>Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/Organization</p>
+      <div class="comment">
+         <span class="markdown">An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/rec/core/Agent"
+               target="_blank"
+               title="https://w3id.org/rec/core/Agent">agent</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/Company" title="https://w3id.org/rec/agents/Company">Company</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/rec/agents/Department" title="https://w3id.org/rec/agents/Department">Department</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/hasMember" title="https://w3id.org/rec/agents/hasMember">has member</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/rec/agents/logo" title="https://w3id.org/rec/agents/logo">logo</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/isMemberOf" title="https://w3id.org/rec/agents/isMemberOf">is member of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/Person</p>
+      <div class="comment">
+         <span class="markdown">A natural person (i.e., an individual human being).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/rec/core/Agent"
+               target="_blank"
+               title="https://w3id.org/rec/core/Agent">agent</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/familyName" title="https://w3id.org/rec/agents/familyName">family name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/firstName" title="https://w3id.org/rec/agents/firstName">first name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/gender" title="https://w3id.org/rec/agents/gender">gender</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/givenName" title="https://w3id.org/rec/agents/givenName">given name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/image" title="https://w3id.org/rec/agents/image">image</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/isMemberOf" title="https://w3id.org/rec/agents/isMemberOf">is member of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/rec/agents/lastName" title="https://w3id.org/rec/agents/lastName">last name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/rec/agents/hasMember" title="https://w3id.org/rec/agents/hasMember">has member</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/rec/agents/hasMember" title="https://w3id.org/rec/agents/hasMember">has member</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/isMemberOf" title="https://w3id.org/rec/agents/isMemberOf">is member of</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/rec/agents/hasMember">
+      <h3>has member<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/hasMember</p>
+      <div class="comment">
+         <span class="markdown">Indicates the individual Persons that are members of an Organization. For member Organizations, use hasPart.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Organization" title="https://w3id.org/rec/agents/Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/isMemberOf">
+      <h3>is member of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/isMemberOf</p>
+      <div class="comment">
+         <span class="markdown">Indicates the Organization(s) that this Person is a member of.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Organization" title="https://w3id.org/rec/agents/Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/rec/agents/familyName" title="https://w3id.org/rec/agents/familyName">family name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/firstName" title="https://w3id.org/rec/agents/firstName">first name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/gender" title="https://w3id.org/rec/agents/gender">gender</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/givenName" title="https://w3id.org/rec/agents/givenName">given name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/image" title="https://w3id.org/rec/agents/image">image</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/lastName" title="https://w3id.org/rec/agents/lastName">last name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/logo" title="https://w3id.org/rec/agents/logo">logo</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/rec/agents/name" title="https://w3id.org/rec/agents/name">name</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/rec/agents/familyName">
+      <h3>family name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/familyName</p>
+      <div class="comment">
+         <span class="markdown">A person's family name.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/name" title="https://w3id.org/rec/agents/name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/firstName">
+      <h3>first name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/firstName</p>
+      <div class="comment">
+         <span class="markdown">A person's first name (if they have one; this varies across cultural contexts).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/name" title="https://w3id.org/rec/agents/name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/gender">
+      <h3>gender<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/gender</p>
+      <div class="comment">
+         <span class="markdown">A gender designation for a Person.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/givenName">
+      <h3>given name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/givenName</p>
+      <div class="comment">
+         <span class="markdown">A person's personal, individual name.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/name" title="https://w3id.org/rec/agents/name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/image">
+      <h3>image<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/image</p>
+      <div class="comment">
+         <span class="markdown">URL link to an image that represents the person.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/lastName">
+      <h3>last name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/lastName</p>
+      <div class="comment">
+         <span class="markdown">A person's last name (if they have one; this varies across cultural contexts).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/name" title="https://w3id.org/rec/agents/name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Person" title="https://w3id.org/rec/agents/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/logo">
+      <h3>logo<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/logo</p>
+      <div class="comment">
+         <span class="markdown">URL link to an image/logo that represents the organization.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/Organization" title="https://w3id.org/rec/agents/Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/rec/agents/name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rec/agents/name</p>
+      <div class="comment">
+         <span class="markdown">A name for some Agent.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/rec/agents/familyName" title="https://w3id.org/rec/agents/familyName">family name</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/firstName" title="https://w3id.org/rec/agents/firstName">first name</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/givenName" title="https://w3id.org/rec/agents/givenName">given name</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/rec/agents/lastName" title="https://w3id.org/rec/agents/lastName">last name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/rec/core/Agent"
+                  target="_blank"
+                  title="https://w3id.org/rec/core/Agent">agent</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
