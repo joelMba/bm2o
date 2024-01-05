@@ -1,0 +1,622 @@
+{
+  "@context" : {
+    "Level" : {
+      "@id" : "https://w3id.org/rec/core/Level"
+    },
+    "timeInterval" : {
+      "@id" : "https://w3id.org/rec/core/timeInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCreatedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasCreatedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "servesDevice" : {
+      "@id" : "https://w3id.org/rec/core/servesDevice",
+      "@type" : "@id"
+    },
+    "hasPopularName" : {
+      "@id" : "https://w3id.org/rec/core/hasPopularName"
+    },
+    "Space" : {
+      "@id" : "https://w3id.org/rec/core/Space"
+    },
+    "HVACZone" : {
+      "@id" : "https://w3id.org/rec/core/HVACZone"
+    },
+    "hasVistingAddress" : {
+      "@id" : "https://w3id.org/rec/core/hasVistingAddress"
+    },
+    "Unit" : {
+      "@id" : "http://qudt.org/schema/qudt/Unit"
+    },
+    "deviceMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/deviceMeasurementUnit",
+      "@type" : "@id"
+    },
+    "RealEstateComponent" : {
+      "@id" : "https://w3id.org/rec/core/RealEstateComponent"
+    },
+    "unitSign" : {
+      "@id" : "https://w3id.org/rec/core/unitSign"
+    },
+    "isMountedInBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/isMountedInBuildingComponent",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Software" : {
+      "@id" : "https://w3id.org/rec/core/Software"
+    },
+    "includes" : {
+      "@id" : "https://w3id.org/rec/core/includes",
+      "@type" : "@id"
+    },
+    "hasObservationTime" : {
+      "@id" : "https://w3id.org/rec/core/hasObservationTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "schemaName" : {
+      "@id" : "https://w3id.org/rec/core/schemaName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "url" : {
+      "@id" : "https://w3id.org/rec/core/url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Asset" : {
+      "@id" : "https://w3id.org/rec/core/Asset"
+    },
+    "isMountedIn" : {
+      "@id" : "https://w3id.org/rec/core/isMountedIn",
+      "@type" : "@id"
+    },
+    "isLocationOf" : {
+      "@id" : "https://w3id.org/rec/core/isLocationOf",
+      "@type" : "@id"
+    },
+    "Type" : {
+      "@id" : "https://w3id.org/rec/core/Type"
+    },
+    "hasDocument" : {
+      "@id" : "https://w3id.org/rec/core/hasDocument",
+      "@type" : "@id"
+    },
+    "personOccupancy" : {
+      "@id" : "https://w3id.org/rec/core/personOccupancy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "premisesType" : {
+      "@id" : "https://w3id.org/rec/core/premisesType",
+      "@type" : "@id"
+    },
+    "personCapacity" : {
+      "@id" : "https://w3id.org/rec/core/personCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "dtdlType" : {
+      "@id" : "https://w3id.org/rec/metadata/dtdlType"
+    },
+    "Room" : {
+      "@id" : "https://w3id.org/rec/core/Room"
+    },
+    "hasRealEstateComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasRealEstateComponent",
+      "@type" : "@id"
+    },
+    "hosts" : {
+      "@id" : "https://w3id.org/rec/core/hosts",
+      "@type" : "@id"
+    },
+    "asWKT" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "qkMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/qkMeasurementUnit",
+      "@type" : "@id"
+    },
+    "hasSubDevice" : {
+      "@id" : "https://w3id.org/rec/core/hasSubDevice",
+      "@type" : "@id"
+    },
+    "hostedBy" : {
+      "@id" : "https://w3id.org/rec/core/hostedBy",
+      "@type" : "@id"
+    },
+    "hasDeletedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasDeletedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "servesBuilding" : {
+      "@id" : "https://w3id.org/rec/core/servesBuilding",
+      "@type" : "@id"
+    },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "producedBy" : {
+      "@id" : "https://w3id.org/rec/core/producedBy",
+      "@type" : "@id"
+    },
+    "hasValue" : {
+      "@id" : "https://w3id.org/rec/core/hasValue"
+    },
+    "hasComment" : {
+      "@id" : "https://w3id.org/rec/core/hasComment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "LogicalGateway" : {
+      "@id" : "https://w3id.org/rec/core/LogicalGateway"
+    },
+    "DataSchema" : {
+      "@id" : "https://w3id.org/rec/core/DataSchema"
+    },
+    "hasGeoReferenceOrigo" : {
+      "@id" : "https://w3id.org/rec/core/hasGeoReferenceOrigo",
+      "@type" : "@id"
+    },
+    "hasMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/hasMeasurementUnit",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "LogicalDevice" : {
+      "@id" : "https://w3id.org/rec/core/LogicalDevice"
+    },
+    "OccupancyZone" : {
+      "@id" : "https://w3id.org/rec/core/OccupancyZone"
+    },
+    "isPartOf" : {
+      "@id" : "https://w3id.org/rec/core/isPartOf",
+      "@type" : "@id"
+    },
+    "hasPostalAddress" : {
+      "@id" : "https://w3id.org/rec/core/hasPostalAddress"
+    },
+    "Setpoint" : {
+      "@id" : "https://w3id.org/rec/core/Setpoint"
+    },
+    "hasPart" : {
+      "@id" : "https://w3id.org/rec/core/hasPart",
+      "@type" : "@id"
+    },
+    "hasStartTime" : {
+      "@id" : "https://w3id.org/rec/core/hasStartTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "BuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/BuildingComponent"
+    },
+    "eventQuantityKind" : {
+      "@id" : "https://w3id.org/rec/core/eventQuantityKind",
+      "@type" : "@id"
+    },
+    "hasReadTime" : {
+      "@id" : "https://w3id.org/rec/core/hasReadTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Premises" : {
+      "@id" : "https://w3id.org/rec/core/Premises"
+    },
+    "lastValue" : {
+      "@id" : "https://w3id.org/rec/core/lastValue"
+    },
+    "operatedBy" : {
+      "@id" : "https://w3id.org/rec/core/operatedBy",
+      "@type" : "@id"
+    },
+    "hasUpdatedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasUpdatedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "observationGeneratedBy" : {
+      "@id" : "https://w3id.org/rec/core/observationGeneratedBy",
+      "@type" : "@id"
+    },
+    "Event" : {
+      "@id" : "https://w3id.org/rec/core/Event"
+    },
+    "hasLocationAttribute" : {
+      "@id" : "https://w3id.org/rec/core/hasLocationAttribute"
+    },
+    "hasSustainabilityCertification" : {
+      "@id" : "https://w3id.org/rec/core/hasSustainabilityCertification"
+    },
+    "PremisesType" : {
+      "@id" : "https://w3id.org/rec/core/PremisesType"
+    },
+    "AssetCollection" : {
+      "@id" : "https://w3id.org/rec/core/AssetCollection"
+    },
+    "isMemberOf" : {
+      "@id" : "https://w3id.org/rec/core/isMemberOf",
+      "@type" : "@id"
+    },
+    "deviceQuantityKind" : {
+      "@id" : "https://w3id.org/rec/core/deviceQuantityKind",
+      "@type" : "@id"
+    },
+    "architectedBy" : {
+      "@id" : "https://w3id.org/rec/core/architectedBy",
+      "@type" : "@id"
+    },
+    "SpaceCollection" : {
+      "@id" : "https://w3id.org/rec/core/SpaceCollection"
+    },
+    "hasDuration" : {
+      "@id" : "https://w3id.org/rec/core/hasDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "observedBy" : {
+      "@id" : "https://w3id.org/rec/core/observedBy",
+      "@type" : "@id"
+    },
+    "levelNumber" : {
+      "@id" : "https://w3id.org/rec/core/levelNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasGeoReferenceBearing" : {
+      "@id" : "https://w3id.org/rec/core/hasGeoReferenceBearing",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "hasPointInTime" : {
+      "@id" : "https://w3id.org/rec/core/hasPointInTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "RealEstate" : {
+      "@id" : "https://w3id.org/rec/core/RealEstate"
+    },
+    "hasSuperDevice" : {
+      "@id" : "https://w3id.org/rec/core/hasSuperDevice",
+      "@type" : "@id"
+    },
+    "ownedBy" : {
+      "@id" : "https://w3id.org/rec/core/ownedBy",
+      "@type" : "@id"
+    },
+    "Agent" : {
+      "@id" : "https://w3id.org/rec/core/Agent"
+    },
+    "hasType" : {
+      "@id" : "https://w3id.org/rec/core/hasType",
+      "@type" : "@id"
+    },
+    "eventMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/eventMeasurementUnit",
+      "@type" : "@id"
+    },
+    "isLocatedAtLocalCoordinates" : {
+      "@id" : "https://w3id.org/rec/core/isLocatedAtLocalCoordinates"
+    },
+    "propertyRegisterDesignation" : {
+      "@id" : "https://w3id.org/rec/core/propertyRegisterDesignation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Portfolio" : {
+      "@id" : "https://w3id.org/rec/core/Portfolio"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "hasSource" : {
+      "@id" : "https://w3id.org/rec/core/hasSource"
+    },
+    "Land" : {
+      "@id" : "https://w3id.org/rec/core/Land"
+    },
+    "hasSerialization" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/rec/core/Building"
+    },
+    "hasTime" : {
+      "@id" : "https://w3id.org/rec/core/hasTime"
+    },
+    "value" : {
+      "@id" : "https://w3id.org/rec/core/value"
+    },
+    "Capability" : {
+      "@id" : "https://w3id.org/rec/core/Capability"
+    },
+    "hasMember" : {
+      "@id" : "https://w3id.org/rec/core/hasMember",
+      "@type" : "@id"
+    },
+    "componentOf" : {
+      "@id" : "https://w3id.org/rec/core/componentOf",
+      "@type" : "@id"
+    },
+    "sensorInterface" : {
+      "@id" : "https://w3id.org/rec/core/sensorInterface",
+      "@type" : "@id"
+    },
+    "Zone" : {
+      "@id" : "https://w3id.org/rec/core/Zone"
+    },
+    "MeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/MeasurementUnit"
+    },
+    "asGML" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#asGML",
+      "@type" : "http://www.opengis.net/ont/geosparql#gmlLiteral"
+    },
+    "hasProcessedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasProcessedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SubBuilding" : {
+      "@id" : "https://w3id.org/rec/core/SubBuilding"
+    },
+    "categorizationProperties" : {
+      "@id" : "https://w3id.org/rec/core/categorizationProperties",
+      "@type" : "@id"
+    },
+    "Information" : {
+      "@id" : "https://w3id.org/rec/core/Information"
+    },
+    "hasCapability" : {
+      "@id" : "https://w3id.org/rec/core/hasCapability",
+      "@type" : "@id"
+    },
+    "hasStopTime" : {
+      "@id" : "https://w3id.org/rec/core/hasStopTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "QuantityKind" : {
+      "@id" : "https://w3id.org/rec/core/QuantityKind"
+    },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
+    "hasAuxiliaryData" : {
+      "@id" : "https://w3id.org/rec/core/hasAuxiliaryData"
+    },
+    "Workspace" : {
+      "@id" : "https://w3id.org/rec/core/Workspace"
+    },
+    "physicalTagNumber" : {
+      "@id" : "https://w3id.org/rec/core/physicalTagNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MACAddress" : {
+      "@id" : "https://w3id.org/rec/core/MACAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "IPAddress" : {
+      "@id" : "https://w3id.org/rec/core/IPAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "lastValueTime" : {
+      "@id" : "https://w3id.org/rec/core/lastValueTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "componentOfBuilding" : {
+      "@id" : "https://w3id.org/rec/core/componentOfBuilding",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "hasBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasBuildingComponent",
+      "@type" : "@id"
+    },
+    "Parameter" : {
+      "@id" : "https://w3id.org/rec/core/Parameter"
+    },
+    "generatedObservation" : {
+      "@id" : "https://w3id.org/rec/core/generatedObservation",
+      "@type" : "@id"
+    },
+    "hasLittera" : {
+      "@id" : "https://w3id.org/rec/core/hasLittera"
+    },
+    "observes" : {
+      "@id" : "https://w3id.org/rec/core/observes",
+      "@type" : "@id"
+    },
+    "includedIn" : {
+      "@id" : "https://w3id.org/rec/core/includedIn",
+      "@type" : "@id"
+    },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
+    "LogicalServer" : {
+      "@id" : "https://w3id.org/rec/core/LogicalServer"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasZipCode" : {
+      "@id" : "https://w3id.org/rec/core/hasZipCode"
+    },
+    "serves" : {
+      "@id" : "https://w3id.org/rec/core/serves",
+      "@type" : "@id"
+    },
+    "type" : {
+      "@id" : "https://w3id.org/rec/core/type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCity" : {
+      "@id" : "https://w3id.org/rec/core/hasCity"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "constructedBy" : {
+      "@id" : "https://w3id.org/rec/core/constructedBy",
+      "@type" : "@id"
+    },
+    "isCapabilityOf" : {
+      "@id" : "https://w3id.org/rec/core/isCapabilityOf",
+      "@type" : "@id"
+    },
+    "Apartment" : {
+      "@id" : "https://w3id.org/rec/core/Apartment"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "coversRequirements" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"
+    },
+    "isPartOfRealEstate" : {
+      "@id" : "https://w3id.org/rec/core/isPartOfRealEstate",
+      "@type" : "@id"
+    },
+    "LogicalController" : {
+      "@id" : "https://w3id.org/rec/core/LogicalController"
+    },
+    "controlledBy" : {
+      "@id" : "https://w3id.org/rec/core/controlledBy",
+      "@type" : "@id"
+    },
+    "locatedIn" : {
+      "@id" : "https://w3id.org/rec/core/locatedIn",
+      "@type" : "@id"
+    },
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "SensorInterface" : {
+      "@id" : "https://w3id.org/rec/core/SensorInterface"
+    },
+    "GeoReferenceOrigo" : {
+      "@id" : "https://w3id.org/rec/core/GeoReferenceOrigo"
+    },
+    "hasAliasID" : {
+      "@id" : "https://w3id.org/rec/core/hasAliasID"
+    },
+    "endpoint" : {
+      "@id" : "https://karlhammar.com/owl2oas/o2o.owl#endpoint"
+    },
+    "PropertySet" : {
+      "@id" : "https://w3id.org/rec/core/PropertySet"
+    },
+    "State" : {
+      "@id" : "https://w3id.org/rec/core/State"
+    },
+    "Actuator" : {
+      "@id" : "https://w3id.org/rec/core/Actuator"
+    },
+    "comment" : {
+      "@id" : "https://w3id.org/rec/core/comment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Service" : {
+      "@id" : "https://w3id.org/rec/core/Service"
+    },
+    "Document" : {
+      "@id" : "https://w3id.org/rec/core/Document"
+    },
+    "isPartOfBuilding" : {
+      "@id" : "https://w3id.org/rec/core/isPartOfBuilding",
+      "@type" : "@id"
+    },
+    "owns" : {
+      "@id" : "https://w3id.org/rec/core/owns",
+      "@type" : "@id"
+    },
+    "hasGeonamesId" : {
+      "@id" : "https://w3id.org/rec/core/hasGeonamesId"
+    },
+    "containsMountedDevice" : {
+      "@id" : "https://w3id.org/rec/core/containsMountedDevice",
+      "@type" : "@id"
+    },
+    "hasRegion" : {
+      "@id" : "https://w3id.org/rec/core/hasRegion"
+    },
+    "hasSubBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasSubBuildingComponent",
+      "@type" : "@id"
+    },
+    "serialNumber" : {
+      "@id" : "https://w3id.org/rec/core/serialNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Campus" : {
+      "@id" : "https://w3id.org/rec/core/Campus"
+    },
+    "modelNumber" : {
+      "@id" : "https://w3id.org/rec/core/modelNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "servedBy" : {
+      "@id" : "https://w3id.org/rec/core/servedBy",
+      "@type" : "@id"
+    },
+    "included" : {
+      "@id" : "https://karlhammar.com/owl2oas/o2o.owl#included"
+    },
+    "servesBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/servesBuildingComponent",
+      "@type" : "@id"
+    },
+    "defaultGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#defaultGeometry",
+      "@type" : "@id"
+    },
+    "Region" : {
+      "@id" : "https://w3id.org/rec/core/Region"
+    },
+    "hasCountry" : {
+      "@id" : "https://w3id.org/rec/core/hasCountry"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "hasSuperBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasSuperBuildingComponent",
+      "@type" : "@id"
+    },
+    "dataSchema" : {
+      "@id" : "https://w3id.org/rec/core/dataSchema",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "documentTopic" : {
+      "@id" : "https://w3id.org/rec/core/documentTopic",
+      "@type" : "@id"
+    },
+    "hasQuantityKind" : {
+      "@id" : "http://qudt.org/schema/qudt/hasQuantityKind",
+      "@type" : "@id"
+    },
+    "producedEvent" : {
+      "@id" : "https://w3id.org/rec/core/producedEvent",
+      "@type" : "@id"
+    },
+    "Collection" : {
+      "@id" : "https://w3id.org/rec/core/Collection"
+    },
+    "Observation" : {
+      "@id" : "https://w3id.org/rec/core/Observation"
+    }
+  }
+}
