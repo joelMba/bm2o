@@ -1,0 +1,224 @@
+<https://w3id.org/rec/dataschemas/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rec/dataschemas/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/dataschemas/3.3/> .
+<https://w3id.org/rec/dataschemas/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rec/core/3.3/> .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/dc/elements/1.1/description> "This REC module models primitive and complex (object/array) data schemas for sensors, actuators, services, etc."@en .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/dc/elements/1.1/title> "RealEstateCore Data Schemas Module"@en .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/dc/terms/modified> "2020-06-23" .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dataschemas" .
+<https://w3id.org/rec/dataschemas/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/dataschemas/3.3/" .
+<https://w3id.org/rec/dataschemas/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/rec/> .
+<https://w3id.org/rec/dataschemas/> <http://www.w3.org/2002/07/owl#versionInfo> "3.3" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/dataschemas/elementSchema
+<https://w3id.org/rec/dataschemas/elementSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/dataschemas/elementSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/rec/dataschemas/elementSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/dataschemas/ArraySchema> .
+<https://w3id.org/rec/dataschemas/elementSchema> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/elementSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the primitive schema of all members of the array."@en .
+<https://w3id.org/rec/dataschemas/elementSchema> <http://www.w3.org/2000/01/rdf-schema#label> "element schema"@en .
+# 
+# https://w3id.org/rec/dataschemas/objectFields
+<https://w3id.org/rec/dataschemas/objectFields> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/dataschemas/objectFields> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/dataschemas/ObjectSchema> .
+<https://w3id.org/rec/dataschemas/objectFields> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/objectFields> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the individual object fields on this schema."@en .
+<https://w3id.org/rec/dataschemas/objectFields> <http://www.w3.org/2000/01/rdf-schema#label> "object fields"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/dataschemas/enumerationValues
+<https://w3id.org/rec/dataschemas/enumerationValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/dataschemas/enumerationValues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/enumerationValues> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines allowed values for this primitive schema instance."@en .
+<https://w3id.org/rec/dataschemas/enumerationValues> <http://www.w3.org/2000/01/rdf-schema#label> "enumeration values"@en .
+# 
+# https://w3id.org/rec/dataschemas/fieldName
+<https://w3id.org/rec/dataschemas/fieldName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/dataschemas/fieldName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/fieldName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/dataschemas/fieldName> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the name by which this primitive schema will be referred to, when defined as a part of an object schema."@en .
+<https://w3id.org/rec/dataschemas/fieldName> <http://www.w3.org/2000/01/rdf-schema#label> "field name"@en .
+# 
+# https://w3id.org/rec/dataschemas/maximum
+<https://w3id.org/rec/dataschemas/maximum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/dataschemas/maximum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/rec/dataschemas/maximum> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum allowed value (inclusive)."@en .
+<https://w3id.org/rec/dataschemas/maximum> <http://www.w3.org/2000/01/rdf-schema#label> "maximum"@en .
+# 
+# https://w3id.org/rec/dataschemas/minimum
+<https://w3id.org/rec/dataschemas/minimum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/dataschemas/minimum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/rec/dataschemas/minimum> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimum allowed value (inclusive)."@en .
+<https://w3id.org/rec/dataschemas/minimum> <http://www.w3.org/2000/01/rdf-schema#label> "minimum"@en .
+# 
+# https://w3id.org/rec/dataschemas/regEx
+<https://w3id.org/rec/dataschemas/regEx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/dataschemas/regEx> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/dataschemas/StringSchema> .
+<https://w3id.org/rec/dataschemas/regEx> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rec/dataschemas/regEx> <http://www.w3.org/2000/01/rdf-schema#comment> "A regular expression that defines valid input per this string schema."@en .
+<https://w3id.org/rec/dataschemas/regEx> <http://www.w3.org/2000/01/rdf-schema#label> "regular expression"@en .
+# 
+# https://w3id.org/rec/dataschemas/resolution
+<https://w3id.org/rec/dataschemas/resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/dataschemas/resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the valid granularity or \"step size\" for numeric input (i.e., FloatSchemas and IntSchemas). Used in conjunction with maximum and minimum, as an alternative to enumerations: e.g., minimum = 5, resolution = 10, maximum = 50 gives valid values 5, 15, 25, 35, and 45."@en .
+<https://w3id.org/rec/dataschemas/resolution> <http://www.w3.org/2000/01/rdf-schema#label> "resolution"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/dataschemas/ArraySchema
+<https://w3id.org/rec/dataschemas/ArraySchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/ArraySchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/DataSchema> .
+<https://w3id.org/rec/dataschemas/ArraySchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/elementSchema> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/dataschemas/BooleanSchema
+<https://w3id.org/rec/dataschemas/BooleanSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/BooleanSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/BooleanSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/enumerationValues> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/dataschemas/DateTimeSchema
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/enumerationValues> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/maximum> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/minimum> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/maximum> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/DateTimeSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid7 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/minimum> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/dataschemas/FloatSchema
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/enumerationValues> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/maximum> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/minimum> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/resolution> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid12 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/maximum> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid13 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/minimum> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/FloatSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid14 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/resolution> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/dataschemas/IntSchema
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/enumerationValues> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/maximum> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/minimum> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/resolution> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/maximum> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/minimum> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/rec/dataschemas/IntSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#int> .
+_:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/resolution> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/dataschemas/ObjectSchema
+<https://w3id.org/rec/dataschemas/ObjectSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/ObjectSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/DataSchema> .
+<https://w3id.org/rec/dataschemas/ObjectSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/objectFields> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://w3id.org/rec/dataschemas/PrimitiveSchema
+<https://w3id.org/rec/dataschemas/PrimitiveSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/PrimitiveSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/DataSchema> .
+# 
+# https://w3id.org/rec/dataschemas/StringSchema
+<https://w3id.org/rec/dataschemas/StringSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/dataschemas/StringSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/dataschemas/PrimitiveSchema> .
+<https://w3id.org/rec/dataschemas/StringSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/rec/dataschemas/enumerationValues> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
