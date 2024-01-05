@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:service" "base:repair" "base:replace" "base:inspect" "base:adjust" "base:diagnose" "base:calibrate" ; /*classes style*/
+	"http://www.semanticweb.org/maintenance-activity" -> "core:" [ label = "owl:imports" ];
+	"NULL" -> "base:calibrate" [ label = "rdf:first" ];
+	"NULL" -> "base:replace" [ label = "rdf:first" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "base:adjust" [ label = "rdf:first" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ffb" [ label = "owl:members" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "base:service" [ label = "rdf:first" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "base:inspect" [ label = "rdf:first" ];
+	"NULL" -> "base:repair" [ label = "rdf:first" ];
+	"NULL" -> "base:diagnose" [ label = "rdf:first" ];
+	"NULL" -> "d2430d5:18cd78ead06:-7ff5" [ label = "rdf:rest" ];
+
+}
