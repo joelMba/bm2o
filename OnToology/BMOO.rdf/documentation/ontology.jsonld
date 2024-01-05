@@ -1,0 +1,564 @@
+[ {
+  "@id" : "http://data.ashrae.org/bacnet/2020#description",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.semanticweb.org/maintenance-activity"
+  }, {
+    "@id" : "https://brickschema.org/schema/1.3/Brick"
+  }, {
+    "@id" : "https://w3id.org/rec/addressing/3.3/"
+  }, {
+    "@id" : "https://w3id.org/rec/agents/3.3/"
+  }, {
+    "@id" : "https://w3id.org/rec/core/3.3/"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Collectivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/agents/Company"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/core/Document"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/core/Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#PropertyManager",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "SLA = Service Level Agreement (define by customer)"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/agents/Company"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Tertiary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#criticalLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The critical level of and intervention/operation is an integer between -1 and 5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#customerCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "email address of the customer person contact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/agents/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#equipmentWorkingOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#estimatedInterventionDurationUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/maintenance-activity#MaintenanceActivity"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceActivityOf"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasMaintenanceContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceContractOf"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#hasSLA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isSLAOf"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceActivityOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/maintenance-activity#MaintenanceActivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isMaintenanceContractOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isPersonContactOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/agents/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#personContact"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedAddressOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/addressing/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/rec/addressing/address"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/agents/Company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCustomerOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCustomer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedDepartmentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/agents/Department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedDepartment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedEquipmentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://brickschema.org/schema/Brick#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedEquipment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedOrganizationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/agents/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedServiceProviderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedCompanyOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedServiceProvider"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isRelatedSpaceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedSpace"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#isSLAOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Label or name of a service provider or property management company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToIntervention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToInterventionUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#maxTimeToRecoveryUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#SLA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#personContact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/agents/Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#phoneNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "phone number of the customer person contact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/agents/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/agents/Company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCustomer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedDepartment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/agents/Department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://brickschema.org/schema/Brick#Equipment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/agents/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedServiceProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#ServiceProvider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedCompany"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#relatedSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/core/Space"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#serviceProviderCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#technicalReason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For example \"multiservice\", \"elevator\" topics, ...etc."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#workType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specified if there is and preventive, curative or reglementary operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceService"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/maintenance-activity#MaintenanceActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/rec/addressing/address",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/core/hasCreatedTime",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/core/hasDuration",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/core/hasProcessedTime",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/core/hasStartTime",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/core/hasStopTime",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#MaintenanceContract"
+  }, {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/core/hasUpdatedTime",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/joel.mba-kouhoue/ontologies/2023/9/BM2O#Operation"
+  } ]
+} ]
